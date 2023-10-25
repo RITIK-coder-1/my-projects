@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERMEDIATE TAILWIND PROJECT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-full h-full">
+    <div class="grid grid-cols-2 w-full h-full">
+
+        <div class="h-full">
+            <img class="w-full h-full" src="https://live.staticflickr.com/65535/50904675663_bd9088c007_z.jpg" alt="Farm Food">
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-5">
+            <div class="flex flex-col justify-between w-full h-28 pl-52">
+                <h3 class="w-full font-mono font-black">FarmMan</h3>
+                <h1 class="w-full font-mono text-3xl font-black">
+                    Hello, <br>
+                    Welcome Back
+                </h1>
+            </div>
+            <form action="#" class="flex flex-col items-center gap-2">
+                <p class="w-full font-mono">Login to manage your account.</p>
+                <input type="text" placeholder="Email" class="w-full py-1 pl-2 border border-solid border-inherit focus:outline-none placeholder:font-mono">
+                <input type="text" placeholder="Password" class="w-full py-1 pl-2 border border-solid border-inherit focus:outline-none placeholder:font-mono">
+                <p class="w-full font-mono text-cyan-700">Forgot your password?</p>
+                <button type="submit" class="w-full py-1 bg-green-600 font-mono text-white text-sm border rounded">Login</button>
+                <span class="font-mono">or</span>
+                <div class="flex gap-5">
+                    <img class="w-5" src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Facebook_svg-512.png" alt="Facebook">
+                    <img class="w-5" src="https://cdn4.iconfinder.com/data/icons/picons-social/57/09-google-3-512.png" alt="Google">
+                    <img class="w-5" src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-256.png" alt="Instagram">
+                </div>
+                <p class="font-mono">
+                    don't have an account? <span class="text-cyan-700">Sign up</span>
+                </p>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE ASSIGNMENT</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        h1{
+            margin-top: 25px;
+            font-size: 25px;
+        }       
+        body > div{
+            width: 1365px;
+            padding: 5px 0px 0px 5px;
+            margin-top: 20px;
+            background-color: #3a9494;
+            height: 385px;
+            border: 2px solid black;
+        }
+        .time-table1{
+            display: grid;
+            grid-template-columns: 189px 164px 163px 164px 182px 162px 165px 161px;
+            grid-template-rows: repeat(1, 70px);
+        }
+        .time-table1 .grid-item{
+            padding-top: 25px;
+            background-color: #e23333;
+        }
+        .time-table2{
+            width: 1350px;
+            display: grid;
+            grid-template-columns: repeat(8, auto);
+            grid-template-rows: repeat(7, 50px);
+        }
+        .grid-item{
+            border: 1px dashed black;
+            padding-top: 18px;
+            font-weight: 900;
+            font-size: 12px;
+        }
+
+        /* TIME */
+        .time{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .time1{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .time2{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .time3{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .time4{
+            grid-column: 5/6;
+            grid-row: 1/2;
+        }
+        .time5{
+            grid-column: 6/7;
+            grid-row: 1/2;
+        }
+        .time6{
+            grid-column: 7/8;
+            grid-row: 1/2;
+        }
+        .time7{
+            grid-column: 8/9;
+            grid-row: 1/2;
+        }
+
+        /* DAY */
+        .Monday{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .Tuesday{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .Wednesday{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .Thursday{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        .Friday{
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        .Saturday{
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+
+        /* SUBJECTS */
+        .english1{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .biology1{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .physics1{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .chemistry1{
+            grid-column: 5/6;
+            grid-row: 1/2;
+        }
+        .bio-lab1{
+            grid-column: 2/4;
+            grid-row: 2/3;
+            background-color: #cfadee;
+        }
+        .physics2{
+            grid-column: 4/5;
+            grid-row: 2/3;
+        }
+        .chemistry2{
+            grid-column: 5/6;
+            grid-row: 2/3;
+        }
+        .lunch{
+            grid-column: 6/7;
+            grid-row: 1/7;
+            background-color: #dfdf1b;
+        }
+        .english2{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        .biology2{
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+        .physics3{
+            grid-column: 4/5;
+            grid-row: 3/4;
+        }
+        .chemistry3{
+            grid-column: 5/6;
+            grid-row: 3/4;
+        }
+        .bio-lab2{
+            grid-column: 2/4;
+            grid-row: 4/5;
+            background-color: #cfadee;
+        }
+        .physics4{
+            grid-column: 4/5;
+            grid-row: 4/5;
+        }
+        .chemistry4{
+            grid-column: 5/6;
+            grid-row: 4/5;
+        }
+        .english3{
+            grid-column: 2/3;
+            grid-row: 5/6;
+        }
+        .biology3{
+            grid-column: 3/4;
+            grid-row: 5/6;
+        }
+        .physics5{
+            grid-column: 4/5;
+            grid-row: 5/6;
+        }
+        .chemistry5{
+            grid-column: 5/6;
+            grid-row: 5/6;
+        }
+        .bio-lab3{
+            grid-column: 2/4;
+            grid-row: 6/7;
+            background-color: #cfadee;
+        }
+        .physics6{
+            grid-column: 4/5;
+            grid-row: 6/7;
+        }
+        .chemistry6{
+            grid-column: 5/6;
+            grid-row: 6/7;
+        }
+        .chem-lab{
+            grid-column: 7/9;
+            grid-row: 1/2;
+            background-color: #cfadee;
+        }
+        .english4{
+            grid-column: 7/8;
+            grid-row: 2/3;
+        }
+        .biology4{
+            grid-column: 8/9;
+            grid-row: 2/3;
+        }
+        .Games{
+            grid-column: 7/9;
+            grid-row: 3/4;
+            background-color: #1d701d;
+        }
+        .english5{
+            grid-column: 7/8;
+            grid-row: 4/5;
+        }
+        .biology5{
+            grid-column: 8/9;
+            grid-row: 4/5;
+        }
+        .phy-lab{
+            grid-column: 7/9;
+            grid-row: 5/6;
+            background-color: #cfadee;
+        }
+        .leave{
+            grid-column: 7/9;
+            grid-row: 6/7;
+            background-color: #1d701d;
+        }
+
+        /* COLOUR */
+        .blueviolet{
+            background-color: blueviolet;
+        }
+        .skyblue{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>School Timetable</h1>
+
+    <div>
+
+        <!-- TIME -->
+        <div class="time-table1">
+            <div class="grid-item time">TIME</div>
+            <div class="grid-item time1">08:00 AM - 09:00 AM</div>
+            <div class="grid-item time2">09:00 AM - 10:00 AM</div>
+            <div class="grid-item time3">10:00 AM - 11:00 AM</div>
+            <div class="grid-item time4">11:00 AM - 12:00 PM</div>
+            <div class="grid-item time5">12:00 PM - 02:00 PM</div>
+            <div class="grid-item time6">02:00 PM - 03:00 PM</div>
+            <div class="grid-item time7">03:00 PM - 04:00 PM</div>
+        </div>
+    
+        <div class="time-table2">
+    
+            <!-- DAY -->
+            <div class="grid-item Monday blueviolet">Monday</div>
+            <div class="grid-item Tuesday blueviolet">Tuesday</div>
+            <div class="grid-item Wednesday blueviolet">Wednesday</div>
+            <div class="grid-item Thursday blueviolet">Thursday</div>
+            <div class="grid-item Friday blueviolet">Friday</div>
+            <div class="grid-item Saturday blueviolet">Saturday</div>
+    
+            <!-- SUBJECTS -->
+            <div class="grid-item english1 skyblue">English</div>
+            <div class="grid-item biology1 skyblue">Biology</div>
+            <div class="grid-item physics1 skyblue">Physics</div>
+            <div class="grid-item chemistry1 skyblue">Chemistry</div>
+            <div class="grid-item bio-lab1">Biology Lab</div>
+            <div class="grid-item physics2 skyblue">Physics</div>
+            <div class="grid-item chemistry2 skyblue">Chemistry</div>
+            
+            <div class="grid-item english2 skyblue">English</div>
+            <div class="grid-item biology2 skyblue">Biology</div>
+            <div class="grid-item physics3 skyblue">Physics</div>
+            <div class="grid-item chemistry3 skyblue">Chemistry</div>
+            <div class="grid-item bio-lab2">Biology Lab</div>
+            <div class="grid-item physics4 skyblue">Physics</div>
+            <div class="grid-item chemistry4 skyblue">Chemistry</div>
+    
+            <div class="grid-item english3 skyblue">English</div>
+            <div class="grid-item biology3 skyblue">Biology</div>
+            <div class="grid-item physics5 skyblue">Physics</div>
+            <div class="grid-item chemistry5 skyblue">Chemistry</div>
+            <div class="grid-item bio-lab3">Biology Lab</div>
+            <div class="grid-item physics6 skyblue">Physics</div>
+            <div class="grid-item chemistry6 skyblue">Chemistry</div>
+    
+            <div class="grid-item lunch">
+                L <br> <br> <br>
+                U <br> <br> <br>
+                N <br> <br> <br>
+                C <br> <br> <br>
+                H <br> <br> <br>
+                
+                BREAK
+            </div>
+    
+            <div class="grid-item chem-lab">chemistry LAB</div>
+            <div class="grid-item english4 skyblue">English</div>
+            <div class="grid-item biology4 skyblue">Biology</div>
+            <div class="grid-item Games">GAMES</div>
+            <div class="grid-item english5 skyblue">English</div>
+            <div class="grid-item biology5 skyblue">Biology</div>
+            <div class="grid-item phy-lab">physics LAB</div>
+            <div class="grid-item leave">LET OFF</div>
+        </div>
+    </div>
+</body>
+</html>

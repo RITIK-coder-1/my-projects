@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS POSITION PROJECT 7</title>
+    <style>
+        h1{
+            margin: 0px;
+            font-size: 24px;
+        }
+        .container{
+            text-align: center;
+            border: 2px solid black;
+            width: 900px;
+            height: 450px;
+            position: relative;
+            top: 50px;
+            left: 150px;
+        }
+        .pokemon{
+            width: 130px;
+            height: 220px;
+            border-radius: 4px;
+            margin: 10px;
+            box-shadow: 0px 0px 0px 1px;
+        }
+        .card1{
+            background-color: rgb(22, 154, 206);
+            position: relative;
+            top: 25px;
+            z-index: 1;
+        }
+        .card2{
+            background-color: rgb(44, 156, 44);
+            position: relative;
+            left: 15px;
+            bottom: 159px;
+            z-index: 2;
+        }
+        .card3{
+            background-color: rgb(250, 215, 17);
+            position: relative;
+            left: 30px;
+            bottom: 345px;
+            z-index: 3;
+        }
+        .pokemon1{
+            width: 100px;
+            height: 120px;
+            background-color: black;
+            position: relative;
+            left: 15px;
+            top: 25px;
+        }
+        .pokemon2{
+            width: 100px;
+            height: 120px;
+            background-color: black;
+            position: relative;
+            left: 15px;
+            top: 25px;
+        }
+        .pokemon3{
+            width: 100px;
+            height: 120px;
+            background-color: black;
+            position: relative;
+            left: 15px;
+            top: 25px;
+        }
+        .card1:hover{
+            z-index: 100;
+            box-shadow: 1px 1px blue;
+            border: 2px solid blue;
+        }
+        .card2:hover{
+            z-index: 100;
+            box-shadow: 1px 1px green;
+            border: 2px solid green;
+        }
+        .card3:hover{
+            z-index: 100;
+            box-shadow: 1px 1px yellow;
+            border: 2px solid rgb(177, 177, 24);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hover to unevil to Pokemon</h1>
+        <div class="pokemon card1">
+            <h3>Card 1</h3>
+            <div class="pokemon1">
+                <img width="100px" height="120px" src="https://pokemonletsgo.pokemon.com/assets/img/common/char-pikachu.png" alt="pokemon">
+            </div>
+        </div>
+        <div class="pokemon card2">
+            <h3>Card 2</h3>
+            <div class="pokemon2">
+                <img width="100px" height="120px" src="https://i.insider.com/57910997dd0895a56e8b456d?width=600&format=jpeg&auto=webp" alt="pokemon">
+            </div>
+        </div>
+        <div class="pokemon card3">
+            <h3>Card 3</h3>
+            <div class="pokemon3">
+                <img width="100px" height="120px" src="https://i.insider.com/57910997dd0895a56e8b4574?width=600&format=jpeg&auto=webp" alt="pokemon">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

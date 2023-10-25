@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DORAEMON CRYING</title>
+    <style>
+        body{
+            display: flex;
+            margin-top: 200px;
+        }
+        img{
+            margin: 0px;
+            width: 250px;
+            height: 200px;
+            position: absolute;
+            transition: 1s;
+        }
+        .one{
+            width: 175px;
+            height: 190px;
+        }
+        .one + p{
+            margin-left: 190px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #8a3232;
+            font-family: sans-serif;
+        }
+        .two + p{
+            margin-left: 200px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #8a3232;
+            font-family: sans-serif;
+        }
+        .three + p{
+            margin-left: 250px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #8a3232;
+            font-family: sans-serif;
+        }
+        @media screen and (max-width: 1600px) and (min-width: 1100px){
+            .three, .two{
+            opacity: 0;
+            transition: 1s;
+            }
+        }
+        @media screen and (max-width: 1600px) and (min-width: 1100px){
+            .three + p, .two + p{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 1100px) and (min-width: 686px){
+            .one, .three{
+            opacity: 0;
+            transition: 1s;
+            }
+        }
+        @media screen and (max-width: 1100px) and (min-width: 686px){
+            .one + p, .three + p{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 500px){
+            .one, .two{
+            opacity: 0;
+            transition: 1s;
+            }
+        }
+        @media screen and (max-width: 686px){
+            .one + p, .two + p{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://pngfre.com/wp-content/uploads/doraemon-png-image-from-pngfre-2-196x300.png" alt="doraemon" class="one">
+    <p>I'm feeling unwell</p>
+    <img src="https://mystickermania.com/cdn/stickers/cartoons/doraemon-sad-512x512.png" alt="doraemon" class="two">
+    <p>Should I cry?</p>
+    <img src="https://i1.sndcdn.com/artworks-000486267219-5sw47i-t500x500.jpg" alt="doraemon" class="three">
+    <p>I probably should</p>
+</body>
+</html>

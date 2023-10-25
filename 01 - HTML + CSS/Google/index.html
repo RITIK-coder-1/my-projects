@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX 6 PROJECT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        body{
+            background-color: #222224;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            position: relative;
+            top: 230px;
+            display: flex;
+            width: 400px;
+            height: 150px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        h1{
+            color: white;
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 45px;
+            position: relative;
+            top: 15px;
+            left: 120px;
+            margin: 1px;
+        }
+        #search{
+            width: 390px;
+            padding: 8px;
+            padding-left: 30px;
+            border-radius: 15px;
+            border: 1px solid #292828;
+            background-color: #222224;
+            /* background-color: #424242; */
+            outline: 1px solid #3b3a3a;
+            color: white;
+            margin: 1px;
+            background-image: url('https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/search-3-64.png'),
+             url('https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-512.png'),
+             url('https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-06-512.png') ;
+            background-position: 5px, 330px, 360px;
+            background-repeat: no-repeat;
+            background-size: 18px 18px, 25px 25px, 25px 25px;
+        }
+        input::placeholder{
+            position: relative;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google</h1>
+        <form action="#">
+          <input type="search" name="Google search" id="search" placeholder="Search...">
+        </form>
+    </div>
+</body>
+</html>
