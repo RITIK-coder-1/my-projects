@@ -270,7 +270,7 @@ input:focus, select:focus{
     color: #696868;
 }
 .sec3 ul{
-    width: 73%;
+    width: 1000px;
     margin-top: 40px;
     gap: 50px;
     display: flex;
