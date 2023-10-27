@@ -39,3 +39,5 @@
 // console.log(0 >= null);
 
 // loose equality doesn't change null into a number (0)
+
+console.log("ritik" == "ritik")
