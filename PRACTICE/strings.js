@@ -54,5 +54,11 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
 // console.log(statement.endsWith("developer!")); // true
 
 
+
 // console.log(String.fromCharCode(72)); // H
 // console.log(String.fromCodePoint(121)); // y
+
+
+
+console.log(statement.includes("ritik")); //false
+console.log(statement.includes("Ritik")); // true
