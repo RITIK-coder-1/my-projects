@@ -11,7 +11,7 @@
 // console.log(myName === MyName); // false
 
 
-let statement = `Hey! This is Ritik!! Gonna be a top web developer`
+let statement = `Hey! This is Ritik!! Gonna be a top web developer` 
 
 // console.log(statement.length); // number of characters: 49
 
@@ -102,6 +102,26 @@ let statement2 = "ritik"
 // console.log(statement2.padStart(7)); // "  ritik"
 // console.log(statement2.padStart(7, "k")); // kkritik
 // console.log(statement2.padStart(1)); // ritik
+
+
+
+let statement3 = `ritik \ncoder` // "ritik; coder"
+// console.log(String.raw`${statement3}`); // "ritik, coder"
+let raw_string = String.raw`ritik \n coder`
+// console.log(raw_string); // "ritik \n coder"
+
+
+
+// console.log(statement2.repeat(10));
+// console.log(statement.repeat(2222));
+
+
+let truth = `Hey! I'm Ritik! Gonna be a top developer!`
+
+// console.log(truth.repeat(2222));
+
+let statement4 = " -_- "
+// console.log(statement4.repeat(22222)); 
 
 
 
