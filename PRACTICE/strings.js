@@ -60,5 +60,15 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
 
 
 
-console.log(statement.includes("ritik")); //false
-console.log(statement.includes("Ritik")); // true
+// console.log(statement.includes("ritik")); //false
+// console.log(statement.includes("Ritik")); // true
+// console.log(statement.includes("")); // true
+
+
+
+// console.log(statement.indexOf("R")); // 13
+// console.log(statement.indexOf(statement)); // 0
+// console.log("ritik".indexOf("ritik")); // 0
+// console.log("ritik".indexOf("i")); // 1
+// console.log(statement.indexOf("")); // 0
+// console.log(statement.indexOf("zaa")); // -1
