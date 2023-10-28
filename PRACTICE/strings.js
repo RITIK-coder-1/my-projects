@@ -120,8 +120,12 @@ let truth = `Hey! I'm Ritik! Gonna be a top developer!`
 
 // console.log(truth.repeat(2222));
 
-let statement4 = " -_- "
+// let statement4 = " -_- "
 // console.log(statement4.repeat(22222)); 
+
+
+console.log(truth.replace(" ", "-")); // Hey!-I'm Ritik! Gonna be a top developer!
+console.log(truth.replaceAll(" ", "-")); // Hey!-I'm-Ritik!-Gonna-be-a-top-developer!
 
 
 
