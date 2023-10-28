@@ -89,7 +89,20 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer`
 // let a = "ritik"
 // let b = "rtk"
 
-// console.log(b.localeCompare(a));
+// console.log(b.localeCompare(a)); // 1 // rtk is considered greater than ritik
+
+let statement2 = "ritik"
+
+// console.log(statement2.length); // 5
+// console.log(statement2.padEnd(8, "323")); // "ritik323"
+// console.log(statement2.padEnd(6).length); // 6
+// console.log(statement2.padEnd(6, "kt")); // "ritikk"
+
+// console.log(statement2.padStart(6, 1)); // "1ritik"
+// console.log(statement2.padStart(7)); // "  ritik"
+// console.log(statement2.padStart(7, "k")); // kkritik
+// console.log(statement2.padStart(1)); // ritik
+
 
 
 
