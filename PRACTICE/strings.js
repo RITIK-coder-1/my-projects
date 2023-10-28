@@ -72,3 +72,10 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
 // console.log("ritik".indexOf("i")); // 1
 // console.log(statement.indexOf("")); // 0
 // console.log(statement.indexOf("zaa")); // -1
+
+
+
+
+console.log(statement.lastIndexOf("Ritik")); //13
+console.log(statement.lastIndexOf("")); // last index from 1 => 50
+console.log(statement.lastIndexOf("uff")); // -1
