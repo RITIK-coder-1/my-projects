@@ -85,3 +85,12 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer`
 // console.log(statement.lastIndexOf("uff")); // -1
 
 
+
+// let a = "ritik"
+// let b = "rtk"
+
+// console.log(b.localeCompare(a));
+
+
+
+
