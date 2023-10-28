@@ -11,7 +11,10 @@
 // console.log(myName === MyName); // false
 
 
-let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
+let statement = `Hey! This is Ritik!! Gonna be a top web developer`
+
+// console.log(statement.length); // number of characters: 49
+
 
 // console.log(statement[3]); // !
 // console.log(statement[424]); // undefined
@@ -23,6 +26,7 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
 // console.log(statement.charAt(424)); // blank space
 // console.log(statement.charAt(-3)); // blank space
 // console.log(statement.charAt("4")); // blank space
+// console.log(statement.charAt(null)); // null => 0 // H
 // console.log(statement.charAt("b")); // NaN => 0 // H
 
 // console.log(statement.at(49)); // !
@@ -76,6 +80,8 @@ let statement = `Hey! This is Ritik!! Gonna be a top web developer!`
 
 
 
-console.log(statement.lastIndexOf("Ritik")); //13
-console.log(statement.lastIndexOf("")); // last index from 1 => 50
-console.log(statement.lastIndexOf("uff")); // -1
+// console.log(statement.lastIndexOf("Ritik")); //13
+// console.log(statement.lastIndexOf("")); // last index from 1 => 50
+// console.log(statement.lastIndexOf("uff")); // -1
+
+
