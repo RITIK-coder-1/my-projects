@@ -127,6 +127,15 @@ let truth = `Hey! I'm Ritik! Gonna be a top developer!`
 // console.log(truth.replace(" ", "-")); // Hey!-I'm Ritik! Gonna be a top developer!
 // console.log(truth.replaceAll(" ", "-")); // Hey!-I'm-Ritik!-Gonna-be-a-top-developer!
 
+// let a = "ritik coder "
+// console.log(a.replace(" ", "-")); // "ritik-coder "
+// console.log(a.replaceAll(" ", "-")); // "ritik-coder-"
+// console.log(a.replace("", "-")); // "-ritik coder "
+// console.log(truth.replace("", "hh")); // hhHey! I'm Ritik! Gonna be a top developer!
+
+
+console.log(truth.indexOf(" "));
+console.log(truth.search(/ /g));
 
 
 
