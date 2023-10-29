@@ -134,8 +134,8 @@ let truth = `Hey! I'm Ritik! Gonna be a top developer!`
 // console.log(truth.replace("", "hh")); // hhHey! I'm Ritik! Gonna be a top developer!
 
 
-console.log(truth.indexOf(" "));
-console.log(truth.search(/ /g));
+// console.log(truth.indexOf(" ")); // 4
+// console.log(truth.search("")); // 0
 
 let statement4 = "rtk is the shortcut for ritik"
 
