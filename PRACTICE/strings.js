@@ -158,3 +158,19 @@ console.log(string_num + 23);
 
 
 
+let whitespace = "   ritik     "
+
+console.log(whitespace.length);
+console.log(whitespace.trim().length);
+console.log(whitespace.trimStart());
+console.log(whitespace.trimEnd());
+
+console.log(whitespace.valueOf());
+
+let a = new String("ritik")
+console.log(a);
+console.log(a.valueOf());
+console.log(typeof a.valueOf());
+console.log(typeof a);
+
+console.log(a !== a.valueOf());
