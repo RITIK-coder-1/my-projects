@@ -137,6 +137,24 @@ let truth = `Hey! I'm Ritik! Gonna be a top developer!`
 console.log(truth.indexOf(" "));
 console.log(truth.search(/ /g));
 
+let statement4 = "rtk is the shortcut for ritik"
+
+console.log(statement4.slice(-19));
+
+
+console.log(statement4.startsWith("Rtk"));
+console.log(statement4.endsWith("ritik"));
+
+console.log(statement4.substring(0, 19));
+
+console.log(statement4.toUpperCase("rtk"));
+console.log(statement4.toUpperCase);
+
+let num = 234
+let string_num = num.toString()
+console.log(string_num);
+
+console.log(string_num + 23);
 
 
 
