@@ -16,7 +16,9 @@ This project is a hospital landing page website, created as a part of my milesto
 
 - This website is a demonstration project created for my milestone exam. It showcases the design and functionality of a hospital landing page.
 
+## SKILLS/TOOLS Involved:
 
+- HTML5, CSS3
 
 ## Installation
 

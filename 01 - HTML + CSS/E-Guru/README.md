@@ -19,6 +19,10 @@ on formalised teaching with the help of resources.
 
 - This website is for demonstration purposes as part of my milestone exam. You can explore the available features and resources.
 
+## SKILLS/TOOLS Involved:
+
+- HTML5, CSS3
+
 ## Installation
 
 - There is no need to install this project as it's hosted on a test server for evaluation.

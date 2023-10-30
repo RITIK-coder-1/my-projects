@@ -1,30 +1,35 @@
-# NFT Website
+# Pixelab Website
 
 ## Overview
 
-This project is an NFT (Non-Fungible Token) website, created as a part of my milestone exam for PWSkills. Please note that this is not a real NFT marketplace but a student project.
+The Pixelab Website is a personal project created by RITIK as a showcase of my web development skills for the milestone exam conducted by PWSkills. It serves as a portfolio and a platform for creative works. Please note that this is not a professional website but a personal project.
 
 ## Features
+- **information:** This website shows the information related to the company, and how it helps you grow your startup. Different objectives have been listed down.
 
-- **NFT Showcase:** The website displays a collection of NFT artworks, each with detailed information, including name, creator, and description.
+- **Partners:** It showcases the people that are contributing the website along with their specified role.
 
-- **information:** It showcases different users, collections and reasons to work with the company.
+- **reviews:** Some of the users' testimonials have also been showcased.
 
-- **create and sell** You've got the liberty to create and sell your NFTS just with few simple steps by dropping your email.
+- **newsletter** There is a section where you can provide your email to get awesome newsletters every week.
 
 ## Usage
 
-- This website is a demonstration project created for my milestone exam. It showcases the design and basic functionality of an NFT marketplace.
+- This website is a personal project created to display my portfolio and share my creative work. It is not intended for commercial purposes.
+
+## SKILLS/TOOLS Involved:
+
+- HTML5, CSS3, TailwindCSS
 
 ## Installation
 
-- There is no need to install this project as it's a static website hosted for evaluation. Please note that it does not connect to the Ethereum blockchain for real transactions.
+- There is no need to install this project as it's a static website hosted for demonstration purposes.
 
 ## Credits
 
-- This project was created by RITIK for the milestone exam in PWSkills.
+- This project was created by RITIK as a web development project on the milestone exam by PWSkills.
 
 ## Contact
 
-- For any questions or feedback regarding this project, please contact: https://linktr.ee/RITIK_MAHAPATRA
+- Feel free to reach out to me if you have any questions or feedback regarding this project: https://linktr.ee/RITIK_MAHAPATRA
 

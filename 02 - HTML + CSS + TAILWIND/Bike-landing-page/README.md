@@ -16,6 +16,10 @@ This project is a bike landing page website, created as a part of my milestone e
 
 - This website is a demonstration project created for my milestone exam. It showcases the design and functionality of a bike landing page.
 
+## SKILLS/TOOLS Involved:
+
+- HTML5, CSS3, TailwindCSS
+
 ## Installation
 
 - There is no need to install this project as it's a static website hosted for evaluation.

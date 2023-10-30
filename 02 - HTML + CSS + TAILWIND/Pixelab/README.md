@@ -17,6 +17,10 @@ The Pixelab Website is a personal project created by RITIK as a showcase of my w
 
 - This website is a personal project created to display my portfolio and share my creative work. It is not intended for commercial purposes.
 
+## SKILLS/TOOLS Involved:
+
+- HTML5, CSS3, TailwindCSS
+
 ## Installation
 
 - There is no need to install this project as it's a static website hosted for demonstration purposes.
