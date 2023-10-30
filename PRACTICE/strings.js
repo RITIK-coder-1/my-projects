@@ -139,38 +139,56 @@ let truth = `Hey! I'm Ritik! Gonna be a top developer!`
 
 let statement4 = "rtk is the shortcut for ritik"
 
-console.log(statement4.slice(-19));
+// console.log(statement4.slice(0, 2)); // "rt"
+// console.log(statement4.slice(-2)); // "ik"
 
-
-console.log(statement4.startsWith("Rtk"));
-console.log(statement4.endsWith("ritik"));
-
-console.log(statement4.substring(0, 19));
-
-console.log(statement4.toUpperCase("rtk"));
-console.log(statement4.toUpperCase);
-
-let num = 234
-let string_num = num.toString()
-console.log(string_num);
-
-console.log(string_num + 23);
+// let a = "ritik"
+// console.log(a.slice(-3, -1)); // "ti"
+// console.log(a.slice(2, 3)); // "t"
 
 
 
-let whitespace = "   ritik     "
 
-console.log(whitespace.length);
-console.log(whitespace.trim().length);
-console.log(whitespace.trimStart());
-console.log(whitespace.trimEnd());
+// console.log(statement4.startsWith("Rtk")); // false
+// console.log(statement4.endsWith("ritik")); // true
 
-console.log(whitespace.valueOf());
 
-let a = new String("ritik")
-console.log(a);
-console.log(a.valueOf());
-console.log(typeof a.valueOf());
-console.log(typeof a);
 
-console.log(a !== a.valueOf());
+// console.log(statement4.split()); // [ 'rtk is the shortcut for ritik' ]
+// console.log(statement4.split(" ")); // [ 'rtk', 'is', 'the', 'shortcut', 'for', 'ritik' ]
+// console.log(statement4.split("")); // ['r', 't', 'k', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 's', 'h', 'o', 'r', 't', 'c', 'u', 't', ' ', 'f', 'o', 'r', ' ', 'r', 'i', 't', 'i', 'k' ]
+// console.log(statement4.split(" ", 3)); //  [ 'rtk', 'is', 'the' ]
+// console.log(statement4.split(2)); // [ 'rtk is the shortcut for ritik' ]
+
+
+
+
+// console.log(statement4.substring(0, 19));
+
+// console.log(statement4.toUpperCase("rtk"));
+// console.log(statement4.toUpperCase);
+
+// let num = 234
+// let string_num = num.toString()
+// console.log(string_num);
+
+// console.log(string_num + 23);
+
+
+
+// let whitespace = "   ritik     "
+
+// console.log(whitespace.length);
+// console.log(whitespace.trim().length);
+// console.log(whitespace.trimStart());
+// console.log(whitespace.trimEnd());
+
+// console.log(whitespace.valueOf());
+
+// let a = new String("ritik")
+// console.log(a);
+// console.log(a.valueOf());
+// console.log(typeof a.valueOf());
+// console.log(typeof a);
+
+// console.log(a !== a.valueOf());
