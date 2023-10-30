@@ -174,8 +174,15 @@ let statement4 = "rtk is the shortcut for ritik"
 
 
 
-console.log(statement4.toUpperCase("rtk"));
-console.log(statement4.toUpperCase);
+// console.log(statement4.toUpperCase("rtk")); // "RTK IS THE SHORTCUT FOR RITIK"
+// console.log(statement4.toUpperCase()); // "RTK IS THE SHORTCUT FOR RITIK"
+// console.log(statement4.toLowerCase()); // "rtk is the shortcut for ritik"
+
+// console.log(statement4.toLocaleLowerCase("en-US")); // "rtk is the shortcut for ritik"
+// console.log(statement4.toLocaleUpperCase("tr")); // "RTK İS THE SHORTCUT FOR RİTİK"
+
+
+
 
 // let num = 234
 // let string_num = num.toString()
