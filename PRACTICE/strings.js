@@ -186,20 +186,23 @@ let statement4 = "rtk is the shortcut for ritik"
 
 // let num = 234
 // let string_num = num.toString()
-// console.log(string_num);
+// console.log(string_num); // "234"
 
-// console.log(string_num + 23);
+// console.log(string_num + 23); // "23423"
+
 
 
 
 // let whitespace = "   ritik     "
+// let a = "r i ti k"
 
-// console.log(whitespace.length);
-// console.log(whitespace.trim().length);
-// console.log(whitespace.trimStart());
-// console.log(whitespace.trimEnd());
+// console.log(whitespace.length); // 13
+// console.log(whitespace.trim().length); // 5
+// console.log(whitespace.trimStart()); // "ritik    "
+// console.log(whitespace.trimEnd()); // "   ritik"
+// console.log(a.trim()); // "r i ti k" // no reduction of space in between
 
-// console.log(whitespace.valueOf());
+// console.log(whitespace.valueOf()); // "   ritik    "
 
 // let a = new String("ritik")
 // console.log(a);
