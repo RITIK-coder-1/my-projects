@@ -6,7 +6,10 @@ This is the official website for LIQUID, a multi-regulated global broker. The we
 ## Table of Contents
 - [Usage](#usage)
 - [Features](#features)
-- [SKILLS/TOOLS-Involded](#SKILLS/TOOLS-Involded)
+- [Overview](#overview)
+- [Skills/Tools Involved](#skillstools-involved)
+- [Contact](#contact)
+
 
 ## Usage
 
@@ -18,6 +21,14 @@ This is the official website for LIQUID, a multi-regulated global broker. The we
 - Easy navigation: The website includes a navigation bar and sections that provide information about LIQUID   and its services.
 - Tailwind CSS: Styling is done using Tailwind CSS, making it easy to maintain and customize the appearance of the website.
 
-## SKILLS/TOOLS Involded
+## Overview
+
+- The link to the site: https://broker-site.ritik.surge.sh
+
+## SKILLS/TOOLS Involved
 
 - HTML5, TailwindCSS
+
+## Contact
+
+- https://linktr.ee/RITIK_MAHAPATRA

@@ -1,8 +1,21 @@
 # Bike Landing Page Website
 
+## Table of Contents
+- [Bike Landing Page Website](#bike-landing-page-website)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Usage](#usage)
+  - [SKILLS/TOOLS Involved](#skillstools-involved)
+  - [Installation](#installation)
+  - [Credits](#credits)
+  - [Contact](#contact)
+
+
 ## Overview
 
 This project is a bike landing page website, created as a part of my milestone exam for PWSkills. Please note that this is not a real e-commerce website but a student project.
+
+Visit the link: https://bike.ritik.surge.sh
 
 ## Features
 
@@ -18,7 +31,7 @@ This project is a bike landing page website, created as a part of my milestone e
 
 ## SKILLS/TOOLS Involved:
 
-- HTML5, CSS3, TailwindCSS
+- HTML5, TailwindCSS
 
 ## Installation
 

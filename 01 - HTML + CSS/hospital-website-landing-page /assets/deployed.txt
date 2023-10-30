@@ -1,1 +1,0 @@
-the link to the deployed website is: hospital.ritik.surge.sh

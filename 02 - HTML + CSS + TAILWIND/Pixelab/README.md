@@ -1,8 +1,20 @@
 # Pixelab Website
 
+## Table of Contents
+- [Pixelab Website](#pixelab-website)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Usage](#usage)
+  - [SKILLS/TOOLS Involved](#skillstools-involved)
+  - [Installation](#installation)
+  - [Credits](#credits)
+  - [Contact](#contact)
+
 ## Overview
 
 The Pixelab Website is a personal project created by RITIK as a showcase of my web development skills for the milestone exam conducted by PWSkills. It serves as a portfolio and a platform for creative works. Please note that this is not a professional website but a personal project.
+
+Visit the link: http://pixelab.ritik.surge.sh/
 
 ## Features
 - **information:** This website shows the information related to the company, and how it helps you grow your startup. Different objectives have been listed down.
