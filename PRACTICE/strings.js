@@ -107,6 +107,7 @@ let statement2 = "ritik"
 
 let statement3 = `ritik \ncoder` // "ritik; coder"
 // console.log(String.raw`${statement3}`); // "ritik, coder"
+
 let raw_string = String.raw`ritik \n coder`
 // console.log(raw_string); // "ritik \n coder"
 
@@ -146,6 +147,15 @@ let statement4 = "rtk is the shortcut for ritik"
 // console.log(a.slice(-3, -1)); // "ti"
 // console.log(a.slice(2, 3)); // "t"
 
+// console.log(statement4.substring(0, 19)); // "rtk is the shortcut"
+// console.log(statement4.slice(0, 19)); // "rtk is the shortcut"
+// console.log(statement4.substring(19, 0)); // "rtk is the shortcut"
+// console.log(statement4.slice(19, 0)); // ""
+// console.log(statement4.substring(-5, -1)); // ""
+// console.log(statement4.substring(3)); // "is the shortcut for ritik"
+// console.log(statement4.substring(244)); // ""
+// console.log(statement4.slice(0, 244)); // rtk is the shortcut for ritik
+
 
 
 
@@ -163,10 +173,9 @@ let statement4 = "rtk is the shortcut for ritik"
 
 
 
-// console.log(statement4.substring(0, 19));
 
-// console.log(statement4.toUpperCase("rtk"));
-// console.log(statement4.toUpperCase);
+console.log(statement4.toUpperCase("rtk"));
+console.log(statement4.toUpperCase);
 
 // let num = 234
 // let string_num = num.toString()
