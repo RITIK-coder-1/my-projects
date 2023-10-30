@@ -1,1 +1,0 @@
-the link to my deployed file is: http://pixelab.ritik.surge.sh/
