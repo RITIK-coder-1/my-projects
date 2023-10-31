@@ -73,5 +73,13 @@ let e = "ritik"
 
 let f = Infinity
 
-console.log(Number.parseFloat(f)); // Infinity
-console.log(Number.parseInt(f)); // NaN
+// console.log(Number.parseFloat(f)); // Infinity
+// console.log(Number.parseInt(f)); // NaN
+
+
+
+let num11 = 324
+let num12 = 4.2
+
+// console.log(num11.toExponential());
+// console.log(num12.toExponential());
