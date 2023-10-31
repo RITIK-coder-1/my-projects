@@ -70,3 +70,8 @@ let e = "ritik"
 // console.log(Number.parseInt(a)); // 3
 // console.log(Number.parseInt(b)); // 4
 // console.table([Number.parseFloat(c), Number.parseFloat(d),Number.parseFloat(e), Number.parseInt(c), Number.parseInt(d), Number.parseInt(e)]); // NaN
+
+let f = Infinity
+
+console.log(Number.parseFloat(f)); // Infinity
+console.log(Number.parseInt(f)); // NaN
