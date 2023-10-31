@@ -37,3 +37,8 @@ let num6 = 1.21
 // console.log(Number.isInteger(num4)); // false
 // console.log(Number.isInteger(num5)); // false
 // console.log(Number.isInteger(num6)); // false
+
+
+
+// console.log(Number.isNaN(num3)); // false
+// console.log(Number.isNaN(num5)); // true
