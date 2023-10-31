@@ -89,9 +89,15 @@ let num13 = 123.62355
 // console.log(num13.toFixed()); // 124
 // console.log(num13.toFixed(3)); // 123.624
 
+console.log(num13.toPrecision()); // 123.62355
+console.log(num13.toPrecision(3)); // 124
+console.log(num13.toPrecision(4)); // 123.6
+console.log(num13.toPrecision(2)); // 1.2e+2
+
 let num14 = 100000000
 let InternationalNumber = num14.toLocaleString()
 let IndianNumber = num14.toLocaleString("en-IN")
 
 // console.log(InternationalNumber); // 100,000,000
 // console.log(IndianNumber); // 10,00,00,000
+
