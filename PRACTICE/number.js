@@ -58,3 +58,15 @@ let num10 = 1871034873n
 // console.log(Number.isSafeInteger(num10)); // false
 // console.log(Number.isSafeInteger(Infinity)); // false
 // console.log(Number.isSafeInteger(NaN)); // false
+
+
+let a = "3.123"
+let b = "4.97"
+let c = ""
+let d = " "
+let e = "ritik"
+
+// console.log(Number.parseFloat(a)); // 3.123
+// console.log(Number.parseInt(a)); // 3
+// console.log(Number.parseInt(b)); // 4
+// console.table([Number.parseFloat(c), Number.parseFloat(d),Number.parseFloat(e), Number.parseInt(c), Number.parseInt(d), Number.parseInt(e)]); // NaN
