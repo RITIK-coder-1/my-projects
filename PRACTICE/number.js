@@ -83,3 +83,8 @@ let num12 = 4.2
 
 // console.log(num11.toExponential());
 // console.log(num12.toExponential());
+
+let num13 = 123.62355
+
+// console.log(num13.toFixed()); // 124
+// console.log(num13.toFixed(3)); // 123.624
