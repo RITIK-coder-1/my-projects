@@ -101,3 +101,17 @@ let IndianNumber = num14.toLocaleString("en-IN")
 // console.log(InternationalNumber); // 100,000,000
 // console.log(IndianNumber); // 10,00,00,000
 
+
+
+console.log(num14.toString()); // "100000000"
+console.log(typeof num14.toString()); // string
+
+
+
+let ObjectNumber = new Number(234)
+let ObjectValue = ObjectNumber.valueOf()
+
+console.log(ObjectNumber); // [Number: 234]
+console.log(ObjectValue); // 234
+console.log(typeof ObjectValue); // number
+
