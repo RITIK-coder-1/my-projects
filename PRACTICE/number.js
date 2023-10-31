@@ -20,3 +20,14 @@ let num2 = new Number(23) // (Object Number)
 
 
 
+let num3 = 2334
+let num4 = 1/0 // Infinity
+let num5 = "ritik"*2 // NaN
+
+// console.log(Number.isFinite(num3)); // true
+// console.log(Number.isFinite(num4)); // false
+// console.log(Number.isFinite(num5)); // false
+// console.log(Number.isFinite(-Infinity)); // false
+
+
+
