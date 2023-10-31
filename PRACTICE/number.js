@@ -114,4 +114,3 @@ let ObjectValue = ObjectNumber.valueOf()
 console.log(ObjectNumber); // [Number: 234]
 console.log(ObjectValue); // 234
 console.log(typeof ObjectValue); // number
-
