@@ -211,3 +211,10 @@ let statement4 = "rtk is the shortcut for ritik"
 // console.log(typeof a);
 
 // console.log(a !== a.valueOf());
+
+
+// let a = "Hey! "
+// let b = "I'm Ritik"
+// let contatenation = `${a}${b}`
+
+// console.log(contatenation);
