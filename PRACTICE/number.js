@@ -89,10 +89,10 @@ let num13 = 123.62355
 // console.log(num13.toFixed()); // 124
 // console.log(num13.toFixed(3)); // 123.624
 
-console.log(num13.toPrecision()); // 123.62355
-console.log(num13.toPrecision(3)); // 124
-console.log(num13.toPrecision(4)); // 123.6
-console.log(num13.toPrecision(2)); // 1.2e+2
+// console.log(num13.toPrecision()); // 123.62355
+// console.log(num13.toPrecision(3)); // 124
+// console.log(num13.toPrecision(4)); // 123.6
+// console.log(num13.toPrecision(2)); // 1.2e+2
 
 let num14 = 100000000
 let InternationalNumber = num14.toLocaleString()
@@ -103,14 +103,14 @@ let IndianNumber = num14.toLocaleString("en-IN")
 
 
 
-console.log(num14.toString()); // "100000000"
-console.log(typeof num14.toString()); // string
+// console.log(num14.toString()); // "100000000"
+// console.log(typeof num14.toString()); // string
 
 
 
 let ObjectNumber = new Number(234)
 let ObjectValue = ObjectNumber.valueOf()
 
-console.log(ObjectNumber); // [Number: 234]
-console.log(ObjectValue); // 234
-console.log(typeof ObjectValue); // number
+// console.log(ObjectNumber); // [Number: 234]
+// console.log(ObjectValue); // 234
+// console.log(typeof ObjectValue); // number
