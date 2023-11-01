@@ -78,15 +78,3 @@ console.log(myBirthday.setMinutes(35));
 console.log(myBirthday.getMinutes()); // 35
 console.log(myBirthday.toString()); /* "Fri Aug 25 2023 00:35:00 GMT+0530 (India Standard Time)"
 my birthday has been changed because it's an object (non-primitive) */
-
-
-
-
-
-
-
-
-
-
-
-
