@@ -12,6 +12,12 @@ console.log(myDate.getMinutes()); // 17 // 12:17 PM
 console.log(myDate.getMonth()); // 10 (November) // starts from 0
 console.log(myDate.getSeconds());
 console.log(myDate.getTime());
+console.log(Math.floor((myDate.getTime())/1000)); // in seconds
+console.log(Math.floor(myDate.getTime()/60000)); // in minutes
+console.log(Math.floor(myDate.getTime()/(60000*60))); // in hours
+console.log(Math.floor(myDate.getTime()/(60000*60*24))); // in days (19662)
+console.log(Math.floor(myDate.getTime()/(60000*60*24*365))); // in years (53)
+console.log(Math.floor(myDate.getUTCDay())); // 3
 
 let myBirthday = new Date("August 20, 2004, 00:30:00")
 
@@ -26,4 +32,4 @@ console.log(myBirthday.getMilliseconds()); // 0
 console.log(myBirthday.getMinutes()); // 30
 console.log(myBirthday.getMonth()); // 7 (August) // starts from 0
 console.log(myBirthday.getSeconds()); // 0
-console.log(myBirthday.getTime());
+console.log(Math.floor(myBirthday.getTime()/1000)); // in seconds
