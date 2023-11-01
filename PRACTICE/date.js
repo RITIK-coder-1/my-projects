@@ -76,7 +76,7 @@
 
 // MY AGE ----------------------------> 
 
-const myBirthday = new Date("Aug 20, 2004, 00:30:00")
+const myBirthday = new Date("20 Aug, 2004")
 
 const TimeTillNow = Math.floor(Date.now()/(1000 * 60 * 60 * 24 * 365)) // 53 // in years
 
