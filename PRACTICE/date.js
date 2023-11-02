@@ -59,7 +59,7 @@ console.log(Math.floor(myBirthday.valueOf()/(1000*60*60*24*365))); // in years /
 
 
 console.log(myBirthday.getDate()); // 20
-console.log(myBirthday.getDay()); // 5 (Friday)
+console.log(myBirthday.getDay()); // 5 (Friday) // starts from 0 (sunday)
 console.log(myBirthday.getFullYear()); // 2004
 console.log(myBirthday.getHours()); // 0 (12 AM)
 console.log(myBirthday.getMilliseconds()); // 0
