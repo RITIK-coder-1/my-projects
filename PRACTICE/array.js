@@ -93,6 +93,24 @@ let splice2 = a.toSpliced(0, 2) // it takes out values without modifying the ori
 
 const b = a.toReversed()
 
-console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
-console.log(b); // [ 8, 7, 6, 5, 4, 3 ]
+// console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
+// console.log(b); // [ 8, 7, 6, 5, 4, 3 ]
+
+
+const c = a.concat(b)
+
+const d = b.concat(a)
+
+console.log(c);
+// console.log(d);
+
+const e = [...a, ...b]
+
+const f = [...b, ...b]
+
+console.log(e);
+// console.log(f);
+
+console.log(c === e); // false // both of them refer to different memory locations
+
 
