@@ -58,9 +58,36 @@ const Array8 = concat.splice(0, 4) // it modifies the original array
 
 const Array9 = concat.concat([1, 2, 3])
 
-console.log(Array9); // [5, 6, 10, 11, 12, 1, 2, 3]
+// console.log(Array9); // [5, 6, 10, 11, 12, 1, 2, 3]
 
 const Array10 = [22, 33]
 
-console.log(Array10.join(concat));
+// console.log(Array10.join()); "22,33"
+// console.log(Array10.join(" ")); "22 33"
+
+const Array11 = Array10.push(concat)
+
+// console.log(Array10); // [ 22, 33, [ 5, 6, 10, 11, 12 ] ]
+// console.log(Array11); // 3
+
+
+
+// slice vs splice ---------->
+
+const a = [1, 2, 3, 4, 5, 6, 7, 8]
+
+let slice = a.slice(0, 2) // it takes out values without modifying the original array // it shows the cut part
+
+console.log(a); // [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(slice); // [ 1, 2 ]
+
+let splice = a.splice(0, 2) // it takes out values modifying the original array // it shows the cut part
+
+console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
+console.log(splice); // [ 1, 2 ]
+
+let splice2 = a.toSpliced(0, 2) // it takes out values without modifying the original array // it shows the uncut part
+
+console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
+console.log(splice2); // [ 5, 6, 7, 8 ]
 
