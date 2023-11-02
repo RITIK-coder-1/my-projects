@@ -218,3 +218,11 @@ let statement4 = "rtk is the shortcut for ritik"
 // let contatenation = `${a}${b}`
 
 // console.log(contatenation);
+
+
+
+// let newString = "ritik is a web-developer"
+// let ArrString = newString.split(" ")
+
+// console.log(ArrString);
+// console.log(typeof ArrString); // object
