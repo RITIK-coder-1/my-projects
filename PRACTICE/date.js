@@ -78,3 +78,8 @@ console.log(myBirthday.setMinutes(35));
 console.log(myBirthday.getMinutes()); // 35
 console.log(myBirthday.toString()); /* "Fri Aug 25 2023 00:35:00 GMT+0530 (India Standard Time)"
 my birthday has been changed because it's an object (non-primitive) */
+
+
+
+let newDate = new Date(2020, 6, 20, 0, 30, 0).toString() // Mon Jul 20 2020 00:30:00 GMT+0530 (India Standard Time)
+console.log(newDate);
