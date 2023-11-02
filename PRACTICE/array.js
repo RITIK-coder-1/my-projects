@@ -101,16 +101,31 @@ const c = a.concat(b)
 
 const d = b.concat(a)
 
-console.log(c);
+// console.log(c);
 // console.log(d);
 
-const e = [...a, ...b]
+const e = [...a, ...b] // spread operator
 
-const f = [...b, ...b]
+const f = [...b, ...b] // spread operator
 
-console.log(e);
+// console.log(e);
 // console.log(f);
 
-console.log(c === e); // false // both of them refer to different memory locations
+// console.log(c === e); // false // both of them refer to different memory locations
+
+const flat_f = f.flat()
+
+console.log(flat_f); // [ 8, 7, 6, 5, 4, 3, 8, 7, 6, 5, 4, 3]
+
+const nestedArray = [1, 2, 3, [1, 2], [3, 4], [1, 1, [4, 5, [6, 7, [8, 9, [10, 11]]]]]]
+
+const pureArray = nestedArray.flat(Infinity) // [ 1,  2,  3, 1, 2, 3, 4, 1,  1,  4, 5, 6, 7, 8, 9, 10, 11 ]
+
+const flatArray1 = nestedArray.flat(1) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, [ 4, 5, [ 6, 7, [Array] ] ] ]
+const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6, 7, [ 8, 9, [Array] ] ] ]
+
+// console.log(pureArray);
+// console.log(flatArray1);
+// console.log(flatArray2);
 
 
