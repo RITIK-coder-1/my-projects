@@ -137,6 +137,6 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 // console.log(Array.from({name: "ritik"})); // []
 
 
-console.log(Array.of(12)); // [12]
-console.log(Array.of("ritik", 1)); // [ "ritik", 1 ]
+// console.log(Array.of(12)); // [12]
+// console.log(Array.of("ritik", 1)); // [ "ritik", 1 ]
 
