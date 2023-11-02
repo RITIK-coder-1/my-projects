@@ -91,3 +91,8 @@ let splice2 = a.toSpliced(0, 2) // it takes out values without modifying the ori
 // console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
 // console.log(splice2); // [ 5, 6, 7, 8 ]
 
+const b = a.toReversed()
+
+console.log(a); // [ 3, 4, 5, 6, 7, 8 ]
+console.log(b); // [ 8, 7, 6, 5, 4, 3 ]
+
