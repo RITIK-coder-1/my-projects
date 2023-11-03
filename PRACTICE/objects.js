@@ -55,3 +55,9 @@ let symbol2 = {
 // console.log(typeof symbol2["symbol3"]); // number
 // console.log(typeof symbol2[symbol1]); // number
 // console.log(typeof symbol2["symbol1"]); // undefined
+
+Object.freeze(myDetails) // can't change the object now
+
+myDetails.email = "ritik@gmail.com"
+
+console.log(myDetails);
