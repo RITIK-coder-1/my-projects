@@ -56,8 +56,56 @@ let symbol2 = {
 // console.log(typeof symbol2[symbol1]); // number
 // console.log(typeof symbol2["symbol1"]); // undefined
 
-Object.freeze(myDetails) // can't change the object now
+// Object.freeze(myDetails) // can't change the object now
 
-myDetails.email = "ritik@gmail.com"
+// myDetails.email = "ritik@gmail.com"
 
-console.log(myDetails);
+// console.log(myDetails);
+
+myDetails.fullname = {
+    name: "Ritik",
+    surname: "Mahapatra"
+}
+
+
+// console.log(myDetails);
+
+// console.log(myDetails.fullname); // { name: 'Ritik', surname: 'Mahapatra' }
+// console.log(myDetails.fullname.name); // "Ritik"
+
+
+const obj1 = {}
+const obj2 = {}
+
+obj1.id = 234
+obj2.id = 235
+
+console.log(obj1);
+console.log(obj2);
+
+const obj3 = {obj1, obj2}
+
+// console.log(obj3); // { obj1: { id: 234 }, obj2: { id: 235 } }
+
+const fullId = Object.assign({}, obj1, obj2) // {id: 235} // obj2 dominated because of the same key
+const AnotherId = {...obj1, ...obj2} // {id: 235} // the same reason
+
+// console.log(fullId);
+// console.log(AnotherId);
+
+const obj4 = {
+    key1: {
+        name: "ritik"
+    }
+}
+const obj5 = {
+    key2: {
+        surname: "Mahapatra"
+    }
+}
+
+const fullname = {...obj4, ...obj5} // { key1: { name: 'ritik' }, key2: { surname: 'Mahapatra' } }
+const name = {...obj4.key1, ...obj5.key2} // { name: 'ritik', surname: 'Mahapatra' }
+
+// console.log(fullname);
+// console.log(name);
