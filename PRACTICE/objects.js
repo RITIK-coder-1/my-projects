@@ -1,7 +1,7 @@
 const myDetails = {
     name: "Ritik",
     surname: "Mahapatra",
-    age: 19,
+    "age": 19,
     gender: "boy",
     nationality: "Indian",
     email: "ritikprofessional111@gmail.com",
@@ -12,6 +12,8 @@ const myDetails = {
 
 // console.log(myDetails.name); // "Ritik"
 // console.log(myDetails["surname"]); // "Mahapatra"
+
+// console.log(myDetails.age); // 19
 
 // console.log(myDetails["name"].concat(myDetails["surname"])); // "RitikMahapatra"
 // console.log(`My name is: ${myDetails.name} ${myDetails.surname}`); // "My name is: Ritik Mahapatra"
@@ -37,3 +39,14 @@ myDetails["gender"] = "Male"
 myGender = myDetails["gender"] 
 
 // console.log(myGender); // male
+
+
+let symbol1 = Symbol(222)
+
+let symbol2 = {
+    [symbol1]: 333, // accessing a symbol
+    symbol1: 444
+}
+
+// console.log(symbol1); // Symbol(222)
+// console.log(symbol2); // { symbol1: 444, [Symbol(222)]: 333}
