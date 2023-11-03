@@ -80,8 +80,8 @@ const obj2 = {}
 obj1.id = 234
 obj2.id = 235
 
-console.log(obj1);
-console.log(obj2);
+// console.log(obj1);
+// console.log(obj2);
 
 const obj3 = {obj1, obj2}
 
@@ -109,3 +109,39 @@ const name = {...obj4.key1, ...obj5.key2} // { name: 'ritik', surname: 'Mahapatr
 
 // console.log(fullname);
 // console.log(name);
+
+
+
+
+// Arrays with objects ----------->
+
+const Value = [
+    {
+        fullname: {
+            name: "ritik",
+            surname: "mahapatra"
+        }
+    },
+    {
+        email: {
+            firstEmail: "ritikprofessional111@gmail.com",
+            alternateEmail: "ritikmahapatra111@gmail.com"
+        }
+    },
+    {
+        LoggedIn: {
+            today: true,
+            lastLoggedin: new Date("Nov 3, 2023, 1:30").toString()
+        }
+    }
+]
+
+// console.log(Value);
+
+// console.log(Value.at(2));
+
+// console.log(Object.keys(Value[0])); // ["fullname"]
+// console.log(Object.keys(Value)); // ["0", "1", "2"]
+// console.log(Object.values(Value[0])); // [ { name: 'ritik', surname: 'mahapatra' } ]
+// console.log(Object.entries(Value)); // [ [ '0', { fullname: [Object] } ], [ '1', { email: [Object] } ], [ '2', { LoggedIn: [Object] } ] ]
+// console.log(Object.entries(Value[0])); // [ [ 'fullname', { name: 'ritik', surname: 'mahapatra' } ] ]
