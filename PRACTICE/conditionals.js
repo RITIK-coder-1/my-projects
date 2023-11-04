@@ -84,3 +84,22 @@
 // } else if (name === null && name === undefined){
 //     console.log("No Name is given!");
 // }
+
+
+
+// Condition to check even or odd --------->
+
+// let num = 123
+
+// if (num%2 == 0) {
+//     console.log(`The number ${num} is even.`);
+// } else {
+//     console.log(`The number ${num} is odd`);
+// }
+
+
+
+// Condition to check whether passed or failed -------------->
+
+
+
