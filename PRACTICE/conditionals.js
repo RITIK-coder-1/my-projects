@@ -166,3 +166,30 @@
 //     console.log(`The given number is neither a multiple of 3 nor 5!`);
 // }
 
+
+
+
+// Conditions to check if the given string is empty or not
+
+// let str = ""
+
+// if (str.length == 0) {
+//     console.log("The given string is empty!");
+// } else {
+//     console.log(`The given string contains some text! and that is: '${str}'`);
+// }
+
+
+// Conditionals to check if a given number is divisible by both 7 and 3, only by 7, only by 3, or neither ------------>
+
+// let num = 21
+
+// if (num%3 == 0 && num%7 == 0) {
+//     console.log(`The given number '${num}' is divisible both by 3 and 7!`);
+// } else if (num%3 == 0){
+//     console.log(`The given number '${num}' is divisible only by 3!`);
+// } else if (num%7 == 0){
+//     console.log(`The given number '${num}' is divisible only by 7!`);
+// } else {
+//     console.log(`The number '${num}' is neither divisible by 3 nor 7!`);
+// }
