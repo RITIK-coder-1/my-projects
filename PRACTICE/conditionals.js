@@ -193,3 +193,21 @@
 // } else {
 //     console.log(`The number '${num}' is neither divisible by 3 nor 7!`);
 // }
+
+
+
+// Condition to check freezing or boiling point --------------------->
+
+// let temp = 1000
+
+// if (temp == 0) {
+//     console.log("The given temperature has touched the freezing point");
+// } else if (temp < 0) {
+//     console.log("The given temperature has gone below freezing point");
+// } else if (0 < temp && temp < 100){
+//     console.log("The given temperature is somewhere between the freezing and the boiling point");
+// } else if (temp == 100){
+//     console.log("The given temperature has touched the boiling point");
+// } else {
+//     console.log("The given temperature has surpassed the boiling point");
+// }
