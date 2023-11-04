@@ -101,5 +101,11 @@
 
 // Condition to check whether passed or failed -------------->
 
+// const score = 23
 
+// if (score >= 60) {
+//     console.log(`Congratulations! You've passed with ${score} marks!`);
+// } else {
+//     console.log(`Failed: Your score is ${score} and you've failed by ${100 - score} marks`);
+// }
 
