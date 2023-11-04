@@ -71,4 +71,16 @@
 
 
 
+// Condition to check if a name is short or long ------------>
 
+// let name = "Ritik Mahapatra"
+
+// if (name.length == 10) {
+//     console.log(`Your name '${name}' is medium.`);
+// } else if (name.length > 10) {
+//     console.log(`Your name '${name}' is long.`);
+// } else if (name.length < 10){
+//     console.log(`Your name '${name}' is short`);
+// } else if (name === null && name === undefined){
+//     console.log("No Name is given!");
+// }
