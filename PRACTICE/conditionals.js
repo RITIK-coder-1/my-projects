@@ -151,3 +151,18 @@
 // }
 
 
+
+// Condition to check if the given number is a multiple of 3 or 5 or both -------->
+
+// let num = 15
+
+// if (num%3 == 0 && num%5 == 0) {
+//     console.log(`The given number '${num}' is a multiple of both 3 and 5!`);
+// } else if (num%3 == 0) {
+//     console.log(`The given number '${num}' is a multiple of 3.`);
+// } else if (num%5 == 0){
+//     console.log(`The given number '${num}' is a multiple of 5.`);
+// } else {
+//     console.log(`The given number is neither a multiple of 3 nor 5!`);
+// }
+
