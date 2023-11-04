@@ -122,5 +122,32 @@
 // }
 
 
+// Condition to check signed integers ---------------->
+
+// let num = 222
+
+// if (num === 0) {
+//     console.log(`The number is 0!`);
+// } else if (num < 0){
+//     console.log(`The number ${num} is a negative integer!`);
+// } else {
+//     console.log(`The number ${num} is a positive integer!`);
+// }
+
+
+// Condition to check a future leap year or a past leap year ---------->
+
+// const presentYear = 2023;
+// const year = 2025;
+
+// if (((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) && year > presentYear) {
+//     console.log(`${year} is a future leap year!`);
+// } else if (((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) && year < presentYear) {
+//     console.log(`${year} is a past leap year!`);
+// } else if (year === presentYear) {
+//     console.log("The given year is the present year!");
+// } else {
+//     console.log(`${year} is not a leap year.`);
+// }
 
 
