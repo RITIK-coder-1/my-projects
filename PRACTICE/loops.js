@@ -4,7 +4,10 @@
 //     console.log(num);    
 // }
 
-for (let num = 0; num <= 20 && num%2 == 0; num++) {
-    console.log(num);
-}
+
+// Lopp to print first 10 even number ---------->
+
+// for (let num = 0; num <= 20; num+= 2) {
+//     console.log(num);
+// }
 
