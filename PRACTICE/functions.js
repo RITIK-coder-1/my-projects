@@ -11,8 +11,11 @@
 // console.log(multiply(33,4)); // 132
 
 
-function fun(name, surname){
-    console.log(`My name is: ${name} ${surname}.`);
-}
+// function fun(name, surname){
+//     let statement = `My name is: ${name} ${surname}.`
+//     return statement
+// }
 
-fun("Ritik", "Mahapatra")
+// let statement1 = fun("Ritik", "Mahapatra")
+
+// console.log(statement1);
