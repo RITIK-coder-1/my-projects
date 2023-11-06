@@ -114,3 +114,14 @@
 
 // DisplayObjectName(myDetails)
 // DisplayObjectName(myDidi)
+
+
+// const arr = [1, 2, 3, 4, 5, 6]
+
+// function lastArrayValue(anyArray) {
+//     let statement = `the last value of the array is: ${anyArray[(anyArray.length) - 1]}`
+//     console.log(statement);
+//     return statement
+// }
+
+// lastArrayValue(arr)
