@@ -28,3 +28,12 @@
 // }
 
 // Greet("Ritik")
+
+// Adding Function -------------------->
+
+// function Add(num1, num2) {
+//     return num1 + num2
+// }
+
+// const Add1 = Add(3, 4)
+// console.log(Add1);
