@@ -19,3 +19,12 @@
 // let statement1 = fun("Ritik", "Mahapatra")
 
 // console.log(statement1);
+
+
+// Greet Function ------------------->
+
+// function Greet(name) {
+//     console.log(`Namaste! ${name}`);
+// }
+
+// Greet("Ritik")
