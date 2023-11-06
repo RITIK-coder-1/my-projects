@@ -37,3 +37,42 @@
 
 // const Add1 = Add(3, 4)
 // console.log(Add1);
+
+// AGE Function ----------------->
+
+// function myAge(birthday, currentYear) {
+//     return currentYear - birthday
+// }
+
+// const Age1 = myAge(2004, 2023)
+// console.log(Age1);
+
+// Farheneit to Celsius ----------------->
+
+// function fahrenheitToCelsius(num) {
+//     return (num - 32) * 5/9 + "Celsius"
+// }
+
+// const degreeInCelsius = fahrenheitToCelsius(20)
+
+// console.log(degreeInCelsius);
+
+// Even or Odd ----------------->
+
+// function isEven(num) {
+//    if (num % 2 == 0) {
+//         return `the number ${num} is even`
+//     } else {
+//         return `the number ${num} is odd`
+//     }
+// }
+
+// const num1 = isEven(2)
+
+// console.log(num1);
+
+// reverse a string -------------------->
+
+function reverseString(name) {
+    
+}
