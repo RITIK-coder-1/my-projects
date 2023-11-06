@@ -70,9 +70,3 @@
 // const num1 = isEven(2)
 
 // console.log(num1);
-
-// reverse a string -------------------->
-
-function reverseString(name) {
-    
-}
