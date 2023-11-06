@@ -70,3 +70,28 @@
 // const num1 = isEven(2)
 
 // console.log(num1);
+
+
+
+// function numbers(...num) {
+//     return num
+// }
+
+// console.log(numbers(1, 2, 3, 4)); // [1, 2, 3, 4]
+
+// function numbers(num1, num2, ...num){
+//     return num
+// }
+
+// console.log(numbers(1, 2, 3, 4, 5)); // [3, 4, 5] // 1 went into num1 and 2 went into num2 // we haven't returned num1 and num2
+
+
+function numbers(num1, num2, ...num) {
+    console.log(num1, num2, num);
+    return [num1, num2, num];
+}
+
+const result = numbers(1, 2, 3, 4, 5); // 1 2 [3, 4, 5]
+console.log(result); // [1, 2, [3, 4, 5]]
+
+
