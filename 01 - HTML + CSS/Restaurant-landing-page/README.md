@@ -2,6 +2,8 @@
 
 A visually appealing landing page for a restaurant. This project showcases a simple, yet elegant design for a restaurant's online presence.
 
+Visit the link: restaurant.ritik.surge.sh
+
 ## Table of Contents
 - [Demo](#demo)
 - [Features](#features)
