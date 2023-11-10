@@ -12,7 +12,15 @@ if (12n){
 if (Symbol(1)){
     console.log("Symbol is truthy");
 }
-
+if ([12] && []){
+    console.log("Array is truthy");
+}
+if ({name: "ritik"} && {}){
+    console.log("Object is truhty");
+}
+if (function name(params) {}){
+    console.log("Function is truthy");
+}
 // Falsy values:
 
 if (null) {
