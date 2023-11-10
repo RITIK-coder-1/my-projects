@@ -28,3 +28,15 @@ if (arrayNumber === false){
 
 // console.log(arrow3(["ritik", 1, null]));
 // console.log(arrow3(["ritik"]));
+
+const acc = {
+    principal: 5000,
+    rate: 8/100,
+    time: 2
+}
+
+const interest = (anyAccount) => anyAccount["principal"] * anyAccount["rate"] * anyAccount["time"]
+const amount = (anyAccount) => anyAccount["principal"] + interest(anyAccount)
+
+// console.log(interest(acc));
+// console.log(amount(acc));
