@@ -8,11 +8,20 @@ const arrow2 = (anyString) => `${anyString} has ${anyString.length} number of ch
 // console.log(arrow2("sonali"));
 
 const arrow3 = (anyArray) => {
+    let arrayNumber = false
     for (let index = 0; index < anyArray.length; index++) {
         if (typeof anyArray[index] === 'number') {
+            arrayNumber = true
+        }
+        if (arrayNumber){
             console.log(`The array [${anyArray}] has got number element(s) and the element(s): ${anyArray[index]}}`);
-        } 
+        }
+} 
+if (arrayNumber === false){
+    console.log(`The array [${anyArray}] has got no number elements`);
 }
+
 }
 
 // console.log(arrow3(["ritik", 1, null]));
+// console.log(arrow3(["ritik"]));
