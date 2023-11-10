@@ -18,7 +18,7 @@ if ([12] && []){
 if ({name: "ritik"} && {}){
     console.log("Object is truhty");
 }
-if (function name(params) {}){
+if (function () {}){
     console.log("Function is truthy");
 }
 
