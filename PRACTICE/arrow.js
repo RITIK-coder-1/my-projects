@@ -6,6 +6,9 @@ const arrow2 = (anyString) => `${anyString} has ${anyString.length} number of ch
 
 // console.log(arrow2("ritik"));
 // console.log(arrow2("sonali"));
+// console.log(arrow2("sushma"));
+// console.log(arrow2("sunena"));
+// console.log(arrow2("bijay"));
 
 const arrow3 = (anyArray) => {
     let arrayNumber = false
