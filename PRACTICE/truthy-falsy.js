@@ -21,6 +21,7 @@ if ({name: "ritik"} && {}){
 if (function name(params) {}){
     console.log("Function is truthy");
 }
+
 // Falsy values:
 
 if (null) {
@@ -32,6 +33,9 @@ if (undefined){
 if (""){
     console.log("empty-string is truhty");
 }
-if (0){
-    console.log("0 is truhty");
+if (0 || -0 || 0n){
+    console.log("0 is truthy");
+}
+if (NaN){
+    console.log("NaN is truthy");
 }
