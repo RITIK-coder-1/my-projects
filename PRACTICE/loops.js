@@ -1,4 +1,4 @@
-// Loop to prin the first 10 natural numbers -------->
+// Loop to print the first 10 natural numbers -------->
 
 // for (let num = 1; num <= 10; num++) {
 //     console.log(num);    
