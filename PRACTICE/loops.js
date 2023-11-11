@@ -5,7 +5,7 @@
 // }
 
 
-// Lopp to print first 10 even number ---------->
+// Loop to print first 10 even number ---------->
 
 // for (let num = 0; num <= 20; num+= 2) {
 //     console.log(num);
