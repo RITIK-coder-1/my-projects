@@ -211,3 +211,14 @@
 // } else {
 //     console.log("The given temperature has surpassed the boiling point");
 // }
+
+
+// let temp = null 
+
+// if (typeof temp === 'number') {
+//     if (temp < 20) {
+//         console.log("it's cold");
+//     } else {
+//         console.log("it's hot");
+//     }
+// }
