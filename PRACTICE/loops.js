@@ -34,6 +34,16 @@
 // }
 
 
+// const arr = [{name: "ritik"}]
+
+// function iterator(anyArray){
+// for (const element of anyArray) {
+//     console.log(element.name);
+// }
+// }
+
+// iterator(arr)
+
 
 
 
