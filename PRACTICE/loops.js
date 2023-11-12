@@ -44,6 +44,26 @@
 
 // iterator(arr)
 
+const arr = [{
+    name: "ritik",
+    age: 19
+},
+{
+    name: "sonali",
+    age: 22
+}]
+
+for (const element of arr) {
+
+        if ("name" in element && "age" in element){
+            if (element.age > 20){
+                console.log(element);
+            }
+        }
+
+}
+
+
 
 
 
