@@ -27,6 +27,12 @@
 //     console.log(i++);
 // }
 
+// const arr = [1, 2]
+
+// for (const element of arr) {
+//     console.log(element);
+// }
+
 
 
 
