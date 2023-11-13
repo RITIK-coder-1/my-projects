@@ -142,6 +142,7 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 
 
 const arr1 = [1]
+
 const push = arr1.push(1, [2])
 
 // console.log(push); // 3
@@ -156,3 +157,10 @@ const pop = arr1.pop()
 
 // console.log(pop); // [ 2 ]
 // console.log(arr1); // [ 6, 1, 1 ]
+// console.log(arr1.pop(2)); // 1 // doesn't matter what the input is // it stores the removed element
+
+const shift = arr1.shift()
+
+// console.log(shift); // 6
+// console.log(arr1); // [ 1, 1 ]
+// console.log(arr1.shift(2)); // 1 // doesn't mattet what the input is // it stores the removed element
