@@ -174,6 +174,10 @@ const obj = {
 // console.log(obj["Email ID"].main);
 // console.log(obj[Sym]);
 
+delete obj["Email ID"].alternate
+
+// console.log(obj);
+
 const fullName = {
     name: "ritik",
     surname: "mahapatra"
@@ -202,3 +206,9 @@ fullName.name = "kitir"
 // console.log(Object.keys(fullName)); // ['name', 'surname']
 // console.log(Object.values(fullName)); // ['Ritik', 'Mahapatra']
 // console.log(Object.entries(fullName)); // [['name', 'Ritik'], ['surname', 'Mahapatra']]
+
+const method = {
+    greet: () => {console.log("Hello!");}
+}
+
+method.greet() // "Hello!" // Object Method
