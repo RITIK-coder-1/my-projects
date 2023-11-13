@@ -199,7 +199,9 @@ const arrFlat1 = arr3.flat()
 const arrFlat2 = arr3.flat(2)
 const arrFlat3 = arr3.flat(Infinity)
 
-// console.log(arr3.join()); // 1,2,3,1,2,1,2,,3,4,4
+console.log(arr3.join("-")); // 1-2-3-1,2,1,2,3,4,4
+console.log(arr3.toString()); // 1,2,3,1,2,1,2,3,4,4
+console.log(arr3.flat(Infinity).join("-")); // 1-2-3-1-2-1-2-3-4-4
 
 // console.log(arrFlat1); // [ 1, 2, 3, 1, 2, [ 1, 2, [ 3, 4, [Array] ] ] ]
 // console.log(arrFlat2); // [ 1, 2, 3, 1, 2, 1, 2, [ 3, 4, [ 4 ] ] ]
