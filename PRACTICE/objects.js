@@ -181,7 +181,11 @@ const fullName = {
 const age = {
     age: 19
 }
+const email = {
+    email: "ritik@gmail.com"
+}
 
+// console.log(Object.assign({}, fullName, age, email));
 // console.log({...fullName, ...age});
 
 fullName.name = "Ritik"
@@ -194,3 +198,7 @@ Object.freeze(fullName)
 fullName.name = "kitir"
 
 // console.log(fullName);
+
+// console.log(Object.keys(fullName)); // ['name', 'surname']
+// console.log(Object.values(fullName)); // ['Ritik', 'Mahapatra']
+// console.log(Object.entries(fullName)); // [['name', 'Ritik'], ['surname', 'Mahapatra']]
