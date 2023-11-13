@@ -152,3 +152,15 @@ function greet3(name){
 // let Hello3 = greet3("ritik") // hello! ritik 
 // console.log(Hello3); // hello! ritik
 
+function take(...num){
+    return num
+}
+
+// console.log(take(2, 3)) // [2, 3]
+
+function input(num1, num2, ...num){
+    console.log(num1, num2, num);
+}
+
+input(1, 2, 3, 4) // 1 2 [3, 4]
+
