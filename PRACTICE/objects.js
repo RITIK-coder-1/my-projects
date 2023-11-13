@@ -233,3 +233,16 @@ Object.assign(three, four);
 
 // console.log(three); // { name: 'ritik', age: 19 } // modified
 // console.log(four); // 19
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Destructured Object
+
+const Obj = {
+    myName: "ritik",
+    myAge: 19
+}
+  
+let { myName: Name } = Obj;
+
+console.log(Name);
