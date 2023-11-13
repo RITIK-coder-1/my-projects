@@ -217,3 +217,19 @@ const add = [...arr4, ...arr5]
 
 // console.log(Array.isArray("ritik")); // false
 // console.log(Array.isArray([1])); // true 
+
+// console.log(Array.from("ritik")); // [ 'r', 'i', 't', 'i', 'k' ]
+// console.log(Array.of("ritik", 1)); // [ 'ritik', 1 ]
+
+
+const arr6 = [1, 2, 3, 4]
+
+const reversed = arr6.reverse()
+
+// console.log(reversed); // [4, 3, 2, 1]
+// console.log(arr6); // [4, 3, 2, 1] // changes the original array
+
+const toReversed = arr6.toReversed()
+
+// console.log(toReversed); // [1, 2, 3, 4]
+// console.log(arr6); // [4, 3, 2, 1] // doesn't change the original array
