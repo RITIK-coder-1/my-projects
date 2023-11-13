@@ -162,11 +162,17 @@ function input(num1, num2, ...num){
     console.log(num1, num2, num);
 }
 
-input(1, 2, 3, 4) // 1 2 [3, 4]
+// input(1, 2, 3, 4) // 1 2 [3, 4]
 
 const square = function(num){ // Function Expression
     return num*num
 }
 
 // console.log(square(4)) // 16
+
+// ritik() // Hoisting
+
+function ritik() {
+    console.log("my name");
+}
 
