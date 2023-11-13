@@ -183,3 +183,8 @@ const age = {
 }
 
 // console.log({...fullName, ...age});
+
+fullName.name = "Ritik"
+fullName.surname = "Mahapatra"
+
+// console.log(fullName);
