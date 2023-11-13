@@ -212,3 +212,10 @@ const method = {
 }
 
 // method.greet() // "Hello!" // Object Method
+
+const one = {name: "ritik"}
+const two = {name: "Ritik"}
+
+console.log({...one, ...two}); // {name: "Ritik"} // the second object dominated cuz of same key name
+console.log({...two, ...one}); // {name: "ritik"} // the same reason
+console.log(Object.assign({}, one, two)); // {name: "Ritik"} // the same reason
