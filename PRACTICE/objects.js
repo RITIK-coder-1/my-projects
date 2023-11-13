@@ -216,6 +216,20 @@ const method = {
 const one = {name: "ritik"}
 const two = {name: "Ritik"}
 
-console.log({...one, ...two}); // {name: "Ritik"} // the second object dominated cuz of same key name
-console.log({...two, ...one}); // {name: "ritik"} // the same reason
-console.log(Object.assign({}, one, two)); // {name: "Ritik"} // the same reason
+// console.log({...one, ...two}); // {name: "Ritik"} // the second object dominated cuz of same key name
+// console.log({...two, ...one}); // {name: "ritik"} // the same reason
+// console.log(Object.assign({}, one, two)); // {name: "Ritik"} // the same reason
+
+// console.log(one); // "ritik"
+
+Object.assign(one, two)
+
+// console.log(one); // "Ritik" // modified
+
+const three = {name: "ritik"}
+const four = {age: 19}
+
+Object.assign(three, four);
+
+// console.log(three); // { name: 'ritik', age: 19 } // modified
+// console.log(four); // 19
