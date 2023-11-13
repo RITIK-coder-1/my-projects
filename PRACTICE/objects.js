@@ -188,3 +188,9 @@ fullName.name = "Ritik"
 fullName.surname = "Mahapatra"
 
 // console.log(fullName);
+
+Object.freeze(fullName)
+
+fullName.name = "kitir"
+
+// console.log(fullName);
