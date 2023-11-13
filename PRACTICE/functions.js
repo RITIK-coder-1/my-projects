@@ -125,3 +125,30 @@
 // }
 
 // lastArrayValue(arr)
+
+
+function greet(name){
+    console.log(`Hello! ${name}`);
+}
+
+// greet() // Hello! undefined
+// greet("Ritik") 
+
+// let Hello = greet("Ritik") // Hello! Ritik
+// console.log(Hello); // undefined
+
+function greet2(name){
+    return `Hello! ${name}`
+}
+
+// let Hello2 = greet2("ritik")
+// console.log(Hello2); // Hello! ritik
+
+function greet3(name){
+    let statement = `hello! ${name}`
+    console.log(statement);
+    return statement
+}
+// let Hello3 = greet3("ritik") // hello! ritik 
+// console.log(Hello3); // hello! ritik
+
