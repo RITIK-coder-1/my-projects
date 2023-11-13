@@ -191,7 +191,12 @@ const toSpli = arr2.toSpliced(0, 2)
 // console.log(toSpli); // [5, 6]
 // console.log(arr2); // [3, 4, 5, 6]
 
-const arrFlat = arr2.flat()
 
-// console.log(arrFlat);
-// console.log(arr2);
+const arr3 = [1, 2, 3, [1, 2, [1, 2, [3, 4, [4]]]]]
+const arrFlat1 = arr3.flat()
+const arrFlat2 = arr3.flat(2)
+const arrFlat3 = arr3.flat(Infinity)
+
+// console.log(arrFlat1); // [ 1, 2, 3, 1, 2, [ 1, 2, [ 3, 4, [Array] ] ] ]
+// console.log(arrFlat2); // [ 1, 2, 3, 1, 2, 1, 2, [ 3, 4, [ 4 ] ] ]
+// console.log(arrFlat3); // [ 1, 2, 3, 1, 2, 1, 2, 3, 4, 4 ]
