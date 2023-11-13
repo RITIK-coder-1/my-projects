@@ -164,3 +164,11 @@ const shift = arr1.shift()
 // console.log(shift); // 6
 // console.log(arr1); // [ 1, 1 ]
 // console.log(arr1.shift(2)); // 1 // doesn't mattet what the input is // it stores the removed element
+
+
+const arr2 = [0, 1, 2, 3, 4, 5, 6]
+
+const con1 = arr2.concat(7, 8, [9, 10])
+
+console.log(con1); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(arr2); // [0, 1, 2, 3, 4, 5, 6] // unchanged
