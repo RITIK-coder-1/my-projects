@@ -145,3 +145,41 @@ const Value = [
 // console.log(Object.values(Value[0])); // [ { name: 'ritik', surname: 'mahapatra' } ]
 // console.log(Object.entries(Value)); // [ [ '0', { fullname: [Object] } ], [ '1', { email: [Object] } ], [ '2', { LoggedIn: [Object] } ] ]
 // console.log(Object.entries(Value[0])); // [ [ 'fullname', { name: 'ritik', surname: 'mahapatra' } ] ]
+
+
+Sym = Symbol("RITIK")
+let nat = "Nationality"
+
+const obj = {
+    fullname: {
+        name: "ritik",
+        surname: "mahapatra"
+    },
+    "Email ID": {
+        main: "ritikprofessional111@gmail.com",
+        alternate: "ritikmahapatra11@gmail.com"
+    },
+    age: 19,
+    [Sym]: "ritik",
+    [nat]: "Indian"
+}
+
+// console.log(obj);
+
+// console.log(obj[nat]);
+
+// console.log(obj.fullname);
+// console.log(obj.fullname.name);
+
+// console.log(obj["Email ID"].main);
+// console.log(obj[Sym]);
+
+const fullName = {
+    name: "ritik",
+    surname: "mahapatra"
+}
+const age = {
+    age: 19
+}
+
+// console.log({...fullName, ...age});
