@@ -144,5 +144,10 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 const arr1 = [1]
 const push = arr1.push(1, [2])
 
-console.log(push); // 3
-console.log(arr1); // [ 1, 1, [2] ]
+// console.log(push); // 3
+// console.log(arr1); // [ 1, 1, [2] ]
+
+const unshift = arr1.unshift(6)
+
+// console.log(unshift); // 4
+// console.log(arr1); // [ 6, 1, 1, [2] ]
