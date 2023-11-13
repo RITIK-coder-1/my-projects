@@ -245,4 +245,11 @@ const Obj = {
   
 let { myName: Name } = Obj;
 
-console.log(Name);
+// console.log(Name);
+
+// JSON API --->
+
+// {
+//     "name" : "ritik",
+//     "id" : "1234"
+// }
