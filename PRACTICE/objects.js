@@ -211,4 +211,4 @@ const method = {
     greet: () => {console.log("Hello!");}
 }
 
-method.greet() // "Hello!" // Object Method
+// method.greet() // "Hello!" // Object Method
