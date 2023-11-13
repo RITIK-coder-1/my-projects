@@ -143,6 +143,9 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 
 const arr1 = [1]
 
+// console.log(arr1[0]);
+// console.log(arr1.at(0));
+
 const push = arr1.push(1, [2])
 
 // console.log(push); // 3
@@ -187,3 +190,8 @@ const toSpli = arr2.toSpliced(0, 2)
 
 // console.log(toSpli); // [5, 6]
 // console.log(arr2); // [3, 4, 5, 6]
+
+const arrFlat = arr2.flat()
+
+// console.log(arrFlat);
+// console.log(arr2);
