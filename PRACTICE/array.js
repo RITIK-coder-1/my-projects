@@ -151,3 +151,8 @@ const unshift = arr1.unshift(6)
 
 // console.log(unshift); // 4
 // console.log(arr1); // [ 6, 1, 1, [2] ]
+
+const pop = arr1.pop()
+
+// console.log(pop); // [ 2 ]
+// console.log(arr1); // [ 6, 1, 1 ]
