@@ -115,7 +115,7 @@ const f = [...b, ...b] // spread operator
 
 const flat_f = f.flat()
 
-console.log(flat_f); // [ 8, 7, 6, 5, 4, 3, 8, 7, 6, 5, 4, 3]
+// console.log(flat_f); // [ 8, 7, 6, 5, 4, 3, 8, 7, 6, 5, 4, 3]
 
 const nestedArray = [1, 2, 3, [1, 2], [3, 4], [1, 1, [4, 5, [6, 7, [8, 9, [10, 11]]]]]]
 
@@ -140,3 +140,9 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 // console.log(Array.of(12)); // [12]
 // console.log(Array.of("ritik", 1)); // [ "ritik", 1 ]
 
+
+const arr1 = [1]
+const push = arr1.push(1, [2])
+
+console.log(push); // 3
+console.log(arr1); // [ 1, 1, [2] ]
