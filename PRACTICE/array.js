@@ -143,8 +143,10 @@ const flatArray2 = nestedArray.flat(2) // [ 1, 2, 3, 1, 2, 3, 4, 1, 1, 4, 5, [ 6
 
 const arr1 = [1]
 
-// console.log(arr1[0]);
-// console.log(arr1.at(0));
+// console.log(arr1[0]); // 1
+// console.log(arr1.at(0)); // 1
+// console.log(arr1.indexOf(1)); // 0
+// console.log(arr1.includes(1)); // true 
 
 const push = arr1.push(1, [2])
 
@@ -200,3 +202,16 @@ const arrFlat3 = arr3.flat(Infinity)
 // console.log(arrFlat1); // [ 1, 2, 3, 1, 2, [ 1, 2, [ 3, 4, [Array] ] ] ]
 // console.log(arrFlat2); // [ 1, 2, 3, 1, 2, 1, 2, [ 3, 4, [ 4 ] ] ]
 // console.log(arrFlat3); // [ 1, 2, 3, 1, 2, 1, 2, 3, 4, 4 ]
+
+
+const arr4 = [1, 2]
+const arr5 = [3, 4]
+
+// console.log(...arr4); // 1 2
+// console.log(...arr5); // 3 4
+
+const add = [...arr4, ...arr5]
+// console.log(add); [1, 2, 3, 4]
+
+// console.log(Array.isArray("ritik")); // false
+// console.log(Array.isArray([1])); // true 
