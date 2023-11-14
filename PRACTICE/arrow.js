@@ -47,7 +47,7 @@ function add1(num1, num2){ // normal function
     return add
 }
 
-add1(4, 5) // 9
+// add1(4, 5) // 9
 
 const add2 = (num1, num2) => { // arrow function
     const add = num1 + num2
@@ -55,8 +55,11 @@ const add2 = (num1, num2) => { // arrow function
     return add
 }
 
-add2(4, 5) // 9
+// add2(4, 5) // 9
 
-const add3 = (num1, num2) => num1 + num2 // arrow function
+const add3 = (num1, num2) => num1 + num2 // implicitely returned // arrow function
 
-console.log(add3(4, 5)) // 9
+// console.log(add3(4, 5)) // 9
+
+const myName = name => console.log(name);
+// myName("Ritik") // Ritik
