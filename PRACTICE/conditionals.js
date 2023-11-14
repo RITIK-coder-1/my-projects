@@ -227,8 +227,21 @@
 
 // condition ? true statement : else statement 
 
-let temp = null
+// let temp = null
 
 // temp < 30 ? console.log("yes") : console.log("no");
 
 // typeof temp === 'number' ?  temp < 30 ? console.log("yes") : console.log("no") : console.log("enter a number!");
+
+
+// Nullish Coalescing Operator ----------------------->
+
+let num1 = 1 ?? 3 // 1
+let num2 = 1 ?? 3 ?? 5 // 1
+let num3 = null ?? 5 // 5
+let num4 = undefined ?? "ritik" // "ritik"
+let num5 = null ?? undefined // undefined
+let num6 = undefined ?? null // null
+let num7 = null ?? 5 ?? 10 // 5
+
+console.log(num1, num2, num3, num4, num5, num6, num7);
