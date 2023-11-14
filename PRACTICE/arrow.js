@@ -68,3 +68,14 @@ const add4 = (num1, num2) => {return num1 + num2}
 
 const myName = name => console.log(name);
 // myName("Ritik") // Ritik
+
+// Returning Object ---->
+
+const returnObject1 = object => {name: "ritik"}
+// console.log(returnObject1()) // undefined
+
+const returnObject2 = object => {return {name: "ritik"}}
+// console.log(returnObject2()); // {name: "ritik"}
+
+const returnObject3 = object => ({name: "ritik"})
+// console.log(returnObject3()); // name: "ritik"
