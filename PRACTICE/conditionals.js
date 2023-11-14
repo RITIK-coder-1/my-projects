@@ -236,6 +236,9 @@
 
 // Nullish Coalescing Operator ----------------------->
 
+// convenient way to handle default values when dealing with potentially null or undefined variables. (The nullish coalescing operator returns the right-hand operand when the left-hand operand is null or undefined; otherwise, it returns the left-hand operand. This is useful for providing default values in situations where null or undefined should be treated differently from other falsy values like 0 or an empty string.)
+
+
 let num1 = 1 ?? 3 // 1
 let num2 = 1 ?? 3 ?? 5 // 1
 let num3 = null ?? 5 // 5
