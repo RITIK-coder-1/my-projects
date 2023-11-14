@@ -61,5 +61,10 @@ const add3 = (num1, num2) => num1 + num2 // implicitely returned // arrow functi
 
 // console.log(add3(4, 5)) // 9
 
+const add4 = (num1, num2) => {return num1 + num2}
+
+// console.log(add4(4,5)); // 9
+
+
 const myName = name => console.log(name);
 // myName("Ritik") // Ritik
