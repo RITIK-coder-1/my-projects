@@ -222,3 +222,13 @@
 //         console.log("it's hot");
 //     }
 // }
+
+// Ternary Operator ----------------------->
+
+// condition ? true statement : else statement 
+
+let temp = null
+
+// temp < 30 ? console.log("yes") : console.log("no");
+
+// typeof temp === 'number' ?  temp < 30 ? console.log("yes") : console.log("no") : console.log("enter a number!");
