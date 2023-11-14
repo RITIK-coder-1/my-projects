@@ -46,8 +46,25 @@ if (true) {
 
 // console.log(a); // undefined // can be hoisted with var
 // console.log(b); // ERROR // can't be hoisted with let
-// console.log(c); // ERROR // can't be hoisted with const
+// console.log(five); // ERROR // can't be hoisted with const
 var a = 3
 let b = 4
-const c = 5
+const five = 5
+
+// Function Scope ----------------->
+
+function add(num1, num2) {
+    var addition = num1 + num2
+    return addition
+}
+
+// console.log(addition); // ERROR // var is function scoped
+
+if (true) {
+    var one = 1
+    let two = 2
+}
+
+// console.log(one); // 1 // var is not block scoped
+// console.log(two); // ERROR
 
