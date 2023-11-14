@@ -247,4 +247,4 @@ let num5 = null ?? undefined // undefined
 let num6 = undefined ?? null // null
 let num7 = null ?? 5 ?? 10 // 5
 
-console.log(num1, num2, num3, num4, num5, num6, num7);
+// console.log(num1, num2, num3, num4, num5, num6, num7);
