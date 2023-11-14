@@ -32,3 +32,12 @@ for (const key in obj1) {
     // console.log(key);
     // console.log(obj1[key]);
 }
+
+const arr4 = ["one", "two", "three"]
+
+arr4.forEach( function (element){
+    // console.log(element);
+})
+
+// arr4.forEach((elm) => console.log(elm))
+
