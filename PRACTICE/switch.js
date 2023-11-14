@@ -98,3 +98,20 @@
 // } else {
 //     console.log("Your grade cannot be evaluated");
 // }
+
+
+let temp = null
+
+if (typeof temp === 'number') {
+    switch (temp) {
+        case temp > 20:
+            console.log("hot");
+            break;
+        default:
+            console.log("cold");
+            break;
+    }
+} else {
+    console.log("please enter a number!");
+}
+
