@@ -44,3 +44,10 @@ if (true) {
 // console.log(num2); // ERROR
 // console.log(num3); // ERROR
 
+// console.log(a); // undefined // can be hoisted with var
+// console.log(b); // ERROR // can't be hoisted with let
+// console.log(c); // ERROR // can't be hoisted with const
+var a = 3
+let b = 4
+const c = 5
+
