@@ -130,6 +130,27 @@ for(i = 1; i < 20; i++){
 }
 
 
+// WHILE LOOP -------------->
+
+let num = 0
+while (num <= 20) {
+    // console.log(num);
+    num++
+}
+
+function evenNumbers(number){
+let num = 0
+while (num <= number) {
+    if (num % 2 === 0) {
+        console.log(num);
+    }
+    num++
+}
+}
+
+// evenNumbers(20)
+// evenNumbers(30)
+
 
 
 
