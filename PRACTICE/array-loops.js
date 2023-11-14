@@ -29,6 +29,6 @@ const obj1 = {
 // }
 
 for (const key in obj1) {
-    console.log(key);
-    console.log(obj1[key]);
+    // console.log(key);
+    // console.log(obj1[key]);
 }
