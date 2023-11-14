@@ -100,6 +100,35 @@ for(i = 1; i < 10; i++){
     }
 }
 
+for(i = 1; i < 10; i++){
+    if (i === 1) {
+        // console.log("The first number");
+    }
+    // console.log(i);
+    if (i === 9) {
+        // console.log("The last number");
+    }
+}
+
+for(i = 1; i < 10; i++){
+    if (i === 1) {
+        // console.log("one has been detected");
+        continue;
+    }
+    // console.log(i);
+    if (i === 6) {
+        // console.log("six has been detected");   
+        break;     
+    }
+}
+
+for(i = 1; i < 20; i++){
+    if (i > 10) {
+        break;
+    }
+    // console.log(i);
+}
+
 
 
 
