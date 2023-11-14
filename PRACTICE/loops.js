@@ -63,6 +63,43 @@
 
 // }
 
+// ---------------------------------------------------------------------
+
+// FOR LOOP --->
+
+// First a variable is initialised, then the condition is checked, then the program is executed and then, it is incremented or decremented. This goes on a loop until the condition is satisfied.
+
+function wholeNumbers(num){
+console.log(`The first ${num} whole numbers:`);
+for (i = 0; i < num; i++){
+    switch (i) {
+        case 0:
+            console.log("The 1st whole number:");
+            break;
+        case 1:
+            console.log(`The 2nd whole number:`);
+            break;
+        case 2:
+            console.log(`The 3rd whole number:`);    
+            break;
+        default:
+            console.log(`The ${i + 1}th whole number:`);
+            break;
+    } 
+    console.log(i);
+}
+}
+
+// wholeNumbers(20)
+// wholeNumbers(10)
+
+for(i = 1; i < 10; i++){
+    // console.log(`Outer loop: ${i}`);
+    for(j = 1; j < 10; j++){
+        // console.log(`Inner loop: ${j}`);
+    }
+}
+
 
 
 
