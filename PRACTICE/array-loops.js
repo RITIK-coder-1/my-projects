@@ -18,3 +18,12 @@ for (const char of name) {
     }
     // console.log(char);
 }
+
+const obj1 = {
+    name: "ritik",
+    age: 19
+}
+
+// for (const iterator of obj1) { // CAN"T ITERATE WITH THIS
+//     console.log(iterator);
+// }
