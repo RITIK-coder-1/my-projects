@@ -27,3 +27,8 @@ const obj1 = {
 // for (const iterator of obj1) { // CAN"T ITERATE WITH THIS
 //     console.log(iterator);
 // }
+
+for (const key in obj1) {
+    console.log(key);
+    console.log(obj1[key]);
+}
