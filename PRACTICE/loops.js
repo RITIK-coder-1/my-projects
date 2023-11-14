@@ -152,7 +152,26 @@ while (num <= number) {
 // evenNumbers(30)
 
 
+// DO WHILE LOOP --------------------->
 
+let num2 = 0
+do {
+    // console.log(num2);
+    num2++
+} while (num2 < 20);
+
+function oddNumbers(number){
+    let i = 1
+    do { 
+        if (i % 2 !== 0) {
+        console.log(i);
+    }
+    i++   
+    } while (i < number);
+}
+
+// oddNumbers(10)
+// oddNumbers(30)
 
 
 
