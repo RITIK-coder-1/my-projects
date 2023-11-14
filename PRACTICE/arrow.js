@@ -40,3 +40,23 @@ const amount = (anyAccount) => anyAccount["principal"] + interest(anyAccount)
 
 // console.log(interest(acc));
 // console.log(amount(acc));
+
+function add1(num1, num2){ // normal function
+    const add = num1 + num2
+    console.log(add);
+    return add
+}
+
+add1(4, 5) // 9
+
+const add2 = (num1, num2) => { // arrow function
+    const add = num1 + num2
+    console.log(add);
+    return add
+}
+
+add2(4, 5) // 9
+
+const add3 = (num1, num2) => num1 + num2 // arrow function
+
+console.log(add3(4, 5)) // 9
