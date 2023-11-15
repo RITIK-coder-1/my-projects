@@ -1,0 +1,12 @@
+My Code Review ------->
+
+Feedback:
+
+Your code correctly determines the discount based on the given conditions.
+The discount is calculated accurately.
+The function handles cases where the input is not a number.
+
+
+Marks: 10/10
+
+Great job on the revision!
