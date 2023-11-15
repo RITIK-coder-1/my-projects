@@ -1,0 +1,10 @@
+My Code Review:
+
+Feedback:
+
+The logic to check if the number is positive, negative, or zero is correctly implemented.
+The function works as expected.
+The code structure is clear and easy to understand.
+
+Marks:
+I would give your code 10 out of 10. Well done! 
