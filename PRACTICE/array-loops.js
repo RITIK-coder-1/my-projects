@@ -1,3 +1,5 @@
+// FOR-OF-LOOP
+
 const arr1 = [1, 2, 3, 4]
 
 for (const element of arr1) {
@@ -19,25 +21,18 @@ for (const char of name) {
     // console.log(char);
 }
 
-const obj1 = {
-    name: "ritik",
-    age: 19
-}
+// FOR-EACH-LOOP
 
-// for (const iterator of obj1) { // CAN"T ITERATE WITH THIS
-//     console.log(iterator);
-// }
+const arr3 = [1, 2, 3, 4]
 
-for (const key in obj1) {
-    // console.log(key);
-    // console.log(obj1[key]);
-}
+// arr3.forEach( (element) => console.log(element) ) // 1 2 3 4
 
-const arr4 = ["one", "two", "three"]
+// arr3.forEach((element) => {
+//     if (element > 2) {
+//         console.log(element);
+//     }
+// }) 
+// 3 4
 
-arr4.forEach( function (element){
-    // console.log(element);
-})
 
-// arr4.forEach((elm) => console.log(elm))
 
