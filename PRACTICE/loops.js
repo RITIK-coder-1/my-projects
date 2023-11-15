@@ -130,13 +130,20 @@ for(i = 1; i < 20; i++){
 }
 
 
-const arr6 = [1, 2, 3, 4]
+const arr6 = [1, 2, 3, 4, 5, 6]
 
 // for (let index = 0; index < arr6.length; index++) {
 //     let element = arr6[index]
 //     element += arr6[index]
 //     console.log(element);
 // } // 2 4 6 8
+
+// let sum = 0
+// for(i = 0; i < arr6.length; i++){
+//     sum += arr6[i]
+//     console.log(sum); // 1 3 6 10 15 21
+// }
+// console.log(`Sum: ${sum}`); // 21
 
 // WHILE LOOP -------------->
 

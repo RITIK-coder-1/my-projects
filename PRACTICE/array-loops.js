@@ -39,6 +39,10 @@ const arr3 = [1, 2, 3, 4]
 // } )
 // 11 12 13 14
 
+let sum = 0
+arr3.forEach( (element) => sum += element)
+// console.log(sum); // 10
+
 const arr4 = [{name: "ritik"}, {age: 19}]
 
 
