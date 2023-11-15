@@ -253,3 +253,21 @@ let { myName: Name } = Obj;
 //     "name" : "ritik",
 //     "id" : "1234"
 // }
+
+// ---------------------------------------- MAPS ---------->
+
+const Details = new Map()
+
+Details.set("name", "ritik")
+Details.set("age", 19)
+
+// console.log(Details);
+
+for (const ele of Details) {
+    // console.log(ele);
+}
+
+for (const [key, val] of Details) {
+    // console.log(`Keys: ${key} & Values: ${val}`);
+}
+
