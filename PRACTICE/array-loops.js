@@ -69,4 +69,3 @@ const filter = arr5.filter( (element) => typeof element === 'number' )
 // console.log(filter); // [1, 2, 3]
 
 
-
