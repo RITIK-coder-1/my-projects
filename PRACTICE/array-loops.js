@@ -34,6 +34,11 @@ const arr3 = [1, 2, 3, 4]
 // }) 
 // 3 4
 
+// arr3.forEach( (element) => {
+//     console.log(element + 10);
+// } )
+// 11 12 13 14
+
 const arr4 = [{name: "ritik"}, {age: 19}]
 
 

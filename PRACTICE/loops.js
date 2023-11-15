@@ -130,6 +130,14 @@ for(i = 1; i < 20; i++){
 }
 
 
+const arr6 = [1, 2, 3, 4]
+
+// for (let index = 0; index < arr6.length; index++) {
+//     let element = arr6[index]
+//     element += arr6[index]
+//     console.log(element);
+// } // 2 4 6 8
+
 // WHILE LOOP -------------->
 
 let num = 0
