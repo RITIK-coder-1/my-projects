@@ -1,0 +1,12 @@
+My code review ------->
+
+Feedback:
+
+Your code correctly determines if a given number is even or odd.
+The function returns the result, providing flexibility for how the result is used.
+You've handled the case where the input is not a number.
+
+
+Marks: 10/10
+
+Great job! If you have more questions or if there's anything else you'd like assistance with, feel free to ask!
