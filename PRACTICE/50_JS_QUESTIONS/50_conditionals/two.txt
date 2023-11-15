@@ -1,0 +1,10 @@
+My code review:
+
+Feedback:
+
+Your code correctly finds the larger number and handles equal numbers.
+The use of the typeof operator to check if inputs are numbers is a good practice.
+Using a variable (statement) to store the result message enhances readability.
+
+
+Marks: 10/10
