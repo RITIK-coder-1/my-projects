@@ -17,20 +17,14 @@ if (typeof year === 'number') {
 const isLeapYear = (year) => {
     if (typeof year === 'number') {
         if (year % 4 === 0 || (year % 100 === 0 && year % 400 === 0)) {
-            let statement = `The given year ${year} is a leap year!`
-            console.log(statement);
-            return statement;
+            return `The given year ${year} is a leap year!`;
         } else {
-            let statement = `The given year ${year} is not a leap year!`
-            console.log(statement);
-            return statement;
+            return `The given year ${year} is not a leap year!`;
         }
     } else {
-        let statement = "Please, input the year in number format!"
-        console.log(statement);
-        return statement
+        return "Please, input the year in number format!"
     }
 }
 
-// isLeapYear(2024)
-// isLeapYear(2023)
+const result = isLeapYear(year)
+// console.log(result);

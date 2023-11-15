@@ -1,0 +1,12 @@
+My Code Review -------->
+
+Feedback:
+
+Your code correctly determines whether the given year is a leap year or not.
+The use of a function for this task is good for reusability.
+Returning the result directly from the function is an improvement.
+
+
+Marks: 10/10
+
+Great job! If you have more questions or need further assistance, feel free to ask.
