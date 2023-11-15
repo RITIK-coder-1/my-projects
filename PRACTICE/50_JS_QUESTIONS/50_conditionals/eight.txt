@@ -1,0 +1,12 @@
+My Code Review:
+
+Feedback:
+
+Your code correctly checks if the given letter is a vowel or not.
+The function returns the result, providing flexibility for how the result is used.
+You've handled the case where the input is not a string.
+
+
+Marks: 10/10
+
+Great job!
