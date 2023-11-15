@@ -1,0 +1,10 @@
+My Code Review -------->
+
+Feedback:
+
+Your code correctly checks if a person is eligible to vote based on their age.
+The function returns the result, allowing for flexibility in how the result is used.
+You've handled the case where the input is not a number.
+
+
+Marks: 10/10

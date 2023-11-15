@@ -9,4 +9,4 @@ Returning the result directly from the function is an improvement.
 
 Marks: 10/10
 
-Great job! If you have more questions or need further assistance, feel free to ask.
+Great job! 

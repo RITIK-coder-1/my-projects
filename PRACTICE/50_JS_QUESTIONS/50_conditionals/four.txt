@@ -9,4 +9,4 @@ You've handled the case where the input is not a number.
 
 Marks: 10/10
 
-Great job! If you have more questions or if there's anything else you'd like assistance with, feel free to ask!
+Great job! 
