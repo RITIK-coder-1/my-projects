@@ -235,3 +235,15 @@ const toReversed = arr6.toReversed()
 
 // console.log(toReversed); // [1, 2, 3, 4]
 // console.log(arr6); // [4, 3, 2, 1] // doesn't change the original array
+
+
+const numbers = [0, 1, 2, 3]
+const sliced = numbers.slice(0, 2)
+// console.log(sliced); // [0,1]
+// console.log(numbers); // [0,1,2,3]
+const spliced = numbers.splice(0, 2)
+// console.log(spliced); // [0, 1]
+// console.log(numbers); // [2, 3]
+const toSpliced = numbers.toSpliced(0, 1)
+// console.log(toSpliced); // [3]
+// console.log(numbers); // [2, 3]
