@@ -34,5 +34,18 @@ const arr3 = [1, 2, 3, 4]
 // }) 
 // 3 4
 
+const arr4 = [{name: "ritik"}, {age: 19}]
+
+
+function keyValue(anyArray){
+anyArray.forEach( (object) => {
+    console.log(`The key: ${Object.keys(object)}`);
+    console.log(`The value: ${Object.values(object)}`);
+} )
+}
+
+// keyValue(arr4)
+
+
 
 
