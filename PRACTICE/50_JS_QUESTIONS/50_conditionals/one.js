@@ -19,18 +19,16 @@ if (typeof num === 'number'){
 function checkInteger(num) {
     if (typeof num === 'number'){
         if (num === 0) {
-            console.log("It's a Zero!");
+            return "It's a Zero!"
         } else if (num < 0) {
-            console.log(`The number ${num} is a negative integer!`);
+            return `The number ${num} is a negative integer!`
         } else {
-            console.log(`The number ${num} is a positive integer!`);
+            return `The number ${num} is a positive integer!`
         }
     } else {
-        console.log(`Please! Input a number!`);
+        return `Please! Input a number!`
     }
 }
 
-// checkInteger(10)
-// checkInteger(-1)
-// checkInteger(0)
-// checkInteger("null")
+const result = checkInteger(num)
+// console.log(result);
