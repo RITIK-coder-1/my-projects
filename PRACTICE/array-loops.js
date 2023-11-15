@@ -46,6 +46,18 @@ anyArray.forEach( (object) => {
 
 // keyValue(arr4)
 
+// const foreach = arr4.forEach( (element) => console.log(element) )
+
+// console.log(foreach); // undefined // forEach loop doesn't return anything!
+
+
+const arr5 = [1, 2, 3, "ritik", "sonali"]
+
+arr5.filter( (element) => typeof element === 'number' ) // it only returns a value upon filtering with a condition
+
+const filter = arr5.filter( (element) => typeof element === 'number' )
+
+// console.log(filter); // [1, 2, 3]
 
 
 
