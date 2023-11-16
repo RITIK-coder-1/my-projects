@@ -189,6 +189,26 @@ function oddNumbers(number){
 // oddNumbers(30)
 
 
+// ------------------------------------
+
+let myName = "ritikk";
+let isEqual = false;
+
+for (let i = 0; i < (myName.length - 1); i++) {
+    for (let j = i + 1; j < myName.length; j++) {
+        if (myName[i] === myName[j]){
+            isEqual = true
+            // console.log(myName[i]);
+        } 
+    }
+}
+
+if (isEqual) {
+    // console.log("true");
+} else {
+    // console.log("false");
+}
+
 
 
 
