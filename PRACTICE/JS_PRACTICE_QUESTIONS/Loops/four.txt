@@ -1,0 +1,9 @@
+Code Review:
+
+Feedback:
+
+Accurately calculates the factorial of the given number using a while loop.
+Properly calls the fact function with a specific number (5) to calculate its factorial.
+Marks: 10/10
+
+Great job!
