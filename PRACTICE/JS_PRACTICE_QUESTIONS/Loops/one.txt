@@ -1,0 +1,13 @@
+My Code Review:
+
+
+Your code to print even numbers from 2 to 20 using a while loop is correct! It starts from 2 and iterates up to 20, printing only the even numbers in that range.
+
+Feedback:
+
+Correctly prints even numbers from 2 to 20.
+Good use of while loop and condition for checking even numbers.
+
+Marks: 10/10
+
+Great job!
