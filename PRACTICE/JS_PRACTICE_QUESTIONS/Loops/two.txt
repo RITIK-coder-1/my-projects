@@ -1,0 +1,13 @@
+My Code Review:
+
+
+Your code for displaying numbers from 10 to 1 using a do-while loop is accurate! It starts from 10 and decrements num until it reaches 1, printing the numbers in descending order.
+
+Feedback:
+
+Correctly displays numbers from 10 to 1.
+Proper use of the do-while loop.
+
+Marks: 10/10
+
+Well done!
