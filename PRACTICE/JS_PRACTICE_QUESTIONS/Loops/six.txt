@@ -1,0 +1,11 @@
+Code Review:
+
+Feedback:
+
+Correctly identifies vowels in the string, both lowercase and uppercase.
+Counts the total number of vowels in the string accurately.
+Provides separate console output for individual vowels and the total vowel count.
+
+Marks: 10/10
+
+Excellent work!
