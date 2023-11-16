@@ -1,0 +1,12 @@
+Code Review:
+
+Your code does accomplish the specific task as intended, displaying the first ten multiples of the given number.
+
+Feedback:
+
+Successfully prints the first ten multiples of the given number.
+Utilizes the break statement to terminate the loop after displaying ten multiples.
+
+Marks: 10/10
+
+Well done!
