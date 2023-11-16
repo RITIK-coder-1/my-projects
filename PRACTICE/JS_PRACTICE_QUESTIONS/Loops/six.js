@@ -2,7 +2,7 @@
 
 
 const printVowels = (string) => {
-    let vowelCount = 0
+let vowelCount = 0
 for (const char of string) {
     if (char === "a" || char === "A" || char === "e" || char === "E" || char === "i" || char === "I" || char === "o" || char === "O" || char === "u" || char === "U") {
         console.log(`The vowel(s) inside the string '${string}': ${char}`);
