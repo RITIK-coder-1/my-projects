@@ -1,0 +1,14 @@
+Code Review:
+
+
+Your code is spot on! This loop correctly sums all the numbers from 1 to 100 and stores the result in the variable sum. The logic is precise: starting from 1, it iterates up to 100 and adds each number to the sum variable.
+
+Feedback:
+
+Accurately sums all numbers from 1 to 100.
+Clear and concise implementation using the for loop.
+
+
+Marks: 10/10
+
+Great job! 
