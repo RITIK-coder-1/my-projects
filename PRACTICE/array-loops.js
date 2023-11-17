@@ -75,6 +75,15 @@ const myArr = ["ritik", 19, "1st"]
 
 // console.log(foreach); // undefined // forEach loop doesn't return anything!
 
+// MAP ------------------------------>
+
+const myArray = [1, 2, 3]
+
+const map = myArray.map( (ele) => ele ) // map returns a value
+// console.log(map); // [1,2,3]
+const foreach2 = myArray.forEach( (ele) => ele )
+// console.log(foreach2); // undefined
+
 
 
 // FILTER -------------->
@@ -88,5 +97,9 @@ const filter = arr5.filter( (element) => typeof element === 'number' )
 // console.log(filter); // [1, 2, 3]
 
 // arr5.filter((element) => console.log(element))
+
+// REDUCE -------------------------->
+
+
 
 
