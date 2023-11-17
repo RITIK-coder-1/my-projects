@@ -84,6 +84,8 @@ const map = myArray.map( (ele) => ele ) // map returns a value
 const foreach2 = myArray.forEach( (ele) => ele )
 // console.log(foreach2); // undefined
 
+// myArray.map((ele, ind, arr) => { console.log(ele, ind, arr) }) // Acts just like foreach
+
 
 
 // FILTER -------------->
@@ -100,6 +102,9 @@ const filter = arr5.filter( (element) => typeof element === 'number' )
 
 // REDUCE -------------------------->
 
+const array = [1, 2, 3, 4]
 
+const total = array.reduce( (acc, ele) => acc + ele, 0)
+// console.log(total); // 10
 
 
