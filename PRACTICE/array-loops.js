@@ -107,4 +107,7 @@ const array = [1, 2, 3, 4]
 const total = array.reduce( (acc, ele) => acc + ele, 0)
 // console.log(total); // 10
 
+const sub = array.reduce((acc, ele) => acc - ele, 0)
+// console.log(sub); // -10
+
 
