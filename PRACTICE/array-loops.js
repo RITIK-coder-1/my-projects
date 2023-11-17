@@ -27,6 +27,10 @@ for (const key in arr1) {
     // console.log(`The key: ${key} and the value: ${arr1[key]}`);
 }
 
+for (const key in name) {
+    // console.log(`Index value: ${key} and Character: ${name[key]}`);
+}
+
 // FOR-EACH-LOOP ------------------------->
 
 const arr3 = [1, 2, 3, 4]
