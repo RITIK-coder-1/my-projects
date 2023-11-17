@@ -1,4 +1,4 @@
-// FOR-OF-LOOP
+// FOR-OF-LOOP ------------------->
 
 const arr1 = [1, 2, 3, 4]
 
@@ -21,13 +21,13 @@ for (const char of name) {
     // console.log(char);
 }
 
-// FOR-IN-LOOP
+// FOR-IN-LOOP ----------------------->
 
 for (const key in arr1) {
     // console.log(`The key: ${key} and the value: ${arr1[key]}`);
 }
 
-// FOR-EACH-LOOP
+// FOR-EACH-LOOP ------------------------->
 
 const arr3 = [1, 2, 3, 4]
 
@@ -65,10 +65,15 @@ const myArr = ["ritik", 19, "1st"]
 
 // myArr.forEach(element => console.log(myArr.indexOf(element)))
 
+// myArr.forEach((val, index, arr) => console.log(`The value: ${val}, the index: ${index} and the whole array is: ${arr}`))
+
 // const foreach = arr4.forEach( (element) => console.log(element) )
 
 // console.log(foreach); // undefined // forEach loop doesn't return anything!
 
+
+
+// FILTER -------------->
 
 const arr5 = [1, 2, 3, "ritik", "sonali"]
 
@@ -77,5 +82,7 @@ arr5.filter( (element) => typeof element === 'number' ) // it only returns a val
 const filter = arr5.filter( (element) => typeof element === 'number' )
 
 // console.log(filter); // [1, 2, 3]
+
+// arr5.filter((element) => console.log(element))
 
 
