@@ -13,6 +13,8 @@ map.set(1, "position")
 
 // console.log(map.size); // 2
 
+// console.log(map.entries()); // array within an object
+
 map.set(null, "trail")
 // console.log(map);
 
