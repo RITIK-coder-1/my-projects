@@ -28,3 +28,4 @@ for (const element of map) {
 for (const [key, value] of map){
     // console.log(`The key: ${key} & The value: ${value}`);
 }
+

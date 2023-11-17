@@ -61,6 +61,10 @@ anyArray.forEach( (object) => {
 
 // keyValue(arr4)
 
+const myArr = ["ritik", 19, "1st"]
+
+// myArr.forEach(element => console.log(myArr.indexOf(element)))
+
 // const foreach = arr4.forEach( (element) => console.log(element) )
 
 // console.log(foreach); // undefined // forEach loop doesn't return anything!
