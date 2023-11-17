@@ -247,3 +247,6 @@ const spliced = numbers.splice(0, 2)
 const toSpliced = numbers.toSpliced(0, 1)
 // console.log(toSpliced); // [3]
 // console.log(numbers); // [2, 3]
+
+const myArray = new Array(1, 2, 3)
+// console.log(myArray);
