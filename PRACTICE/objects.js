@@ -271,3 +271,10 @@ for (const [key, val] of Details) {
     // console.log(`Keys: ${key} & Values: ${val}`);
 }
 
+// -------------------- LOOPS IN OBJECT
+
+const obj6 = {name: "ritik", age: 19}
+
+for (const key in obj6) {
+    // console.log(`The key: ${key} and the value: ${obj6[key]}`);
+}

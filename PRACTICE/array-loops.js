@@ -21,6 +21,12 @@ for (const char of name) {
     // console.log(char);
 }
 
+// FOR-IN-LOOP
+
+for (const key in arr1) {
+    // console.log(`The key: ${key} and the value: ${arr1[key]}`);
+}
+
 // FOR-EACH-LOOP
 
 const arr3 = [1, 2, 3, 4]
