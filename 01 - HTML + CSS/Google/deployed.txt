@@ -1,1 +1,0 @@
-the link to the deployed webpage: google.ritik.surge.sh
