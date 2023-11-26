@@ -17,5 +17,29 @@
         <li class="Selector">querySelector</li>
         <li class="Selector">querySelectorAll</li>
     </ul>
+
+    <script>
+        let selector1 = document.getElementById("first heading") // selects element by ID
+
+        let selector2 = document.getElementsByClassName("heading") // selects element by Class
+        selector2 = document.getElementsByClassName("Selector")
+
+        let selector3 = document.getElementsByTagName("li") // selects all the preferred tag within the document
+        selector3 = document.getElementsByTagName("p")
+
+        let selector4 = document.querySelector(".heading") // uses CSS selector to select the first element
+        let selector5 = document.querySelector("ul li")
+
+        let selector6 = document.querySelectorAll(".Paragraph") // uses CSS selector to select all the elements
+        let selector7 = document.querySelectorAll("ul li")
+
+        console.log(selector1);
+        console.log(selector2);
+        console.log(selector3);
+        console.log(selector4);
+        console.log(selector5);
+        console.log(selector6);
+        console.log(selector7);
+    </script>
 </body>
 </html>
