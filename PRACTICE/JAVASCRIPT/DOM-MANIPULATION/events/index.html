@@ -9,17 +9,21 @@
     <button id="button">click me</button>
 </body>
 <script>
-    
+
     const click = document.getElementById("button")
 
     click.addEventListener("click", () => {
+
         const bgColor = document.body
+
         bgColor.style.backgroundColor = "black"
+
         if (bgColor.style.backgroundColor === "black"){
             click.addEventListener("click", () => {
                 bgColor.style.backgroundColor = "white"
             })
         }
+        
     })
     
 </script>
