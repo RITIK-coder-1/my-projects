@@ -1,8 +1,8 @@
-console.log(document);
-console.log(document.all);
-console.log(document.title);
-console.log(document.head);
-console.log(document.body); // null
+// console.log(document);
+// console.log(document.all);
+// console.log(document.title);
+// console.log(document.head);
+// console.log(document.body); 
 
 // changing elements
 
@@ -26,9 +26,5 @@ para.append("This is a paragraph")
 
 body.append(para)
 
-const div = document.createElement("div")
-div.append("Text inside a div")
+// adding a styled div ------->
 
-body.append(div)
-
-console.log(document.getElementsByTagName("div"));
