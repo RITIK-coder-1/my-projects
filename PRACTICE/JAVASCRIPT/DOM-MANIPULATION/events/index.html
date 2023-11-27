@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button id="button">click me</button>
+</body>
+<script>
+    const click = document.getElementById("button")
+    
+    click.addEventListener("click", () => {
+        document.body.style.backgroundColor = "black"
+        if (document.body.style.backgroundColor === "black") {
+        click.addEventListener("click", () => {
+        document.body.style.backgroundColor = "white"
+    })
+    }
+    })
+    
+</script>
+</html>
