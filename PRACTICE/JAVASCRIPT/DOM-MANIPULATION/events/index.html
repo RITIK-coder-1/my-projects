@@ -9,15 +9,17 @@
     <button id="button">click me</button>
 </body>
 <script>
-    const click = document.getElementById("button")
     
+    const click = document.getElementById("button")
+
     click.addEventListener("click", () => {
-        document.body.style.backgroundColor = "black"
-        if (document.body.style.backgroundColor === "black") {
-        click.addEventListener("click", () => {
-        document.body.style.backgroundColor = "white"
-    })
-    }
+        const bgColor = document.body
+        bgColor.style.backgroundColor = "black"
+        if (bgColor.style.backgroundColor === "black"){
+            click.addEventListener("click", () => {
+                bgColor.style.backgroundColor = "white"
+            })
+        }
     })
     
 </script>
