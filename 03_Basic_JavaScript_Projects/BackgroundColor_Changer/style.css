@@ -16,6 +16,11 @@ h1{
     margin-bottom: 15px;
     font-weight: 100;
 }
+#set-color{
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
 .container{
     width: 75vw;
     height: 95vh;
