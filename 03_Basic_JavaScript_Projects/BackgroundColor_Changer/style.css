@@ -70,5 +70,5 @@ h1{
 .grid-item:hover{
     cursor: pointer;
     transform: scale(1.05); 
-    transition: 0.5s;
+    transition: 0.8s;
 }
