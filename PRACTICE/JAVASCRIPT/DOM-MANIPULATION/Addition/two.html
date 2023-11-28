@@ -35,6 +35,17 @@
     let lastChild = parent.lastElementChild
     lastChild.style.color = "brown"
 
+    children[1].setAttribute("class", "child second-element")
+
+    const childNodes = parent.childNodes
+
+    childNodes.forEach(element => {
+        // console.log(element);
+    });
+
+
+    // console.log(childNodes);
+    // console.log(children[1].nextElementSibling);
     // console.log(firstChild);
     // console.log(lastChild);
     // console.log(arrayChildren);
