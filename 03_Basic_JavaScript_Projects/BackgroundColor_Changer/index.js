@@ -11,65 +11,33 @@ const eighthColor = document.querySelector(".eight")
 
 
 firstColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#8D3DAF"
 })
 
 secondColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#E07C24"
 })
 
 thirdColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#758283"
 })
 
 fourthColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#E0388B"
 })
 
 fifthColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#FF6666"
 })
 
 sixthcolor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#03C6C7"
 })
 
 seventhColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#CAD5E2"
 })
 
 eighthColor.addEventListener("click", () => {
-    if (body.style.backgroundColor === "black"){
-        body.style.backgroundColor = "#8D3DAF"
-    } else {
-        body.style.backgroundColor = "black"
-    }
+    body.style.backgroundColor = "#35BDD0"
 })
