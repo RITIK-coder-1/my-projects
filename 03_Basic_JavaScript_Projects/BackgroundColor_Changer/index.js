@@ -11,33 +11,65 @@ const eighthColor = document.querySelector(".eight")
 
 
 firstColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#8D3DAF"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 secondColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#E07C24"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 thirdColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#758283"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 fourthColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#E0388B"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 fifthColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#FF6666"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 sixthcolor.addEventListener("click", () => {
-    body.style.backgroundColor = "#03C6C7"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 seventhColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#CAD5E2"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
 
 eighthColor.addEventListener("click", () => {
-    body.style.backgroundColor = "#35BDD0"
+    if (body.style.backgroundColor === "black"){
+        body.style.backgroundColor = "#8D3DAF"
+    } else {
+        body.style.backgroundColor = "black"
+    }
 })
