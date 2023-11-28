@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent and Children</title>
+</head>
+<body>
+    <ul class="parent">
+        <li class="child">one</li>
+        <li class="child">two</li>
+        <li class="child">three</li>
+        <li class="child">four</li>
+        <li class="child">five</li>
+    </ul>
+</body>
+<script>
+    const parent = document.querySelector(".parent")
+
+    const children = parent.children
+    
+    children[2].style.backgroundColor = "blue"
+
+    arrayChildren = Array.from(children)
+
+    arrayChildren.map( (children) => {
+        // console.log(children);
+    } )
+
+    
+
+
+    // console.log(children);
+    // console.log(children[1]);
+</script>
+</html>
