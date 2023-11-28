@@ -10,7 +10,8 @@
 <script>
     
     const body = document.body
-
+    body.style.backgroundColor = "#212121"
+    
     // Adding Text to the title element --->
 
     const title = document.querySelector("title")
@@ -21,7 +22,12 @@
     
     // Adding Styled Content to the body ---->
 
-    
+    const h1 = document.createElement("h1")
+
+    const headingText = document.createTextNode("JavaScript Created Heading!")
+
+    h1.append(headingText)
+    body.append(h1)
 
 
 </script>
