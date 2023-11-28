@@ -44,6 +44,18 @@
     });
 
 
+    const six = document.createElement("li")
+    six.append(document.createTextNode("six"))
+    document.querySelector("ul").append(six)
+
+    children[3].remove()
+
+    const five = children[3]
+    
+    five.replaceWith("FIVE")
+
+
+    // console.log(five);
     // console.log(childNodes);
     // console.log(children[1].nextElementSibling);
     // console.log(firstChild);
