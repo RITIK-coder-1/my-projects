@@ -18,6 +18,14 @@
             font-weight: 600;
             cursor: pointer; 
         }
+        #button:focus{
+            animation: button 0.2s linear 0s 1 normal;
+        }
+        @keyframes button {
+            0% {transform: scale(1);}
+            50% {transform: scale(0.9);}
+            100% {transform: scale(1);}
+        }
     </style>
 </head>
 <body>
