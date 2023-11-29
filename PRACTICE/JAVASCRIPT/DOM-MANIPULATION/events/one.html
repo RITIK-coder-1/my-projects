@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practising DOM</title>
+    <title>Practising DOM (To-Do)</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        #button{
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 12px;
+            background-color: aqua;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <button id="button" style="display: block;">CREATE A TO-DO</button>
+    <button id="button">CREATE A TO-DO</button>
 </body>
 <script>
     const body = document.body
@@ -19,6 +34,9 @@
 
         const text = document.createElement("input")
         text.type = "text"
+        text.style.backgroundColor = "#212121"
+        text.style.color = "aliceblue"
+        text.style.fontFamily = "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
         text.placeholder = "Type Something"
         text.style.marginTop = "10px"
         text.style.border = "none"
