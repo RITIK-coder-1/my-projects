@@ -9,6 +9,20 @@
     <button id="button">create text</button>
 </body>
 <script>
-
+    function createText(){
+        const body = document.body
+        const text = document.createElement("input")
+        text.placeholder = "Type Something"
+        text.style.display = "block"
+        text.style.marginTop = "10px"
+        text.style.border = "none"
+        text.style.borderBottom = "1px solid #212121"
+        text.style.paddingBottom = "10px"
+        body.append(text)
+    }
+    const button = document.getElementById("button")
+    button.addEventListener("click", () => {
+        createText()
+    })
 </script>
 </html>
