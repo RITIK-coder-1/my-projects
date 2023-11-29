@@ -9,20 +9,36 @@
     <button id="button">create text</button>
 </body>
 <script>
+    const body = document.body
     function createText(){
-        const body = document.body
         const text = document.createElement("input")
+        text.type = "text"
         text.placeholder = "Type Something"
-        text.style.display = "block"
         text.style.marginTop = "10px"
         text.style.border = "none"
-        text.style.borderBottom = "1px solid #212121"
         text.style.paddingBottom = "10px"
+        text.style.outline = "none"
+        text.id = "text"
         body.append(text)
+    }
+    function createInput(){
+        const input = document.createElement("input")
+        input.type = "checkbox"
+        input.id = "checkbox"
+        body.append(input)
+    }
+    function createDiv(){
+        const div = document.createElement("div")
+        div.style.display = "block"
+        div.style.border = "1px solid black"
+        div.style.display = "flex"
+        div.style.gap = "10px"
+        div.append(createInput())
+        div.append(createText())
     }
     const button = document.getElementById("button")
     button.addEventListener("click", () => {
-        createText()
+        createDiv()
     })
 </script>
 </html>
