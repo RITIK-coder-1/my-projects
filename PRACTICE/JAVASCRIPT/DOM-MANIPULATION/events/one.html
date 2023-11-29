@@ -12,6 +12,11 @@
     const body = document.body
 
     function createText(){
+
+        const input = document.createElement("input")
+        input.type = "checkbox"
+        input.id = "checkbox"
+
         const text = document.createElement("input")
         text.type = "text"
         text.placeholder = "Type Something"
@@ -20,10 +25,6 @@
         text.style.paddingBottom = "10px"
         text.style.outline = "none"
         text.id = "text"
-
-        const input = document.createElement("input")
-        input.type = "checkbox"
-        input.id = "checkbox"
 
         const div = document.createElement("div")
         div.style.display = "flex"
