@@ -10,6 +10,7 @@
 </body>
 <script>
     const body = document.body
+
     function createText(){
         const text = document.createElement("input")
         text.type = "text"
@@ -19,18 +20,24 @@
         text.style.paddingBottom = "10px"
         text.style.outline = "none"
         text.id = "text"
-        body.append(text)
-    }
-    function createInput(){
+
         const input = document.createElement("input")
         input.type = "checkbox"
         input.id = "checkbox"
-        body.append(input)
+
+        const div = document.createElement("div")
+        div.style.display = "flex"
+
+        div.append(input)
+        div.append(text)
+
+        body.append(div)
     }
+
     const button = document.getElementById("button")
     button.addEventListener("click", () => {
-        createInput()
         createText()
     })
+
 </script>
 </html>
