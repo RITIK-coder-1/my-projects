@@ -51,6 +51,10 @@
         div.append(text)
 
         body.append(div)
+
+        input.addEventListener("click", () => {
+            text.style.textDecoration = "line-through"
+        })
     }
 
     const button = document.getElementById("button")
