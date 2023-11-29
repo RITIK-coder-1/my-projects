@@ -44,16 +44,26 @@
         text.style.outline = "none"
         text.id = "text"
 
+        const button = document.createElement("button")
+
+
         const div = document.createElement("div")
         div.style.display = "flex"
 
         div.append(input)
         div.append(text)
+        div.append(button)
 
         body.append(div)
 
         input.addEventListener("click", () => {
             text.style.textDecoration = "line-through"
+        })
+
+        button.addEventListener("click", () => {
+            input.remove()
+            text.remove()
+            button.remove()
         })
     }
 
