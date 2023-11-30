@@ -57,6 +57,7 @@ const button = document.getElementById("button")
 button.addEventListener("click", () => {
     setTimeout(() => {
         createText()
+        document.getElementById("remove").style.display = "inline"
     }, 100)
     button.style.animation = "none"
     void button.offsetWidth
