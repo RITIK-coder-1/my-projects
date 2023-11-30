@@ -75,19 +75,19 @@
 
         input.addEventListener("click", () => {
             text.style.textDecoration = "line-through"
-        })
+        }, false)
 
         button.addEventListener("click", () => {
             input.remove()
             text.remove()
             button.remove()
-        })
+        }, false)
     }
 
     const button = document.getElementById("button")
     button.addEventListener("click", () => {
         createText()
-    })
+    }, false)
 
 </script>
 </html>

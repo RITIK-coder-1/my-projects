@@ -42,7 +42,7 @@ body.append(div)
 
 input.addEventListener("click", () => {
     text.style.textDecoration = "line-through"
-})
+}, false)
 
 button.addEventListener("click", () => {
     setTimeout(() => {
@@ -50,7 +50,7 @@ button.addEventListener("click", () => {
         text.remove()
         button.remove()
     }, 100)
-})
+}, false)
 
 }
 
@@ -80,6 +80,6 @@ button.addEventListener("click", () => {
     button.style.animation = "button 0.2s linear 0s 1 normal"
 
     addRemoveButton()
-})
+}, false)
 
 
