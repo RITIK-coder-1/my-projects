@@ -2,14 +2,17 @@ const increase = document.querySelector("#increment")
 const num = document.querySelector("#number")
 const decrease = document.querySelector("#decrement")
 
+function applyButtonAnimation(button) {
+   button.style.animation = "none";
+   void button.offsetWidth;
+   button.style.animation = "button 0.2s linear 0s 1 normal";
+}
+
 increase.addEventListener("click", () => {
 
    num.textContent = Number(num.textContent) + 1
 
-   const button = document.querySelector("#increment")
-   button.style.animation = "none"
-   void button.offsetWidth
-   button.style.animation = "button 0.2s linear 0s 1 normal"
+   applyButtonAnimation(increase)
 
 }, false)
 
@@ -21,9 +24,6 @@ decrease.addEventListener("click", () => {
         alert("Check out! The Counter is going beyond 0.")
     }
 
-   const button = document.querySelector("#decrement")
-   button.style.animation = "none"
-   void button.offsetWidth
-   button.style.animation = "button 0.2s linear 0s 1 normal"
+   applyButtonAnimation(decrease)
 
 }, false)
