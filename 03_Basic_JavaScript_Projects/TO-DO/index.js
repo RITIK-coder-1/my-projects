@@ -52,13 +52,6 @@ button.addEventListener("click", () => {
     }, 100)
 })
 
-const remove = document.getElementById("remove")
-remove.addEventListener("click", () => {
-    const input = document.getElementsByClassName("input-field")
-    const div = Array.from(input)
-    div.map((ele) => ele.remove())
-    document.getElementById("remove").remove()
-})
 }
 
 const button = document.getElementById("button")
@@ -70,6 +63,23 @@ button.addEventListener("click", () => {
     button.style.animation = "none"
     void button.offsetWidth
     button.style.animation = "button 0.2s linear 0s 1 normal"
+
+    function addRemoveButton() {
+        const remove = document.createElement("button");
+        remove.id = "remove";
+        remove.textContent = "REMOVE All";
+    
+        remove.addEventListener("click", () => {
+            const inputFields = document.querySelectorAll(".input-field");
+            inputFields.forEach((field) => field.remove())
+            remove.remove();
+            addRemoveButton(); // Recreate the Remove All button after removal
+        });
+    
+        body.appendChild(remove);
+    }
+
+    addRemoveButton()
 })
 
 
