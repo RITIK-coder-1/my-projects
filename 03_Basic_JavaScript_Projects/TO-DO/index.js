@@ -30,6 +30,7 @@ button.style.cursor = "pointer"
 
 
 const div = document.createElement("div")
+div.className = "input-field"
 div.style.display = "flex"
 div.style.alignItems = "center"
 
@@ -60,4 +61,11 @@ button.addEventListener("click", () => {
     button.style.animation = "none"
     void button.offsetWidth
     button.style.animation = "button 0.2s linear 0s 1 normal"
+})
+
+const remove = document.getElementById("remove")
+remove.addEventListener("click", () => {
+    const input = document.getElementsByClassName("input-field")
+    const div = Array.from(input)
+    div.map((ele) => ele.remove())
 })
