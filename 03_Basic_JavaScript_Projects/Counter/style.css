@@ -28,8 +28,8 @@ span{
     font-size: 50px;
 }
 button{
-    background-color: red;
-    color: aliceblue;
+    background-color: #77b1b1;
+    color: black;
     width: 25px;
     height: 20px;
     border: none;
@@ -37,6 +37,15 @@ button{
     font-size: 15px;
     font-weight: 900;
     cursor: pointer;
+}
+#reset{
+    background-color: red;
+    color: aliceblue;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 @keyframes button {
     0% {transform: scale(1);}

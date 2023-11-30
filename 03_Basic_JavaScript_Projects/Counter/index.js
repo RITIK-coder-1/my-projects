@@ -1,6 +1,7 @@
 const increase = document.querySelector("#increment")
 const num = document.querySelector("#number")
 const decrease = document.querySelector("#decrement")
+const reset = document.querySelector("#reset")
 
 function applyButtonAnimation(button) {
    button.style.animation = "none";
@@ -26,4 +27,10 @@ decrease.addEventListener("click", () => {
 
    applyButtonAnimation(decrease)
 
+}, false)
+
+reset.addEventListener("click", () => {
+   num.textContent = Number("0")
+
+   applyButtonAnimation(reset)
 }, false)
