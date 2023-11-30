@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL BULB</title>
+</head>
+<body>
+    <button id="switch">turn on</button>
+</body>
+<script>
+    const button = document.getElementById("switch")
+    const body = document.body
+    body.style.backgroundColor = "black"
+    let isDark = true
+    button.addEventListener("click", () => {
+        isDark = !isDark
+        if (isDark){
+            body.style.backgroundColor = "#f3f391"
+        } else {
+            body.style.backgroundColor = "black"
+        }
+    })
+</script>
+</html>
