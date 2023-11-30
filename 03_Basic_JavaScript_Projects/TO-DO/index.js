@@ -51,6 +51,14 @@ button.addEventListener("click", () => {
         button.remove()
     }, 100)
 })
+
+const remove = document.getElementById("remove")
+remove.addEventListener("click", () => {
+    const input = document.getElementsByClassName("input-field")
+    const div = Array.from(input)
+    div.map((ele) => ele.remove())
+    document.getElementById("remove").remove()
+})
 }
 
 const button = document.getElementById("button")
@@ -64,9 +72,4 @@ button.addEventListener("click", () => {
     button.style.animation = "button 0.2s linear 0s 1 normal"
 })
 
-const remove = document.getElementById("remove")
-remove.addEventListener("click", () => {
-    const input = document.getElementsByClassName("input-field")
-    const div = Array.from(input)
-    div.map((ele) => ele.remove())
-})
+
