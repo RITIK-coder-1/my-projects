@@ -78,15 +78,19 @@
         })
 
         button.addEventListener("click", () => {
-            input.remove()
-            text.remove()
-            button.remove()
+            setTimeout(() => {
+                input.remove()
+                text.remove()
+                button.remove()
+            }, 100)
         })
     }
 
     const button = document.getElementById("button")
     button.addEventListener("click", () => {
-        createText()
+        setTimeout(() => {
+            createText()
+        }, 100)
         button.style.animation = "none"
         void button.offsetWidth
         button.style.animation = "button 0.2s linear 0s 1 normal"
