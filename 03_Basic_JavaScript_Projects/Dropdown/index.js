@@ -4,9 +4,22 @@ const selectElements = document.getElementById("dropdown")
 
 dropdown.forEach((language) => {
 
-    const Option = document.createElement("option")
-    Option.value = language
-    Option.textContent = language
+    const option = document.createElement("option")
+    option.value = language
+    option.textContent = language
 
-    selectElements.append(Option)
+    selectElements.append(option)
+
+    // option.addEventListener("click", () => {
+    //     alert(option.value)
+    // })
 })
+
+selectElements.addEventListener("change", function() {
+
+    const selectedOption = this.options[this.selectedIndex];
+
+    alert(`Your Favourite Programming Language has been set to: ${selectedOption.value}`);
+    
+});
+
