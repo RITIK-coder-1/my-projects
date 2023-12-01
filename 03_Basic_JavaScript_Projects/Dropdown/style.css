@@ -23,6 +23,7 @@ select{
     background-color: #aee9e9;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
+    outline: none;
 }
 option{
     background-color: #c8f8f8;
