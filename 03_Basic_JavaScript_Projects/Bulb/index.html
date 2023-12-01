@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIGITAL BULB</title>
     <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         img{
             position: absolute;
+
+        }
+        div{
+            border: 1px solid red;
+            display: flex;
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
+    <div>
+        <img src="3911242_bulb_electric_energy_lamp_light_icon (1).png" alt="off-bulb" id="off">
+        <img src="3911242_bulb_electric_energy_lamp_light_icon.png" alt="on-bulb" id="on">
+    </div>
     <button id="switch">turn on</button>
-    <img src="3911242_bulb_electric_energy_lamp_light_icon (1).png" alt="off-bulb" id="off">
-    <img src="3911242_bulb_electric_energy_lamp_light_icon.png" alt="on-bulb" id="on">
 </body>
 <script>
     const button = document.getElementById("switch")
