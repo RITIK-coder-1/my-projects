@@ -1,7 +1,29 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 #dropdown{
     width: 250px;
     height: 25px;
+}
+select{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #aee9e9;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+option{
+    background-color: #c8f8f8;
 }
