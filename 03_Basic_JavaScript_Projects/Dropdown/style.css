@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+#dropdown{
+    width: 250px;
+    height: 25px;
+}
