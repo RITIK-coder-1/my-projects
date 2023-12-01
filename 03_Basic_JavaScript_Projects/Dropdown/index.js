@@ -9,10 +9,6 @@ dropdown.forEach((language) => {
     option.textContent = language
 
     selectElements.append(option)
-
-    // option.addEventListener("click", () => {
-    //     alert(option.value)
-    // })
 })
 
 selectElements.addEventListener("change", function() {
@@ -20,6 +16,6 @@ selectElements.addEventListener("change", function() {
     const selectedOption = this.options[this.selectedIndex];
 
     alert(`Your Favourite Programming Language has been set to: ${selectedOption.value}`);
-    
+
 });
 
