@@ -5,27 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIGITAL BULB</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
         body{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 20px;
+        }
+        h1{
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 100px;
         }
         img{
             position: absolute;
-
+            height: 100px;
         }
-        div{
-            border: 1px solid red;
-            display: flex;
-            width: 50px;
-            height: 50px;
+        button{
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 5px;
+            font-weight: 900;
+            background-color: aqua;
         }
     </style>
 </head>
 <body>
+    <h1>DIGITAL BULB</h1>
     <div>
-        <img src="3911242_bulb_electric_energy_lamp_light_icon (1).png" alt="off-bulb" id="off">
+        <img src="3911242_bulb_electric_energy_lamp_light_icon (2).png" alt="off-bulb" id="off">
         <img src="3911242_bulb_electric_energy_lamp_light_icon.png" alt="on-bulb" id="on">
     </div>
     <button id="switch">turn on</button>
