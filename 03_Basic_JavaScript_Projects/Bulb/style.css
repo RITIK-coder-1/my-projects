@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+h1{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100px;
+}
+img{
+    position: absolute;
+    height: 100px;
+}
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: 900;
+    background-color: aqua;
+    cursor: pointer;
+}
+@keyframes switch {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

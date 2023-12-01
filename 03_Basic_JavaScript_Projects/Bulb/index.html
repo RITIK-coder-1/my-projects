@@ -4,46 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIGITAL BULB</title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        html, body{
-            height: 100%;
-            width: 100%;
-        }
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        h1{
-            color: red;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 100px;
-        }
-        img{
-            position: absolute;
-            height: 100px;
-        }
-        button{
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 12px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 5px;
-            font-weight: 900;
-            background-color: aqua;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>DIGITAL BULB</h1>
@@ -51,31 +12,7 @@
         <img src="3911242_bulb_electric_energy_lamp_light_icon (2).png" alt="off-bulb" id="off">
         <img src="3911242_bulb_electric_energy_lamp_light_icon.png" alt="on-bulb" id="on">
     </div>
-    <button id="switch">turn on</button>
+    <button id="switch"></button>
 </body>
-<script>
-    const button = document.getElementById("switch")
-    const body = document.body
-    const offBulb = document.getElementById("off")
-    offBulb.style.visibility = "visible"
-    const onBulb = document.getElementById("on")
-    onBulb.style.visibility = "hidden" 
-    body.style.backgroundColor = "black"
-    let isDark = true
-    button.addEventListener("click", () => {
-        
-        if (isDark){
-            body.style.backgroundColor = "#f3f391"
-            onBulb.style.visibility = "visible"
-            offBulb.style.visibility = "hidden"
-        } else {
-            body.style.backgroundColor = "black"
-            onBulb.style.visibility = "hidden"
-            offBulb.style.visibility = "visible"
-        }
-        isDark = !isDark
-
-    }, false)
-
-</script>
+<script src="index.js"></script>
 </html>
