@@ -15,7 +15,8 @@ selectElements.addEventListener("change", function() {
 
     const selectedOption = this.options[this.selectedIndex];
 
-    alert(`Your Favourite Programming Language has been set to: ${selectedOption.value}`);
+    const p = document.querySelector("p")
+    p.innerText = `Your Favourite Programming Language has been set to: ${selectedOption.value}`
 
 });
 
