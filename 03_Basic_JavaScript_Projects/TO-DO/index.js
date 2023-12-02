@@ -1,5 +1,7 @@
 const body = document.body
 let number = 0
+const div = document.getElementById("numberOfToDo")
+div.innerText = `The number of To Dos: 0`
 
 function createText(){
 
@@ -83,6 +85,7 @@ button.addEventListener("click", () => {
 
     addRemoveButton()
     number++
+    div.innerText = `The number of To Dos: ${number}`
 }, false)
 
 
