@@ -75,6 +75,7 @@ button.addEventListener("click", () => {
         createText()
         document.getElementById("remove").style.display = "inline"
     }, 100)
+    
     button.style.animation = "none"
     void button.offsetWidth
     button.style.animation = "button 0.2s linear 0s 1 normal"
