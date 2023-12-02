@@ -1,5 +1,6 @@
 const body = document.body
 let number = 0
+
 function createText(){
 
 const input = document.createElement("input")
