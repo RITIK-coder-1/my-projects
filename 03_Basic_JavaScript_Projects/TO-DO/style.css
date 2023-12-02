@@ -31,11 +31,10 @@ body{
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    background-color: aqua;
+    background-color: #6b6bbe;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 600;
     cursor: pointer;
-
 }
 #remove{
     padding: 5px;

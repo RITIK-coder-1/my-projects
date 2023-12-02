@@ -55,6 +55,8 @@ button.addEventListener("click", () => {
         text.remove()
         button.remove()
     }, 100)
+    number--
+    numberOfToDo.textContent = `Number of To Dos: ${number}`
 }, false)
 
 }
@@ -72,6 +74,7 @@ function addRemoveButton() {
     });
 
     container.appendChild(remove);
+    numberOfToDo.textContent = `Number of To Dos: 0`
 }
 
 const button = document.getElementById("button")
