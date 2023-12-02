@@ -1,7 +1,7 @@
 const body = document.body
 let number = 0
 const numberOfToDo = document.getElementById("numberOfToDo")
-numberOfToDo.innerText = `Number of To Dos: 0`
+numberOfToDo.innerText = `Number of To Dos: ${number}`
 
 const container = document.getElementById("container")
 
@@ -71,10 +71,11 @@ function addRemoveButton() {
         inputFields.forEach((field) => field.remove())
         remove.remove();
         addRemoveButton(); // Recreate the Remove All button after removal
+        number = 0
+        numberOfToDo.textContent = `Number of To Dos: ${number}`
     });
 
     container.appendChild(remove);
-    numberOfToDo.textContent = `Number of To Dos: 0`
 }
 
 const button = document.getElementById("button")
