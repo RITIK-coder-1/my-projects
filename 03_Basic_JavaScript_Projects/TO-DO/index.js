@@ -1,7 +1,9 @@
 const body = document.body
 let number = 0
-const div = document.getElementById("numberOfToDo")
-div.innerText = `The number of To Dos: 0`
+const numberOfToDo = document.getElementById("numberOfToDo")
+numberOfToDo.innerText = `Number of To Dos: 0`
+
+const container = document.getElementById("container")
 
 function createText(){
 
@@ -69,7 +71,7 @@ function addRemoveButton() {
         addRemoveButton(); // Recreate the Remove All button after removal
     });
 
-    body.appendChild(remove);
+    container.appendChild(remove);
 }
 
 const button = document.getElementById("button")
@@ -85,7 +87,7 @@ button.addEventListener("click", () => {
 
     addRemoveButton()
     number++
-    div.innerText = `The number of To Dos: ${number}`
+    numberOfToDo.innerText = `Number of To Dos: ${number}`
 }, false)
 
 
