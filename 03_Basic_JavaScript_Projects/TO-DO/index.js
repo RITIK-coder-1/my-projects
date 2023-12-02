@@ -1,12 +1,13 @@
 const body = document.body
-
+let number = 0
 function createText(){
 
 const input = document.createElement("input")
 input.type = "checkbox"
-input.id = "checkbox"
+input.id = `checkbox${number}`
 
 const text = document.createElement("input")
+text.id = `text${number}`
 text.type = "text"
 text.style.backgroundColor = "#212121"
 text.style.color = "aliceblue"
@@ -16,7 +17,6 @@ text.style.marginTop = "10px"
 text.style.border = "none"
 text.style.paddingBottom = "10px"
 text.style.outline = "none"
-text.id = "text"
 
 const button = document.createElement("button")
 button.style.backgroundColor = "red"
@@ -80,6 +80,7 @@ button.addEventListener("click", () => {
     button.style.animation = "button 0.2s linear 0s 1 normal"
 
     addRemoveButton()
+    number++
 }, false)
 
 
