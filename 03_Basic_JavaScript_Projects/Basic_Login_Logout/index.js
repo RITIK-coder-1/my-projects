@@ -94,8 +94,14 @@ logout.addEventListener("click", () => {
 
     heading.innerText = "The User has Logged Out."
 
+    logout.addEventListener("click", () => {
+        alert("You have already logged out!")
+    })
+    
     login.addEventListener("click", () => {
-        
+
+        if (isLoggedOut === true){
+    
         if (isLoggedIn === false){
             isLoggedIn = true
         } else if (isLoggedIn === true){
@@ -108,11 +114,12 @@ logout.addEventListener("click", () => {
         } else {
             remove()
         }
+    }
     })
-
-    // logout.addEventListener("click", () => {
-    //     alert("You have already logged out!")
-    // })
 } 
 })
+
+
+
+
 
