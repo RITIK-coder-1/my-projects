@@ -1,8 +1,6 @@
 const body = document.body
 const login = document.getElementById("login")
-login.style.cursor = "pointer"
 const logout = document.getElementById("logout")
-logout.style.cursor = "pointer"
 const heading = document.getElementById("heading")
 
 let isFormCreated = false
@@ -29,7 +27,6 @@ const createForm  = function (){
     submit.innerText = "Submit"
     submit.style.width = "150px"
     submit.type = "submit"
-    submit.style.cursor = "pointer"
     
     
     form.append(input1)
