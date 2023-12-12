@@ -3,7 +3,9 @@ const login = document.getElementById("login")
 const logout = document.getElementById("logout")
 const heading = document.getElementById("heading")
 
-let isFormCreated = false
+let isLoggedIn = false
+let isLoggedOut = false
+let filledForm = false
 
 const createForm  = function (){
     const form = document.createElement("form")
@@ -43,7 +45,8 @@ const createForm  = function (){
             const form = document.getElementsByTagName("form")
             for (let index = 0; index < form.length; index++) {
             const element = form[index];  
-            element.remove()        
+            element.remove()    
+            filledForm = true    
         }
         }  
     })
@@ -56,13 +59,13 @@ const remove = () => {
 
 login.addEventListener("click", () => {
 
-    if (isFormCreated === false){
-        isFormCreated = true
-    } else if (isFormCreated === true){
-        isFormCreated = false
+    if (isLoggedIn === false){
+        isLoggedIn = true
+    } else if (isLoggedIn === true){
+        isLoggedIn = false
     }
 
-    if (isFormCreated === true){
+    if (isLoggedIn === true){
         createForm()
     } else {
         remove()
@@ -70,11 +73,34 @@ login.addEventListener("click", () => {
 })
 
 logout.addEventListener("click", () => {
+
+    if (isLoggedIn === false || filledForm === false){
+        alert("You haven't logged in yet.")
+    } else if (isLoggedOut === false){
+        isLoggedOut = true
+    } else if (isLoggedOut === true){
+        isLoggedOut = false
+    }
+
+    if (isLoggedOut === true){
+
     alert("Are you sure? You want to log out?")
+
     const form = document.getElementsByTagName("form")
     for (let index = 0; index < form.length; index++) {
         const element = form[index];  
         element.remove()        
     }
+
     heading.innerText = "The User has Logged Out."
+
+    login.addEventListener("click", () => {
+            createForm()
+            heading.innerText = ""
+    })
+
+    logout.addEventListener("click", () => {
+        alert("You have already logged out!")
+    })
+} 
 })
