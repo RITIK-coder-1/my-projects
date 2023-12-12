@@ -95,12 +95,24 @@ logout.addEventListener("click", () => {
     heading.innerText = "The User has Logged Out."
 
     login.addEventListener("click", () => {
+        
+        if (isLoggedIn === false){
+            isLoggedIn = true
+        } else if (isLoggedIn === true){
+            isLoggedIn = false
+        }
+    
+        if (isLoggedIn === true){
             createForm()
             heading.innerText = ""
+        } else {
+            remove()
+        }
     })
 
-    logout.addEventListener("click", () => {
-        alert("You have already logged out!")
-    })
+    // logout.addEventListener("click", () => {
+    //     alert("You have already logged out!")
+    // })
 } 
 })
+
