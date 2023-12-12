@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #000000, #242323);
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: purple;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
