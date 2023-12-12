@@ -5,6 +5,8 @@ const logout = document.getElementById("logout")
 logout.style.cursor = "pointer"
 const heading = document.getElementById("heading")
 
+let isFormCreated = false
+
 const createForm  = function (){
     const form = document.createElement("form")
     form.style.display = "flex"
@@ -50,9 +52,24 @@ const createForm  = function (){
     })
 }
 
+const remove = () => {
+    const form = document.querySelector("form")
+    form.remove()
+}
 
 login.addEventListener("click", () => {
-    createForm()
+
+    if (isFormCreated === false){
+        isFormCreated = true
+    } else if (isFormCreated === true){
+        isFormCreated = false
+    }
+
+    if (isFormCreated === true){
+        createForm()
+    } else {
+        remove()
+    }
 })
 
 logout.addEventListener("click", () => {
