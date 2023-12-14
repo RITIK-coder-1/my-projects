@@ -7,10 +7,17 @@ button.textContent = "TURN ON"
 const offBulb = document.getElementById("off")
 offBulb.style.visibility = "visible"
 
-const onBulb = document.getElementById("on")
-onBulb.style.visibility = "hidden" 
+const yellowBulb = document.getElementById("on-yellow")
+yellowBulb.style.visibility = "hidden" 
 
 let isDark = true
+let Blue = false
+
+const blue = document.querySelector("option[value='blue']")
+
+blue.addEventListener("click", () => {
+    isBlue = true
+})
 
 const animatedButton = (button) => {
 
@@ -24,12 +31,17 @@ button.addEventListener("click", () => {
     
     if (isDark){
         body.style.backgroundColor = "#f3f391"
-        onBulb.style.visibility = "visible"
+        yellowBulb.style.visibility = "visible"
+        offBulb.style.visibility = "hidden"
+        button.textContent = "TURN OFF"
+    } else if (isDark && Blue){
+        body.style.backgroundColor = "#6060a7"
+        yellowBulb.style.visibility = "visible"
         offBulb.style.visibility = "hidden"
         button.textContent = "TURN OFF"
     } else {
         body.style.backgroundColor = "black"
-        onBulb.style.visibility = "hidden"
+        yellowBulb.style.visibility = "hidden"
         offBulb.style.visibility = "visible"
         button.textContent = "TURN ON"
     }
@@ -38,5 +50,3 @@ button.addEventListener("click", () => {
     animatedButton(button)
 }, false)
 
-const colors = [blue, green, red]
-const dropdown = document.getElementById("dropdown")
