@@ -37,3 +37,6 @@ button.addEventListener("click", () => {
 
     animatedButton(button)
 }, false)
+
+const colors = [blue, green, red]
+const dropdown = document.getElementById("dropdown")
