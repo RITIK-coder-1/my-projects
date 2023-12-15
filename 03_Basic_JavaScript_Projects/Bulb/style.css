@@ -48,3 +48,20 @@ button{
         transform: scale(1);
     }
 }
+#dropdown{
+    width: 250px;
+    height: 25px;
+}
+select{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #aee9e9;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    outline: none;
+}
+option{
+    background-color: #c8f8f8;
+    margin: 5px;
+}
