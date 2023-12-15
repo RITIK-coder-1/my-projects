@@ -16,6 +16,9 @@ blueBulb.style.visibility = "hidden"
 const greenBulb = document.getElementById("green-bulb")
 greenBulb.style.visibility = "hidden"
 
+const redBulb = document.getElementById("red-bulb")
+redBulb.style.visibility = "hidden"
+
 let isOff = true
 
 const animatedButton = (button) => {
@@ -64,11 +67,18 @@ button.addEventListener("click", () => {
         offBulb.style.visibility = "hidden"
         button.textContent = "TURN OFF"
     } 
+    else if (isOff && selectElements.value === "Red"){
+        body.style.backgroundColor = "#d47878"
+        redBulb.style.visibility = "visible"
+        offBulb.style.visibility = "hidden"
+        button.textContent = "TURN OFF"
+    } 
     else {
         body.style.backgroundColor = "black"
         yellowBulb.style.visibility = "hidden"
         blueBulb.style.visibility = "hidden"
         greenBulb.style.visibility = "hidden"
+        redBulb.style.visibility = "hidden"
         offBulb.style.visibility = "visible"
         button.textContent = "TURN ON"
     }
