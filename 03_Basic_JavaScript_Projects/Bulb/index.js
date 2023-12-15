@@ -20,7 +20,7 @@ const animatedButton = (button) => {
 
 }
 
-const dropdown = ["yellow", "blue", "green", "red"]
+const dropdown = ["Yellow", "Blue", "Green", "Red"]
 
 const selectElements = document.getElementById("dropdown")
 
@@ -36,6 +36,7 @@ dropdown.forEach((language) => {
 selectElements.addEventListener("change", function() {
 
     const selectedOption = this.options[this.selectedIndex];
+    
 }, false);
 
 button.addEventListener("click", () => {
