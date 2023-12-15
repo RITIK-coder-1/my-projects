@@ -11,9 +11,9 @@ const yellowBulb = document.getElementById("on-yellow")
 yellowBulb.style.visibility = "hidden" 
 
 let isDark = true
-// let Blue = false
+let Blue = false
 
-// const blue = document.querySelector("option[value='blue']")
+const blue = document.querySelector("option[value='blue']")
 
 // blue.addEventListener("click", () => {
 //     isBlue = true
@@ -27,7 +27,7 @@ const animatedButton = (button) => {
 
 }
 
-const dropdown = ["JavaScript", "Java", "Python", "C", "C++"]
+const dropdown = ["yellow", "blue", "green", "red"]
 
 const selectElements = document.getElementById("dropdown")
 
@@ -43,10 +43,7 @@ dropdown.forEach((language) => {
 selectElements.addEventListener("change", function() {
 
     const selectedOption = this.options[this.selectedIndex];
-
-    const p = document.querySelector("p")
-    p.innerText = `Your Favourite Programming Language has been set to: ${selectedOption.value}`
-
+    selectedOption
 });
 
 button.addEventListener("click", () => {
