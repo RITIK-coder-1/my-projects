@@ -47,3 +47,15 @@ let e = a++ - b++
 let number = +true
 let number2 = -"456"
 // console.log(number2);
+
+
+let A = 10 // 11
+let B = A++ // 10
+// let C = 11++ // invalid
+let C = 10 // 11
+let D = ++C // 11
+
+// console.log(A);
+// console.log(B);
+// console.log(C);
+// console.log(D);

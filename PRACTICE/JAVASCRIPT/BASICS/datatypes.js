@@ -30,7 +30,7 @@ let temp = null
 let random4 = NaN
 // it is a number too (Not-a-Number)
 console.table([name, age, boy, girl, random, random2, random3, BigNum, temp, random4])
-console.table([typeof name,typeof age,typeof boy,typeof girl,typeof random,typeof random2,typeof random3,typeof BigNum,typeof temp, typeof random4])
+console.table([typeof(name),typeof age,typeof boy,typeof girl,typeof random,typeof random2,typeof random3,typeof BigNum,typeof temp, typeof random4])
 
 let random5 = Symbol(3)
 console.log(random3 === random5);

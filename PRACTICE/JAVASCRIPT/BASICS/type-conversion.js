@@ -186,3 +186,26 @@ let boolean_m = Boolean(m)
 
 // 0, empty String, null, undefined get converted to false 
 
+
+
+let score = "33"
+let name = "ritik"
+let emptyString = ''
+let positiveNumber = 19
+let zero = 0
+let negativeNumber = -19
+let bigNumber = 123594085498n
+let zeroBigInt = 0n
+let nothing1 = null
+let nothing2 = undefined
+let symb = Symbol("ritik")
+let isBoy = true
+let isOld = false
+
+// console.table([Number(score), Number(name), Number(emptyString), Number(bigNumber), Number(zeroBigInt), Number(nothing1), Number(nothing2), Number(isBoy), Number(isOld)])
+
+// console.table([Boolean(score), Boolean(name), Boolean(emptyString), Boolean(bigNumber), Boolean(zeroBigInt), Boolean(nothing1), Boolean(nothing2), Boolean(positiveNumber), Boolean(negativeNumber), Boolean(symb), Boolean(zero)])
+
+// console.table([BigInt(score), BigInt(emptyString), BigInt(positiveNumber), BigInt(negativeNumber), BigInt(isBoy), BigInt(isOld), BigInt(zero)])
+
+
