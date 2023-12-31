@@ -111,3 +111,55 @@ const sub = array.reduce((acc, ele) => acc - ele, 0)
 // console.log(sub); // -10
 
 
+const a = [1, 2, 3, 4]
+const b = "ritik"
+
+let sum1 = 0;
+for (let i = 0; i < a.length; i++) {
+    const element = a[i]
+    // sum1 += a[i]
+    // console.log(`The index: ${i} and the value: ${element}`);
+}
+// console.log(`The Sum: ${sum1}`);
+
+for (let i = 0; i < b.length; i++) {
+    const element = b[i];
+    // console.log(`The index: ${i} and the value: ${element}`);
+}
+
+for (const key in a) {
+    // console.log(`The index: ${key} and the value: ${a[key]}`);
+    // sum1 += a[key]
+}
+// console.log(sum1);
+
+for (const key in b) {
+    // console.log(b[key]);
+}
+
+for (const iterator of a) {
+    // console.log(iterator);
+}
+
+for (const iterator of b) {
+    // console.log(iterator);
+}
+
+const forEach = a.forEach(function(element){
+    // console.log(element);
+    return element // it doesn't return
+})
+
+// console.log(forEach) // undefined
+
+const map1 = a.map((ele) => {
+    return ele // it does return
+})
+
+// console.log(map1) // [1,2,3,4]
+
+const filter1 = a.filter((ele) => ele > 2) // it also returns
+
+// console.log(filter1); // [3,4]
+
+

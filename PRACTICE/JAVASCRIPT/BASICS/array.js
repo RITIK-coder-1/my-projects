@@ -250,3 +250,6 @@ const toSpliced = numbers.toSpliced(0, 1)
 
 const myArray = new Array(1, 2, 3)
 // console.log(myArray);
+
+const array1 = [1, 2, 3]
+console.log(...array1);
