@@ -161,5 +161,3 @@ const map1 = a.map((ele) => {
 const filter1 = a.filter((ele) => ele > 2) // it also returns
 
 // console.log(filter1); // [3,4]
-
-
