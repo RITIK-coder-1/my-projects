@@ -1,31 +1,23 @@
 const button = document.getElementById('button')
+const body = document.body
 
 button.addEventListener('click', () => {
-    generateRandomColor()
+    body.style.backgroundColor = `${generateRandomColor()}`
 })
 
-const randomColor = ["0", "1", "2", "3", "4", "5", "6", "A", "B", "C", "D", "E", "F"]
+const randomColor = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
 
 const generateRandomColor = () => {
     let Color = "#"
-    // for (let i = 0; i < randomNumber(); i++) {
-    //     const Element = randomColor[i]
-    //     Color += Element
-    //     console.log(Element);
-    // }
-    // // console.log(Element);
-    randomNumber()
+    for (let i = 0; i < 6; i++) {
+        const Element = randomColor[randomNumber()]
+        Color += Element
+    }
+    return Color
 }
 
 const randomNumber = () => {
-let min = 6
-let max = 13
-const random = Math.floor(Math.random() * ((max - min) + 1) + min)
 
-for (let i = 0; i < random; i++) {
-    const Element = randomColor[i]
-    console.log(Element);
-}
+return Math.floor(Math.random() * 16)
 
-console.log(random);
 }
