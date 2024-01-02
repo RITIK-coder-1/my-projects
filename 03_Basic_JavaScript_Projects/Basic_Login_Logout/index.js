@@ -1,11 +1,12 @@
 const body = document.body
 const login = document.getElementById("login")
+login.style.cursor = "pointer"
 const logout = document.getElementById("logout")
+logout.style.cursor = "pointer"
 const heading = document.getElementById("heading")
 
-let isLoggedIn = false
-let isLoggedOut = false
-let filledForm = false
+let loggedIn = false
+let loggedOut = false
 
 const createForm  = function (){
     const form = document.createElement("form")
@@ -29,97 +30,44 @@ const createForm  = function (){
     submit.innerText = "Submit"
     submit.style.width = "150px"
     submit.type = "submit"
+    submit.style.cursor = "pointer"
     
     
     form.append(input1)
     form.append(input2)
     form.append(submit)
     body.append(form)
-
-    submit.addEventListener("click", () => {
-        event.preventDefault()
-        if (input1.value === "" || input2.value === "") {
-            alert("please fill the form first!")
-        } else {
-            heading.innerText = "The User has logged In."
-            const form = document.getElementsByTagName("form")
-            for (let index = 0; index < form.length; index++) {
-            const element = form[index];  
-            element.remove()    
-            filledForm = true    
-        }
-        }  
-    })
 }
 
-const remove = () => {
-    const form = document.querySelector("form")
-    form.remove()
-}
 
 login.addEventListener("click", () => {
-
-    if (isLoggedIn === false){
-        isLoggedIn = true
-    } else if (isLoggedIn === true){
-        isLoggedIn = false
-    }
-
-    if (isLoggedIn === true){
+    if (loggedIn === false){
         createForm()
     } else {
-        remove()
+        document.querySelector('form').remove()
     }
-})
+
+    if (loggedIn === false){
+        loggedIn = true
+    } else {
+        loggedIn = false
+    }
+}, false)
+
 
 logout.addEventListener("click", () => {
-
-    if (isLoggedIn === false || filledForm === false){
-        alert("You haven't logged in yet.")
-    } else if (isLoggedOut === false){
-        isLoggedOut = true
-    } else if (isLoggedOut === true){
-        isLoggedOut = false
-    }
-
-    if (isLoggedOut === true){
-
-    alert("Are you sure? You want to log out?")
-
-    const form = document.getElementsByTagName("form")
-    for (let index = 0; index < form.length; index++) {
+    if (loggedIn === false){
+        alert("You haven't logged in yet!")
+    } else if (loggedOut === false && loggedIn === true){
+        alert("Are you sure? You want to log out?")
+        const form = document.getElementsByTagName("form")
+        for (let index = 0; index < form.length; index++) {
         const element = form[index];  
         element.remove()        
-    }
-
-    heading.innerText = "The User has Logged Out."
-
-    logout.addEventListener("click", () => {
-        alert("You have already logged out!")
-    })
-    
-    login.addEventListener("click", () => {
-
-        if (isLoggedOut === true){
-    
-        if (isLoggedIn === false){
-            isLoggedIn = true
-        } else if (isLoggedIn === true){
-            isLoggedIn = false
         }
-    
-        if (isLoggedIn === true){
-            createForm()
-            heading.innerText = ""
-        } else {
-            remove()
-        }
+        heading.innerText = "The User has Logged Out."
+        loggedOut = true
+    } else if (loggedOut === true) {
+        alert("You have already logged Out!")
     }
-    })
-} 
-})
-
-
-
-
-
+}, false)
