@@ -40,6 +40,22 @@
         console.log(selector5);
         console.log(selector6);
         console.log(selector7);
+
+        const ul = document.querySelector('ul')
+        const children = ul.children
+
+        for (let i = 0; i < children.length; i++) {
+            const element = children[i];
+            console.log(element);
+            children[4].style.fontSize = "24px"
+        }
+
+        const thirdChild = children[2]
+        const forthEle = thirdChild.nextSibling
+        const forthChild = thirdChild.nextElementSibling
+        thirdChild.textContent = "checking!"
+        forthEle.textContent = "checking"
+        forthChild.textContent = "checking!"
     </script>
     <script src="style.js"></script>
 </body>
