@@ -13,10 +13,10 @@
 </body>
 <script>
 
-    const click = document.getElementById("button")
+    const button= document.getElementById("button")
 
-    click.addEventListener("click", () => {
-        alert("clicked")
+    button.addEventListener("click", () => {
+        // alert("clicked")
     })
 
     const parent = document.querySelector('#parent')
@@ -48,6 +48,25 @@
     // +++++++++++++++++++++++++++++++++++++++++++
 
     // MOUSE EVENTS
+    
+    button.addEventListener("click", () => {
+        document.body.append(document.createElement('p').innerText = "clicked")
+    })
+    button.addEventListener("dblclick", () => alert("double-clicked!"))
+    button.addEventListener("mouseover", () => console.log("hovered"))
+    button.addEventListener("mouseout", () => console.log("moved out"))
+    button.addEventListener("mousemove", () => console.log("moving"))
+    button.addEventListener("focus", () => {
+        console.log("focused!");
+    })
 
+    // KEYBOARD EVENTS
+
+    button.addEventListener("keydown", () => console.log("pressed down"))
+    button.addEventListener("keyup", () => {
+        console.log("key  moved");
+        console.log(event.key)
+    })
+    button.addEventListener("keypress", () => console.log("pressed"))
 </script>
 </html>
