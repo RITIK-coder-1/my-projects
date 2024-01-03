@@ -6,6 +6,9 @@
     <title>Events</title>
 </head>
 <body>
+    <ul id="parent">
+        <li id="child">child</li>
+    </ul>
     <button id="button">click me</button>
 </body>
 <script>
@@ -13,22 +16,38 @@
     const click = document.getElementById("button")
 
     click.addEventListener("click", () => {
+        alert("clicked")
+    })
 
-        alert("It will change the background color!")
+    const parent = document.querySelector('#parent')
+    const child = document.querySelector("#child")
 
-        const bgColor = document.body
-
-        bgColor.style.backgroundColor = "black"
-
-        if (bgColor.style.backgroundColor === "black"){
-
-            click.addEventListener("click", () => {
-                bgColor.style.backgroundColor = "white"
-            })
-
-        }
-
-    }, false)
+    // Event Bubbling --->
     
+    parent.addEventListener("click", () => {
+        // console.log("parent clicked");
+    }, false)
+    child.addEventListener("click", () => {
+        // console.log("child clicked");
+    }, false)
+
+    // child is clicked first and then, parent
+
+    // Event capturing --->
+
+    parent.addEventListener("click", () => {
+        console.log("parent clicked");
+        // event.stopPropagation()  it stops the furthur propagation
+    }, true)
+    child.addEventListener("click", () => {
+        console.log("child clicked");
+    }, true)
+
+    // parent is clicked first and then, child
+
+    // +++++++++++++++++++++++++++++++++++++++++++
+
+    // MOUSE EVENTS
+
 </script>
 </html>
