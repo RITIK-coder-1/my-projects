@@ -5,10 +5,11 @@ const two = document.getElementById("two")
 const three = document.getElementById("three")
 const four = document.getElementById("four")
 const five = document.getElementById("five")
+const six = document.getElementById("six")
 
 input.addEventListener('input', () => {
     const value = input.value.toLowerCase()
-    const items = [one, two, three, four, five]
+    const items = [one, two, three, four, five, six]
 
     items.forEach((ele) => {
         const text = ele.innerText.toLowerCase()
