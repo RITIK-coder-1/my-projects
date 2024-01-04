@@ -2,13 +2,11 @@ const button = document.getElementById('button')
 const body = document.body
 
 button.addEventListener('click', () => {
-    body.style.backgroundColor = `${generateRandomColor()}`
-    let bodyStyle = button.style.backgroundColor
-    button.style.backgroundColor = `#${reverseString(body.style.backgroundColor).slice(0, 6)}`
+    let bodyStyle = generateRandomColor()
+    let buttonStyle = `#${reverseString(bodyStyle).slice(0, 6)}`
+    body.style.backgroundColor = `${bodyStyle}`
+    button.style.backgroundColor = `${buttonStyle}`
     animatedButton(button)
-    console.log(`#${reverseString(generateRandomColor()).slice(0, 6)}`);
-    console.log(generateRandomColor());
-    console.log(bodyStyle);
 })
 
 const randomColor = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
@@ -26,12 +24,12 @@ const randomNumber = () => {
     return Math.floor(Math.random() * 16)
 }
 
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
 function animatedButton(Button){
     Button.style.animation = "none"
     void Button.offsetWidth
     Button.style.animation = "button 0.1s ease-in-out 0s 1 normal"
-}
-
-function reverseString(str) {
-    return str.split('').reverse().join('');
 }
