@@ -65,8 +65,20 @@
     button.addEventListener("keydown", () => console.log("pressed down"))
     button.addEventListener("keyup", () => {
         console.log("key  moved");
-        console.log(event.key)
+        let keyEvent = event.key
+        console.log(keyEvent)
     })
     button.addEventListener("keypress", () => console.log("pressed"))
+
+    // CLIENT EVENTS
+
+    document.addEventListener('mousemove', function(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    const screenX = event.screenX;
+    const screenY = event.screenY;
+    console.log(`Mouse X: ${mouseX}, Mouse Y: ${mouseY}`)
+    console.log(`Screen X: ${screenX}, Screen Y: ${screenY}`)
+    })
 </script>
 </html>
