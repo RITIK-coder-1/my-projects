@@ -23,17 +23,17 @@ document.addEventListener("click", (event) => {
 
     div.addEventListener('dragenter', (event) => {
         event.preventDefault()
-        event.target.style.border = '2px dashed blue'; // Visual indication of drop target
+        event.target.style.border = '2px dashed white'; // Visual indication of drop target
     })
 
     div.addEventListener('dragleave', (event) => {
         event.preventDefault()
-        event.target.style.border = '1px solid black'; // Revert style when leaving drop target
+        event.target.style.border = '1px solid white'; // Revert style when leaving drop target
     })
 
     div.addEventListener('drop', (event) => {
         event.preventDefault()
         // Handle the drop event if needed
-        event.target.style.border = '1px solid black'; // Revert style when dropping
+        event.target.style.border = '1px solid white'; // Revert style when dropping
     })
 })

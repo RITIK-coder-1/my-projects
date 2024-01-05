@@ -1,5 +1,8 @@
+body{
+    background-color: black;
+}
 .draggable {
-    border: 1px solid black;
+    border: 3px solid white;
     border-radius: 50%;
     height: 50px;
     width: 50px;
