@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
-    <h1>0</h1>
-    <button>click</button>
+    <header>
+        <nav>
+            <button id="reset">
+                reset
+            </button>
+        </nav>
+    </header>
+    <main>
+        <h1>STOPWATCH</h1>
+        <div id="clock">0</div>
+        <div>
+            <button id="start">START</button>
+            <button id="stop">STOP</button>
+        </div>
+    </main>
 </body>
-<script>
-    const h1 = document.querySelector('h1')
-    let sec = 1
-    const button = document.querySelector('button')
-    button.addEventListener('click', () => {
-        setInterval(() => {
-        h1.innerText = sec++
-    }, 1000)
-    })
-</script>
+<script src="index.js"></script>
 </html>
