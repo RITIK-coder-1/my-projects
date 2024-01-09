@@ -16,7 +16,7 @@ start.addEventListener('click', () => {
         div.innerText = `${sec} s`
 
         if (sec > 60) { 
-            div.innerText = `${min} m ${sec1} s`
+            div.innerText = `${min} m`
         }
     
         stop.addEventListener("click", () => {
@@ -40,29 +40,3 @@ start.addEventListener('click', () => {
     }, 60000)   
     
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
