@@ -2,15 +2,42 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+html, body{
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    color: aliceblue;
+}
+header{
+    height: 50px;
+}
+nav, ol{
+    height: 100%;
+}
+nav > ol{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 100px;
+}
+nav li, nav a{
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: aliceblue;
+}
+nav li:hover, nav li:focus{
+    color: #9cc0df;
+}
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     padding-top: 150px;
-    background-color: #000000;
-    color: aliceblue;
 }
 h1{
     font-family: 'Courier New', Courier, monospace;

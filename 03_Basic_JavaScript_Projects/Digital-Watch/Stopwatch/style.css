@@ -10,10 +10,33 @@ body{
     background-color: #000000;
     color: aliceblue;
 }
-nav{
+header{
+    height: 50px;
+}
+.resetSection{
     display: flex;
     justify-content: end;
     padding: 15px;
+}
+nav, ol{
+    height: 100%;
+}
+nav ol{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 100px;
+}
+nav li, nav a{
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: aliceblue;
+}
+nav li:hover, nav li:focus{
+    color: #9cc0df;
 }
 main{
     display: flex;
