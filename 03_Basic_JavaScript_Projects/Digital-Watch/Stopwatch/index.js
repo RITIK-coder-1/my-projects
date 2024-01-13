@@ -1,13 +1,13 @@
-const div = document.querySelector('div')
+const div = document.querySelector("div")
 
 let sec = 0
 let min = 0
 
-const start = document.querySelector('#start')
+const start = document.querySelector("#start")
 const stop = document.querySelector("#stop")
 const reset = document.querySelector("#reset")
 
-start.addEventListener('click', () => {
+start.addEventListener("click", () => {
 
     let time1 = setInterval(function(){
         
@@ -24,7 +24,7 @@ start.addEventListener('click', () => {
     })
     }, 1000)
 
-    reset.addEventListener('click', () => {
+    reset.addEventListener("click", () => {
         sec = 0
         min = 0
         div.innerText = 0
