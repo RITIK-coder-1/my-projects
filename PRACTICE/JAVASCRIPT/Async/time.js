@@ -4,4 +4,9 @@ function message() {
     console.log('delay of 2 secs');
 }
 
-setInterval(message, 2000)
+let interval = setInterval(message, 2000)
+
+setTimeout(() => {
+    clearInterval(interval)
+    console.log("interval cleared");
+}, 5000)

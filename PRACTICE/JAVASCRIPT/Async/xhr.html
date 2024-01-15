@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const xhr = new XMLHttpRequest()
+
+    const myGitHubApi = "https://api.github.com/users/RITIK-coder-1"
+
+    console.log(xhr.readyState);
+
+    xhr.open("GET", myGitHubApi)
+
+    console.log(xhr.readyState);
+
+    xhr.onreadystatechange = function(){
+        const readyState = xhr.readyState
+        console.log(readyState);
+        const responseText = this.responseText
+        const objResponseText = JSON.parse(responseText)
+        if (readyState === 4) {
+            console.log(responseText);
+        }
+        console.log(objResponseText.followers);
+    }
+
+    xhr.send()
+</script>
