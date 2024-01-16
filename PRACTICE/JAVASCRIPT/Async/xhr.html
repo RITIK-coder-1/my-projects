@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xhr</title>
+    <title>Practising HTTP Request</title>
 </head>
-<body>
+<body style="background-color: black; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+    <img src="" style="width: 150px; height: 150px; border-radius: 50%;">
+    <span id="one" style="display: block; font-size: 20px; font-family: 'Courier New', Courier, monospace;color: aliceblue;"></span>
+    <span id="two" style="display: block; font-size: 20px; font-family: 'Courier New', Courier, monospace;color: aliceblue;"></span>
+    <span id="three" style="display: block; font-size: 20px; font-family: 'Courier New', Courier, monospace;color: aliceblue;"></span>
     
 </body>
 </html>
@@ -14,21 +18,33 @@
 
     const myGitHubApi = "https://api.github.com/users/RITIK-coder-1"
 
-    console.log(xhr.readyState);
-
     xhr.open("GET", myGitHubApi)
-
-    console.log(xhr.readyState);
 
     xhr.onreadystatechange = function(){
         const readyState = xhr.readyState
-        console.log(readyState);
         const responseText = this.responseText
         const objResponseText = JSON.parse(responseText)
-        if (readyState === 4) {
-            console.log(responseText);
-        }
-        console.log(objResponseText.followers);
+
+        console.log(objResponseText);
+
+        const image = document.querySelector("img")
+        image.setAttribute("src", `${objResponseText.avatar_url}`)
+
+        const one = document.querySelector("#one")
+        one.textContent = `My GitHub Username: ${objResponseText.login}`
+
+        const two = document.querySelector("#two")
+        let followers = 0
+        two.textContent = `My GitHub Followers: ${followers}`
+        const time = setInterval(() => {
+            two.innerHTML = `My GitHub Followers: <b>${followers++}<b>`
+            if (followers > objResponseText.followers) {
+                clearInterval(time)
+            }
+        }, 80)
+
+        const three = document.querySelector("#three")
+        three.innerHTML = `<a href="${objResponseText.html_url}" style="text-decoration: none;">Visit My GitHub</a>`
     }
 
     xhr.send()
