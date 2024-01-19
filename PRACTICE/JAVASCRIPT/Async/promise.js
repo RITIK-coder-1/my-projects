@@ -1,6 +1,8 @@
 const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log("executed");
-    }, 10000)
+    }, 2000)
     resolve ("done")
 })
+
+myPromise.then()
