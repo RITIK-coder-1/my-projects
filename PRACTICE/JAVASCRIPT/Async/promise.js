@@ -1,8 +1,19 @@
+// Creating a Promise ---->
+
 const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log("executed");
+        resolve() // it resolves the promise after timeout
+        reject()
     }, 2000)
-    resolve ("done")
+    // resolve() // it resolves the promise before timeout
 })
 
-myPromise.then()
+// Consuming a Promise ---->
+
+myPromise.then(() => {
+    console.log("resolved");
+})
+myPromise.catch(() => {
+    console.log("error");
+})
