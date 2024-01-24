@@ -14,6 +14,3 @@ const myPromise = new Promise((resolve, reject) => {
 myPromise.then(() => {
     console.log("resolved");
 })
-myPromise.catch(() => {
-    console.log("error");
-})
