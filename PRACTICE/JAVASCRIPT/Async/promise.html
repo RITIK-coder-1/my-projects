@@ -13,7 +13,7 @@
     const myPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log("executed");
-            resolve("resolved") // it resolves the promise after timeout
+            // resolve("resolved") // it resolves the promise after timeout
             // reject("rejected") // it rejects the promise after timeout
         }, 5000)
         // resolve() // it resolves the promise before timeout
@@ -39,8 +39,12 @@
     // async - await ------>
 
     async function demo(){
-        const result = await myPromise
-        console.log(result);
+        try {
+            const result = await myPromise
+            console.log(result);
+        } catch (error) {
+            console.log("There is an an error: ", error);
+        }
         return "demo"
     }
 
