@@ -13,7 +13,7 @@
     const myPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log("executed");
-            // resolve("resolved") // it resolves the promise after timeout
+            resolve("resolved") // it resolves the promise after timeout
             // reject("rejected") // it rejects the promise after timeout
         }, 5000)
         // resolve() // it resolves the promise before timeout
@@ -27,7 +27,7 @@
     console.log(myPromise);
 
     // Consuming a Promise ----->
-    
+
     myPromise.then(() => {
         console.log("promise resolved");
     }).catch(() => {
@@ -36,5 +36,14 @@
         console.log("executed regardless");
     })
 
+    // async - await ------>
+
+    async function demo(){
+        const result = await myPromise
+        console.log(result);
+        return "demo"
+    }
+
+    console.log(demo());
 </script>
 </html>
