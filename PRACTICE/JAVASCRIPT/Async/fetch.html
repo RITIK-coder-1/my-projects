@@ -6,7 +6,11 @@
     <title>Fetch API</title>
 </head>
 <body>
-    <blockquote></blockquote>
+    <blockquote>
+        "Life is a learning experience, only if you learn."
+    </blockquote>
+    <span>-- Yogi Berra</span>
+    <button id="button">Generate a Quote</button>
 </body>
 <script>
     let category = "happiness"
@@ -17,15 +21,19 @@
         return response.json()
     })
     .then(data => {
+        const button = document.getElementById("button")
+        const quote = document.querySelector("blockquote")
+        const author = document.querySelector("span")
+
+        button.addEventListener("click", () => {
+            quote.textContent = `"${data[generateRandomNumber()].text}"`
+        })
         console.log(data)
-        console.log(data[generateRandomNumber()].text);
     })
 
     function generateRandomNumber() {
         return Math.floor(Math.random()*16)
     }
-
-    console.log(Math.floor(Math.random()*16));
     
 </script>
 </html>
