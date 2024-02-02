@@ -27,7 +27,17 @@
 
         button.addEventListener("click", () => {
             quote.textContent = `"${data[generateRandomNumber()].text}"`
+
+            const authorString = data[generateRandomNumber()].author
+            if (authorString.includes("type.fit")) {
+                author.textContent = `-- ${authorString.substring(0, authorString.length - 10)}`
+            } // the default value is "author name, type.fit", thus to discard "type.fit" I wrote this!
+
+            if (authorString.includes("type.fit") && authorString.length === 9) {
+                author.textContent = "Unknown"
+            }
         })
+
         console.log(data)
     })
 
