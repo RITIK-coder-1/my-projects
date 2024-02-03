@@ -18,8 +18,8 @@ myAPI
             author.textContent = `-- ${authorString.substring(0, authorString.length - 10)}`
         } // the default value is "author name, type.fit", thus to discard "type.fit" I wrote this!
 
-        if (authorString.includes("type.fit") && authorString.length === 9) {
-            author.textContent = "Unknown"
+        else {
+            author.textContent = `${authorString}`
         }
     })
 
