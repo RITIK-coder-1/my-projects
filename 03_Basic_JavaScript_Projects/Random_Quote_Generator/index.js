@@ -1,4 +1,3 @@
-let category = "happiness"
 let myAPI = fetch("https://type.fit/api/quotes")
 
 myAPI
