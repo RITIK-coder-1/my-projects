@@ -5,64 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATOR BY RITIK</title>
-    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>CALCULATOR</h1>
     
-    <div class="calc">
+    <div class="calculator">
 
         
         <input type="text" placeholder="0">
         
 
-        <div class="opt">
-            <button class="clear clear1">C</button>
-            <button class="clear clear2">CE</button>
-            <button class="clear clear3">&radic;</button>
-            <button class="clear clear4">DEL</button>
+        <div id="first-column">
+               <button id="clear" class="first-column">C</button>
+               <button id="clear-all" class="first-column">CE</button>
+               <button id="square-root" class="first-column">&radic;</button>
+               <button id="delete" class="first-column">DEL</button>
         </div>
 
-        <div class="num1">
-                <button class="numb1 sm-cl">(</button>
-                <button class="numb1 sm-cl">)</button>
-                <button class="numb1 sm-cl">%</button>
-                <button class="numb1 lastbutn sm-cl">/</button>
+        <div id="second-column">
+                <button class="second-column same-bg-1">(</button>
+                <button class="second-column same-bg-1">)</button>
+                <button class="second-column same-bg-1">%</button>
+                <button class="second-column last-button same-bg-1">/</button>
         </div>
 
-         <div class="num2">
+         <div id="third-column">
                 
-                <button class="numb2 smcl">7</button>
-                <button class="numb2 smcl">8</button>
-                <button class="numb2 smcl">9</button>
-                <button class="numb2 lastbutn sm-cl">&times;</button>
+                <button class="third-column same-bg-2">7</button>
+                <button class="third-column same-bg-2">8</button>
+                <button class="third-column same-bg-2">9</button>
+                <button class="third-column last-button same-bg-1">&times;</button>
 
         </div>
 
-         <div class="num3">
-                <button class="numb3 smcl">6</button>
-                <button class="numb3 smcl">5</button>
-                <button class="numb3 smcl">4</button>
-                <button class="numb3 lastbutn sm-cl">-</button>
+         <div id="fourth-column">
+                <button class="fourth-column same-bg-2">6</button>
+                <button class="fourth-column same-bg-2">5</button>
+                <button class="fourth-column same-bg-2">4</button>
+                <button class="fourth-column last-button same-bg-1">-</button>
          </div>   
                
-        <div class="num4">
+        <div id="fifth-column">
                     
-                <button class="numb4 smcl">3</button>
-                <button class="numb4 smcl">2</button>
-                <button class="numb4 smcl">1</button>
-                <button class="numb4 lastbutn sm-cl">+</button>
+                <button id="three" class="fifth-column same-bg-2">3</button>
+                <button id="two" class="fifth-column same-bg-2">2</button>
+                <button id="one" class="fifth-column same-bg-2">1</button>
+                <button id="add" class="fifth-column last-button same-bg-1">+</button>
         </div>
                 
-        <div class="num5">
+        <div id="sixth-column">
 
-                <button class="numb5 smcl">0</button>
-                <button class="numb5 smcl">.</button>
-                <button class="numb5 lastbutn sm-cl equal">=</button>
+                <button class="sixth-column same-bg-2">0</button>
+                <button class="sixth-column same-bg-2">.</button>
+                <button id="equals" class="sixth-column last-button">=</button>
 
         </div>
-        
-            </div> 
+              
     </div>
 </body>
+<script src="index.js"></script>
 </html>
