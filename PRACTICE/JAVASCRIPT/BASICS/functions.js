@@ -164,7 +164,7 @@ function input(num1, num2, ...num){
 
 // input(1, 2, 3, 4) // 1 2 [3, 4]
 
-square(2) // Hoisting not possible
+// square(2) // Hoisting not possible
 
 const square = function(num){ // Function Expression
     return num*num
@@ -178,3 +178,20 @@ function ritik() {
     console.log("my name");
 }
 
+function demo() {
+    console.log("demo");
+    return "returned value"
+}
+const one = demo
+one() // demo
+const two = demo()
+// two() // error
+console.log(two); // returned value
+
+function demo2(){
+    return function(){
+        console.log("returned function");
+    }
+}
+const three = demo2()
+three() // returned function

@@ -12,5 +12,4 @@ Object.defineProperty(obj1, "name", {
 
 obj1.name = "RITIK"
 
-console.log(obj1);
-
+console.log(obj1); // name: 'ritik'
