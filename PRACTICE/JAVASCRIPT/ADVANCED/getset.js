@@ -11,5 +11,7 @@ const obj = {
     }
 }
 
+obj.email = "Ritik@ai.com"
+
 console.log(obj.getEmail);
 console.log(obj.email);
