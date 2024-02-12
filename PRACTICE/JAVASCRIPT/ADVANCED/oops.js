@@ -75,3 +75,43 @@ class two extends one {
 const newUser2 = new two("  ritik", 19)
 newUser2.log()
 newUser2.actualLength()
+
+// Abstraction --> 
+
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(123, 152)); // 275
+  
+class Car {
+    constructor(brand, model) {
+      this.brand = brand;
+      this.model = model;
+    }
+  
+    start() {
+      console.log('Engine started');
+    }
+}
+  
+let myCar = new Car('Toyota', 'Camry');
+
+myCar.start() // Engine Started
+
+// Polymorphism -->
+
+class Shape {
+    draw() {
+      console.log('Drawing a shape');
+    }
+}
+  
+  class Circle extends Shape {
+    draw() {
+      console.log('Drawing a circle');
+    }
+}
+  
+let shape = new Circle();
+shape.draw();  // Calls the draw method of the Circle class
