@@ -1,12 +1,12 @@
 let array = [] // array to store numbers and perform arithmetic operations
 let operation // it will decide the type of operation
-let screenValue = ""
 
 // Selecting elements --->
 
 const screen = document.getElementById("screen")
-screen.value = screenValue
+screen.value = ""
 
+const zero = document.getElementById("zero")
 const one = document.getElementById("one")
 const two = document.getElementById("two")
 const three = document.getElementById("three")
@@ -20,6 +20,7 @@ const nine = document.getElementById("nine")
 const add = document.getElementById("add")
 const sub = document.getElementById("sub")
 const multiply = document.getElementById("multiply")
+const divide = document.getElementById("divide")
 const equals = document.getElementById("equals")
 
 const clear = document.getElementById("clear")
@@ -34,12 +35,32 @@ sub.addEventListener("click", () => {
     operation = "sub"
     display("-")
 })
+multiply.addEventListener("click", () => {
+    operation = "multiply"
+    display("*")
+})
+divide.addEventListener("click", () => {
+    operation = "divide"
+    display("/")
+})
 
 equals.addEventListener("click", () => {
     // clicking the equal button will calculate on the basis of these conditions --->
 
     let initialvalue = 0
-    let result = array.reduce((accumulator, element) => accumulator + element, initialvalue)
+    let result = 0 
+
+    if (operation === "add" || operation === "sub") {
+        result = array.reduce((accumulator, element) => accumulator + element, initialvalue)
+    } else if (operation === "multiply") {
+        initialvalue = 1
+        result = array.reduce((accumulator, element) => accumulator * element, initialvalue)
+    } else if (operation === "divide") {
+        for (let i = 0; i < array.length; i++) {
+            result = array[i] / array[i + 1]
+            break;
+        }
+    }
 
     array = [] // the array should get empty once a calculation is done
     operation = undefined // the operation should again reset to its original value
@@ -48,123 +69,17 @@ equals.addEventListener("click", () => {
 })
 // clicking numbers --->
 
-one.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(1)
-            break; 
-        case "add":
-            addItems(1)
-            break;   
-        case "sub":
-            addItems(-1)
-            break;
-    } 
-})
-two.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(2)
-            break; 
-        case "add":
-            addItems(2)
-            break;  
-        case "sub":
-            addItems(-2)
-            break;
-    }
-})
-three.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(3)
-            break; 
-        case "add":
-            addItems(3)
-            break;  
-        case "sub":
-            addItems(-3)
-            break;
-    }
-})
-four.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(4)
-            break; 
-        case "add":
-            addItems(4)
-            break;  
-        case "sub":
-            addItems(-4)
-            break;
-    }
-})
-five.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(5)
-            break; 
-        case "add":
-            addItems(5)
-            break;  
-        case "sub":
-            addItems(-5)
-            break;
-    }
-})
-six.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(6)
-            break; 
-        case "add":
-            addItems(6)
-            break;  
-        case "sub":
-            addItems(-6)
-            break;
-    }
-})
-seven.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(7)
-            break; 
-        case "add":
-            addItems(7)
-            break;  
-        case "sub":
-            addItems(-7)
-            break;
-    }
-})
-eight.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(8)
-            break; 
-        case "add":
-            addItems(8)
-            break;  
-        case "sub":
-            addItems(-8)
-            break;
-    }
-})
-nine.addEventListener("click", () => {
-    switch (operation) {
-        case undefined:
-            addItems(9)
-            break; 
-        case "add":
-            addItems(9)
-            break;  
-        case "sub":
-            addItems(-9)
-            break;
-    }
-})
+numberListener(zero, 0)
+numberListener(one, 1)
+numberListener(two, 2)
+numberListener(three, 3)
+numberListener(four, 4)
+numberListener(five, 5)
+numberListener(six, 6)
+numberListener(seven, 7)
+numberListener(eight, 8)
+numberListener(nine, 9)
+
 
 clear.addEventListener("click", () => {
     screen.value = ""
@@ -173,18 +88,20 @@ clear.addEventListener("click", () => {
 
 // hidding placeholder while calculations --->
 
-if (screen.value === ""){
-    screen.placeholder = 0
-} else {
-    screen.placeholder = ""
-}
+screen.addEventListener("input", () => {
+    if (screen.value === ""){
+        screen.placeholder = 0
+    } else {
+        screen.placeholder = ""
+    }
+})
 
 // add items function --->
 function addItems(button) {
     array.push(button)
     console.log(array);
     
-    // Immediately Invoked Function to update screen value --> 
+    // Immediately Invoked Function to update screen value with numbers --> 
 
     (() => {
 
@@ -202,8 +119,38 @@ function addItems(button) {
     })()
 }
 
+// Function to update the screen value with signs -->
+
 function display(button) {
     let newValue = screen.value + button
 
     screen.value = newValue
+}
+
+// function to push signed numbers -->
+
+function numberSign(num) {
+    switch (operation) {
+        case undefined:
+            addItems(num)
+            break; 
+        case "add":
+            addItems(num)
+            break;  
+        case "sub":
+            addItems(-num)
+            break;
+        case "multiply":
+            addItems(num) 
+            break;
+        case "divide":
+            addItems(num)
+            break;       
+    }
+}
+
+// function for clicking numbers --->
+
+function numberListener(button, num) {
+    button.addEventListener("click", () => numberSign(num))
 }
