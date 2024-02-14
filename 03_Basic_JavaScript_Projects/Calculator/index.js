@@ -98,7 +98,13 @@ screen.addEventListener("input", () => {
 
 // add items function --->
 function addItems(button) {
-    array.push(button)
+    // if (typeof array[array.length - 1] === 'number') {
+  
+    //     array[array.length - 1] = array[array.length - 1] * 10 + button;
+    // } else {
+      
+        array.push(button);
+    // }
     console.log(array);
     
     // Immediately Invoked Function to update screen value with numbers --> 
