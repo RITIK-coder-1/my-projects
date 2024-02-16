@@ -72,7 +72,7 @@ select {
     cursor: pointer;
 }
 
-.button-container {
+#button-container {
     display: flex;
     justify-content: space-between;
     width: 350px;
