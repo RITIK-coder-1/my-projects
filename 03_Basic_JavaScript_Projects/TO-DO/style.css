@@ -10,7 +10,7 @@
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #9191e6, #ffffff, #baf1ba);
 }
 header, nav{
     width: 100%;
@@ -23,6 +23,9 @@ nav{
     visibility: hidden; 
     /* it should be hidden until a task is created */
 }
+nav span {
+    font-family: 'Courier New', Courier, monospace;
+}
 main{
     display: flex;
     justify-content: center;
@@ -34,13 +37,9 @@ img{
 }
 /* classes and IDs */
 #reset{
-    background-color: #ff0000;
-    border: none;
-    border-radius: 5px;
     font-size: 10px;
     font-weight: 600;
     padding: 2px;
-    cursor: pointer;
     width: 50px;
 }
 #todo-container {
@@ -48,7 +47,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 8px;
-    box-shadow: 0 0 10px #0000001a;
+    box-shadow: 0 0 10px #000000d3;
     height: auto;
     width: 350px;
 }
@@ -76,6 +75,7 @@ img{
 }
 .checkbox-container {
     display: flex;
+    justify-content: space-between;
     width: 45px;
     position: relative;
     left: 345px;
@@ -83,6 +83,15 @@ img{
 }
 .checkbox-container button{
     border: none;
+    cursor: pointer;
+    background: transparent;
+}
+.todo-item input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid #03395e;
+    width: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 #todo-input, .todo-item input {
     width: 100%;
@@ -91,25 +100,28 @@ img{
     border-top: 1px solid #eee;
     outline: none;
 }
-#add-button {
-    width: 100%;
+#add-button, #reset {
     background-color: #2ecc71;
     color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 5px;
 }
-
-/* animations */
-@keyframes button {
-    0% {transform: scale(1);}
-    50% {transform: scale(0.9);}
-    100% {transform: scale(1);}
+button, input[type="text"], input[type="checkbox"] {
+    transition: background-color 0.3s ease;
 }
 
 /* hover */
 #reset:hover{
     background-color: #b30909;
+}
+#add-button:hover{
+    background-color: #25a85c;
+}
+.todo-item:hover {
+    background-color: #f9f9f9;
+}
+.todo-item input[type="checkbox"]:checked {
+    background-color: #174463;
 }
