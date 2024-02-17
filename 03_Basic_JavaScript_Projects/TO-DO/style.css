@@ -1,55 +1,115 @@
+/* tags */
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    background-color: #212121;
+:root, body{
+    height: 100%;
+    width: 100%;
 }
-.container{
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+header, nav{
+    width: 100%;
+}
+nav{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: end;
+    padding-right: 15px;
+    padding-top: 5px;
+    visibility: hidden; 
+    /* it should be hidden until a task is created */
 }
-#container{
+main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    height: 600px;
 }
-#button{
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    background-color: aqua;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    cursor: pointer; 
+img{
+    width: 15px;
 }
-#numberOfToDo{
-    width: 150px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    background-color: #6b6bbe;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-}
-#remove{
-    padding: 5px;
+/* classes and IDs */
+#reset{
+    background-color: #ff0000;
     border: none;
     border-radius: 5px;
     font-size: 10px;
-    background-color: red;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 600;
-    cursor: pointer; 
-    margin-left: 15px;
-    display: none;
+    padding: 2px;
+    cursor: pointer;
+    width: 50px;
 }
+#todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+    height: auto;
+    width: 350px;
+}
+#todo-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 80px;
+}
+#todo-list {
+    list-style: none;
+}
+.todo-item {
+    padding: 20px 10px 0px 10px;
+    border-bottom: 1px solid #eee;
+}
+.todo-item > input {
+    border-radius: 5px;
+    width: 100px;
+}
+.checkbox-container {
+    display: flex;
+    width: 45px;
+    position: relative;
+    left: 345px;
+    bottom: 25px;
+}
+.checkbox-container button{
+    border: none;
+}
+#todo-input, .todo-item input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #eee;
+    outline: none;
+}
+#add-button {
+    width: 100%;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* animations */
 @keyframes button {
     0% {transform: scale(1);}
     50% {transform: scale(0.9);}
     100% {transform: scale(1);}
+}
+
+/* hover */
+#reset:hover{
+    background-color: #b30909;
 }

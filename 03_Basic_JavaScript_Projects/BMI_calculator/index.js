@@ -1,4 +1,4 @@
-// Type of calculation -->
+// Types of calculation -->
 
 let generalCalculation = true
 let metricCalculation = false
@@ -44,10 +44,10 @@ weightUnit.addEventListener("change", function() {
             weight = Number(weight2.value)
             break
         case "Grams":
-            weight = Number(weight2.value) / 1000
+            weight = Number(weight2.value) / 1000 // grams to KGS
             break
         case "Pounds":
-            weight = Number(weight2.value) * 0.453592
+            weight = Number(weight2.value) * 0.453592 // Pounds to KGs
             break
     }
 })
@@ -59,10 +59,10 @@ heightUnit.addEventListener("change", function() {
             height = (height2.value)
             break
         case "Centimeters":
-            height = (height2.value) / 100
+            height = (height2.value) / 100 //  CMs to Ms
             break
         case "Inches":
-            height = (height2.value) * 0.0254
+            height = (height2.value) * 0.0254 // Inches to Ms
             break
     }
 })
@@ -84,8 +84,8 @@ function calculate(weight, height, indexNumber) {
     let BMI = (weight / (height * height)).toFixed(2)
     for (let i = 0; i < result.length; i++) {
         const element = result[indexNumber] // Specific index number for a specific calculator
-        if (!(weight.value === "" || height.value === "")) {
-            if (!(weight.value <= 0 || height.value <= 0)) {
+        if (!(weight === "" || height === "")) {
+            if (!(weight <= 0 || height <= 0)) {
                 element.innerHTML = `BMI: ${BMI} kg/m<sup>2</sup>`
             } else {
                 element.innerHTML = "Please enter a valid number!" // If a negative integer or 0 has been input
@@ -100,7 +100,7 @@ function calculate(weight, height, indexNumber) {
     let summary1 = ""
     let summary2 = ""
 
-    if (!(weight.value === "" || height.value === "") && !(weight.value <= 0 || height.value <= 0)) {
+    if (!(weight === "" || height === "") && !(weight <= 0 || height <= 0)) {
         switch (true) {
             case BMI > 0 && BMI < 16:
                 summary1 = "You are Underweight!"
@@ -143,10 +143,12 @@ function calculate(weight, height, indexNumber) {
     nav.style.visibility = "visible" // Once a calculation is done, it should be displayed
 
     reset.addEventListener("click", () => {
-        height.value = ""
-        weight.value = ""
+        // Once the reset button is clicked, everything should change to their initial value -->
 
-        Array.from(result).map((ele) => {
+        height = ""
+        weight = ""
+
+        Array.from(result).map((ele) => { // changing HTML collection to an array
             ele.innerHTML = ""
         })
 
@@ -167,6 +169,8 @@ general.addEventListener("click", () => {
 
     let metric = document.querySelector("#metric-calculator")
     metric.style.visibility = "hidden"
+
+    conclusion.textContent = "" // The conclusive statement should be removed once a calculator is changed
 })
 
 metric.addEventListener("click", () => {
@@ -178,4 +182,6 @@ metric.addEventListener("click", () => {
 
     let metric = document.querySelector("#metric-calculator")
     metric.style.visibility = "visible"
+
+    conclusion.textContent = "" // // The conclusive statement should be removed once a calculator is changed
 })
