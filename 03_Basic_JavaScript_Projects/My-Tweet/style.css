@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* tags */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #031018;
+}
+img[alt="My Profile"]{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* classes and ids */
+#tweet{
+    width: 600px;
+    height: 450px;
+    border: 1px solid white;
+    padding: 10px 15px 0px;
+    background-color: black;
+    border-radius: 10px;
+}
+.container{
+    border-bottom: 1px solid #5D6165;
+    width: 100%;
+    height: 50px;
+}
+#container1{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+}
+#image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#name{
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+#id{
+    color: #536471;
+    font-weight: 400;
+    cursor: pointer;
+}
+#name, #id{
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+#name-container + div{
+    width: 290px;
+}
+#name-container + div + div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#promote{
+    width: 100px;
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f3f7f8;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#more{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;    
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    color: #696666;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#container2{
+    height: 235px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    border: none;
+}
+pre{
+    color: white;
+    font-size: 17px;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+#container3{
+    height: 35px;
+    color: #5D6165;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+#container4{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+img[alt="stats"]{
+    width: 15px;
+    height: 15px;
+}
+#container4 span{
+    color: #71767B;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+#container5{
+    color: #71767B;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+#container5 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+.icons{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#container5 img{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+}
+#container5 span{
+    transition: 0.5s;
+}
+#retweet1, #heart1, #bookmark1, #share1{
+    z-index: 10;  
+}
+#retweet2, #heart2, #bookmark2, #share2{
+    z-index: 5;
+}
+#heart3{
+    transition: 1s;
+}
+#share1, #share2{
+    width: 10px;
+    height: 10px;
+}
+
+/* hover */
+img:hover{
+    filter: brightness(0.8);
+}
+#name:hover{
+    text-decoration: underline;
+}
+#promote:hover{
+    background-color: #D7DBDC;
+}
+#more:hover{
+    background-color: #031018;
+    color:#1D9BF0;
+}
+#time:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#container4:hover{
+    background-color: #080808;
+}
