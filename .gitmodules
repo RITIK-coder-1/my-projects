@@ -1,0 +1,3 @@
+[submodule "basic-frontend-websites"]
+	path = basic-frontend-websites
+	url = git@github.com:RITIK-coder-1/basic-frontend-websites.git
