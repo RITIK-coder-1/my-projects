@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+
+        #scroll-container {
+            display: flex;
+            flex-direction: column;
+            gap: 250px;
+            height: 500px;
+            border: 1px solid red;
+            overflow: scroll;
+        }
+
+        #one {
+            border: 1px solid black;
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+            position: sticky;
+            top: 10px;
+            z-index: 1;
+            transition: 1s;
+        }
+
+        #two {
+            border: 1px solid black;
+            background-color: #ff9900;
+            height: 300px;
+            width: 100%;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="scroll-container">
+        <div id="one"></div>
+        <div id="two"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const one = document.getElementById("one")
+            const scrollContainer = document.getElementById('scroll-container');
+            scrollContainer.addEventListener("wheel", () => {
+                if (event.deltaY > 0){
+                    console.log("lala");
+                    animation(one)
+                    one.style.transform = "translateX(50px)"
+                }
+                if (event.deltaY < 0) {
+                    console.log("-lala");
+                    one.style.transform = "translateX(0px)"
+                }
+                function animation(element) {
+                }
+            });
+        });
+    </script>
+</body>
+</html>

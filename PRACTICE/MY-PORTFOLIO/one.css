@@ -44,6 +44,7 @@ header img {
 nav {
     padding: 15px 0;
     text-align: center;
+    animation: grow-big 500ms ease-in-out 0s 1 alternate;
 }
 
 nav a {
