@@ -42,6 +42,7 @@ header h1 {
     color: #fff;
     margin-top: 20px;
     animation: grow-big 500ms ease-in-out 0s 1 alternate;
+    margin-bottom: 10px;
 }
 nav {
     padding: 15px 0;
@@ -121,8 +122,10 @@ footer p {
     text-align: center;
 }
 #skills{
+    padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 #skills > div {
     display: flex;
@@ -143,7 +146,33 @@ footer p {
 #skills span {
     font-size: 22px;
 }
-
+#projects{
+    height: 700px;
+}
+#projects > div{
+    height: 520px;
+    overflow: hidden;
+}
+#projects > div + div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#projects button{
+    height: 30px;
+}
+#projects a{
+    font-size: 20px;
+}
+#projects > div > div > div{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    color: #e44a4a;
+}
+.tools{
+    color: rgb(182, 36, 36);
+}
 /* animations */
 
 @keyframes grow-big {
