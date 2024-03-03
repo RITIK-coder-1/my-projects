@@ -148,6 +148,7 @@ footer p {
 }
 #projects{
     height: 700px;
+    transition: 2s;
 }
 #projects > div{
     height: 520px;
@@ -160,6 +161,13 @@ footer p {
 }
 #projects button{
     height: 30px;
+    background: transparent;
+    border: 1px solid red;
+    padding: 5px;
+    color: aliceblue;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }
 #projects a{
     font-size: 20px;
