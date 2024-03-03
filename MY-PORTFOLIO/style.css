@@ -10,6 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom, #005cbf, #333);
     color: #fff;
+    line-height: 1.6;
 }
 header{
     position: sticky;
@@ -121,11 +122,31 @@ footer p {
     padding: 20px;
     text-align: center;
 }
+#about {
+    background-color: #ffffff1a;
+    background-color: #2762A2;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+#about h2 {
+    color: #60a0c5;
+    margin-bottom: 30px;
+}
+#about p {
+    font-size: 1.2em;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 #skills{
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #1d2c3e;
+    border-radius: 10px;
+    margin: 30px 0;
 }
 #skills > div {
     display: flex;
@@ -146,18 +167,21 @@ footer p {
 #skills span {
     font-size: 22px;
 }
-#projects{
-    height: 700px;
-    transition: 2s;
-}
-#projects > div{
-    height: 520px;
-    overflow: hidden;
-}
 #projects > div + div{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+#projects > div > div > div > span{
+    color: #dbcbd9;
+    font-size: 10px;
+}
+#projects img{
+    width: 100%;
+}
+#all-projects{
+    display: none;
+    transition: opacity 1s ease;
 }
 #projects button{
     height: 30px;
@@ -168,18 +192,25 @@ footer p {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+    transition: 500ms;
 }
 #projects a{
-    font-size: 20px;
+    font-size: 15px;
+    color: #86a9c7;
 }
-#projects > div > div > div{
+#projects > div > div > div > div{
     width: 50%;
     display: flex;
     justify-content: space-between;
     color: #e44a4a;
 }
+#projects img{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .tools{
-    color: rgb(182, 36, 36);
+    color: #b62424;
 }
 /* animations */
 
@@ -200,3 +231,104 @@ footer p {
 nav a:hover {
     color: #60a0c5;
 }
+#projects button:hover {
+    background: red;
+    color: aliceblue;
+    border-color: aliceblue;
+}
+#socials a:hover{
+    text-decoration: underline;
+}
+
+/* Updated CSS with enhanced styling */
+
+
+/* Updated header styling */
+header > div {
+    background: linear-gradient(to right, #093c52, #062e58);
+    padding: 50px 0;
+    box-shadow: 0 5px 15px #0000004d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header img {
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    animation: grow-big 500ms ease-in-out 0s 1 alternate;
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #fff;
+    margin-top: 20px;
+    animation: grow-big 500ms ease-in-out 0s 1 alternate;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #60a0c5;
+}
+
+/* Updated about me styling */
+
+
+/* Updated skills section styling */
+
+
+#skills > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#skills > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#skills img {
+    width: 50px;
+    height: 50px;
+}
+
+#skills span {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Add this CSS to control transition for the show more button */
+#projects button {
+    height: 30px;
+    background: transparent;
+    border: 1px solid red;
+    padding: 5px;
+    color: aliceblue;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
+}
+
+
