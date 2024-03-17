@@ -38,7 +38,7 @@
     const itemsList = document.getElementById("itemsList")
     const list = document.getElementsByTagName("li")
     const paraContent = document.getElementById("paraContent")
-    const add = document.getElementsByClassName("add")
+    const addButton = document.getElementsByClassName("add")
 
     let numberOfItems = 0
 
@@ -52,7 +52,7 @@
             pieces: 22
         },
         {
-            name: "Graphes",
+            name: "Grapes",
             pieces: 26
         },
         {
@@ -78,8 +78,8 @@
         itemsList.append(li)
     }
 
-    for (let i = 0; i < add.length; i++) {
-        const element = add[i];
+    for (let i = 0; i < addButton.length; i++) {
+        const element = addButton[i];
         element.addEventListener("click", () => {
             const li = document.createElement("li")
             li.append(`${items[i].name} has been added, with ${items[i].pieces} pieces`)
