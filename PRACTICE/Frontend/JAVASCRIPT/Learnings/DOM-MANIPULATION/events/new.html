@@ -22,6 +22,11 @@
         border-radius: 10px;
         padding: 10px;
     }
+    .add{
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+    }
 </style>
 <body>
     <div id="items">
@@ -44,7 +49,7 @@
 
     const items = [
         {
-            name: "Apple",
+            name: "Apples",
             pieces: 24
         },
         {
@@ -71,7 +76,7 @@
         const li = document.createElement("li")
         li.id = element.name
         const add = document.createElement("button")
-        add.textContent = "+"
+        add.textContent = "Add To Cart"
         add.className = "add"
         li.append(`Name: ${element.name} and Number of Pieces: ${element.pieces}`)
         li.append(add)
@@ -81,8 +86,10 @@
     for (let i = 0; i < addButton.length; i++) {
         const element = addButton[i];
         element.addEventListener("click", () => {
+            element.textContent = "Added"
+            element.style.backgroundColor = "aqua"
             const li = document.createElement("li")
-            li.append(`${items[i].name} has been added, with ${items[i].pieces} pieces`)
+            li.append(`${items[i].name} have been added, with ${items[i].pieces} pieces`)
             cart.append(li)
             numberOfItems++
             paraContent.textContent = `Number of added items: ${numberOfItems}`
