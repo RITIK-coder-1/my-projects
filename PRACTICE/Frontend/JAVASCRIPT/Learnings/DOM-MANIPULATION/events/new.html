@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cart</title>
+</head>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    body, #cart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    #cart{
+        background-color: antiquewhite;   
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="items">
+        <h2>ITEMS</h2>
+        <ul id="itemsList"></ul>
+    </div>
+    <div id="cart">
+        <h2>CART</h2>
+        <p id="paraContent">Nothing in the cart</p>
+    </div>
+    <button>Show Cart</button>
+</body>
+<script>
+    const button = document.getElementsByTagName("button")
+    const cart = document.getElementById("cart")
+    const itemsList = document.getElementById("itemsList")
+    const list = document.getElementsByTagName("li")
+    const paraContent = document.getElementById("paraContent")
+
+    const items = [
+        {
+            name: "Item1",
+            pieces: 24
+        },
+        {
+            name: "Item2",
+            pieces: 22
+        },
+        {
+            name: "Item3",
+            pieces: 26
+        },
+        {
+            name: "Item4",
+            pieces: 20
+        },
+        {
+            name: "Item5",
+            pieces: 24
+        }
+    ]
+ 
+    
+    for (let i = 0; i < items.length; i++) {
+        const element = items[i];
+        const li = document.createElement("li")
+        li.className = `item${i + 1}`
+        const add = document.createElement("button")
+        add.textContent = "+"
+        add.className = `item${i + 1}`
+        li.append(`name: ${element.name} and number of pieces: ${element.pieces}`)
+        li.append(add)
+        itemsList.append(li)
+    }
+
+    for (let i = 0; i < button.length; i++) {
+        const element = button[i];
+        element.addEventListener("click", () => {
+            if(element.className === list[i].className){
+                paraContent.remove()
+                const li = document.createElement("li")
+                li.append(`Item${i + 1} has been added`)
+                cart.append(li)
+            }
+        })
+    }
+</script>
+</html>
