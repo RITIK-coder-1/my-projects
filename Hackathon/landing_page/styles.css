@@ -75,6 +75,19 @@ main h1{
     color: #F17228;
     font-size: 38px;
 }
+footer{
+    background-color: #000;
+    height: 150px;
+    color: aliceblue;
+    font-family: Open Sans;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer span{
+    color: #3488d1;
+}
 
 /* ids and classes */
 
@@ -169,6 +182,7 @@ main h1{
 #how-this-works small{
     color: #302f2e;
 }
+
 /* Special Effects */
 
 nav input:focus{
