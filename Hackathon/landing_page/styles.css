@@ -55,14 +55,25 @@ header > section{
     display: flex;
     padding: 0px 60px;
 }
-#heading-container, #image-container{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    height: 100%;
-}
 main{
     width: 100%;
+    height: 518px;
+}
+main > section{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #FFCE67 , #FDEDCA);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+main h1{
+    font-family: Open Sans;
+    font-weight: 700;
+    color: #F17228;
+    font-size: 38px;
 }
 
 /* ids and classes */
@@ -83,6 +94,12 @@ main{
     font-size: 30px;
     color: #F17228;
 }
+#heading-container, #image-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
 #address{
     width: 550px;
     height: 150px;
@@ -96,6 +113,10 @@ main{
 #address > div{
     display: flex;
     gap: 10px;
+}
+#del-pick{
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 20px;
 }
 #address input{
     width: 393px;
@@ -129,7 +150,25 @@ main{
     font-weight: 600;
     font-family: Open Sans;
 } 
-
+#how-this-works{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+#how-this-works > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Open Sans;
+}
+#how-this-works big{
+    color: #000;
+    font-weight: 600;
+}
+#how-this-works small{
+    color: #302f2e;
+}
 /* Special Effects */
 
 nav input:focus{
