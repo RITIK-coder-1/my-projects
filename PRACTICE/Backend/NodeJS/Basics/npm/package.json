@@ -1,0 +1,21 @@
+{
+  "name": "practice_package",
+  "version": "1.0.0",
+  "description": "I installed this package to learn about it",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RITIK-coder-1"
+  },
+  "keywords": [
+    "Ritik Mahapatra",
+    "Ritik",
+    "Mahapatra",
+    "RTK"
+  ],
+  "author": "Ritik Mahapatra",
+  "license": "ISC"
+}
