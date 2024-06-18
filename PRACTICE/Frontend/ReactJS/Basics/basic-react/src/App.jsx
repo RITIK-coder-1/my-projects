@@ -2,9 +2,11 @@ import React from 'react'
 
 function App() {
   return(
-  <h1>
-    Hey!!!
-  </h1>
+    <>
+       <h1>0</h1>
+       <button>+</button>
+       <button>-</button>
+    </>
   )
 }
 
