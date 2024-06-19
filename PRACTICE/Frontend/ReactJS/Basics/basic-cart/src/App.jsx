@@ -20,8 +20,8 @@ function App() {
     <>
       <ul>
         {
-          arr.map(ele => {
-            return <li>{ele}</li> // returning each element within a list item
+          arr.map((ele, index) => {
+            return <li key={index}>{ele}</li> // returning each element within a list item // the index number is acting as the key
           })
         }
       </ul>
