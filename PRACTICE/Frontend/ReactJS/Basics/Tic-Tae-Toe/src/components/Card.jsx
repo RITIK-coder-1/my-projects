@@ -12,7 +12,7 @@ function Card({callback, Icon}) {
 
       <div id="card-container"> {/* container to contain the icons so that they don't get affected by the presence of the game sticker */}
 
-      {Icon && <Icon style={{height: "50px", width: "50px"}}/>} {/* Icon will be rendered only when it is not a falsy value */}
+      {Icon && <Icon style={{height: "50px", width: "50px"}}/>} {/* Icon will be rendered only when it is not a falsy value (shortcircuting)*/}
 
       </div>
 
