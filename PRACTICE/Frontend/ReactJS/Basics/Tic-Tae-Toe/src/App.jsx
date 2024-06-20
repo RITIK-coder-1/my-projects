@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import Card from './components/Card' // imported the Card component
 import { FaRegCircle } from "react-icons/fa6"; // the circle icon from react icons
 import { RxCross2 } from "react-icons/rx"; // the cross icon from react icons
+import { ToastContainer, toast } from 'react-toastify'; // imported the toast container
+
+import 'react-toastify/dist/ReactToastify.css'; // imported the toast container CSS
 
 function App() {
 
@@ -26,8 +29,12 @@ function App() {
     
     if (win){
       setWinner(win) // if win is not null, it updates the winner variable
+      if (turn) {
+        toast.success(`The Winner is ${circle}`) // toast message to display
+      } else {
+        toast.success(`The Winner is ${cross}`) // toast message to display
+      }
     }
-
   }
 
   // function to check the winner --> It checks each index of the card, if it matches with the symbol or not
@@ -79,8 +86,24 @@ function App() {
       {/* As there are 9 elements in the array, 9 cards will be generated */}
 
     </div>    
-  
+
+    {/* Toast  */}
+    
+    <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition: Bounce
+      />
     </>
+
   )
 }
 
