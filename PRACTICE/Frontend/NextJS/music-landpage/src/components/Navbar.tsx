@@ -21,19 +21,18 @@ function Navbar({ className }: { className?: string }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Our Courses">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">One</HoveredLink>
-            <HoveredLink href="/interface-design">Two</HoveredLink>
-            <HoveredLink href="/seo">Three</HoveredLink>
-            <HoveredLink href="/branding">Four</HoveredLink>
+            <HoveredLink href="/web-dev">All Courses</HoveredLink>
+            <HoveredLink href="/interface-design">Basic Music Theory</HoveredLink>
+            <HoveredLink href="/seo">Advanced Composition</HoveredLink>
+            <HoveredLink href="/branding">Music Production</HoveredLink>
           </div>
         </MenuItem>
       <MenuItem setActive={setActive} active={active} item="Contact us">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="/"
-              description="Prepare for tech interviews like never before."
-            />
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">X (Twitter)</HoveredLink>
+            <HoveredLink href="/interface-design">GitHub</HoveredLink>
+            <HoveredLink href="/seo">LinkedIn</HoveredLink>
+          </div>
         </MenuItem>
       </Menu>
       </nav>
