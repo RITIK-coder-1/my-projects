@@ -100,7 +100,7 @@ function App() {
     <nav>
     <button onClick={restart}>RESTART</button> 
     </nav>
-    <h1>Tic Tae Toe</h1>
+    <h1>Tic Tac Toe</h1>
 
     {
     winner !== null // if there is a winner
