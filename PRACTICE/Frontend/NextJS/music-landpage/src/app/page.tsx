@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import CardSection from "@/components/CardSection";
 import courses from "../data/courses.json"
 import { InfiniteMovingCardsDemo } from "@/components/MovingCard";
+import { CardHoverEffectDemo } from "@/components/CardHover";
 
 
 export default function Home() {
@@ -22,6 +23,10 @@ export default function Home() {
         </section>
         <section>
           <InfiniteMovingCardsDemo />
+        </section>
+        <section className="dark:bg-dot-white/[0.05]">
+          <h2 className="text-3xl text-center font-bold mt-5">Our Featured Webinar</h2>
+        <CardHoverEffectDemo />
         </section>
     </main>
     </>
