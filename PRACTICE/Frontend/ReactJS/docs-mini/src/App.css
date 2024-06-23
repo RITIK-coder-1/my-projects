@@ -1,8 +1,16 @@
+:root, body, #root{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: black;
+}
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+h1::selection{
+  color: yellow;
 }
 
 .logo {
