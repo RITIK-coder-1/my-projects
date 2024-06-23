@@ -4,7 +4,7 @@ import CardSection from "@/components/CardSection";
 import courses from "../data/courses.json"
 import { InfiniteMovingCardsDemo } from "@/components/MovingCard";
 import { CardHoverEffectDemo } from "@/components/CardHover";
-
+import { WavyBackground } from "@/components/ui/wavy-background";
 
 export default function Home() {
   return(
@@ -27,6 +27,9 @@ export default function Home() {
         <section className="dark:bg-dot-white/[0.05]">
           <h2 className="text-3xl text-center font-bold mt-5">Our Featured Webinar</h2>
         <CardHoverEffectDemo />
+        </section>
+        <section>
+          <WavyBackground />
         </section>
     </main>
     </>

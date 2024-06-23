@@ -22,7 +22,6 @@ export default function RootLayout({
         <header>
         <Navbar />
         </header>
-        {/* <HeroSection /> */}
         {children}
         </body>
     </html>
