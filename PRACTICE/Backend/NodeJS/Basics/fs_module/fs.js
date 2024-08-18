@@ -17,3 +17,7 @@ fs.readFile("fs.txt", (err, data) => {
 const read = fs.readFileSync("fs.txt") // this returns the data directly
 console.log(read.toString()); // the data has been converted to string
 
+// Opening a File
+
+fs.open("fs.txt")
+
