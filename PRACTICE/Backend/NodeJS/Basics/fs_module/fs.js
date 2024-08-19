@@ -21,3 +21,4 @@ console.log(read.toString()); // the data has been converted to string
 
 fs.open("fs.txt")
 
+
