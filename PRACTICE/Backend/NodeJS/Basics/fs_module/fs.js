@@ -17,11 +17,7 @@ fs.readFile("fs.txt", (err, data) => {
 const read = fs.readFileSync("fs.txt") // this returns the data directly
 console.log(read.toString()); // the data has been converted to string
 
-// Opening a File
-
-// fs.open("fs.txt")
-
-// Writing a File
+// WRITING A FILE
 
 fs.writeFile("fs.txt", "updated", (err) => { // this method replaces the content entirely
     if (!err) {
@@ -35,3 +31,23 @@ fs.appendFile("fs.txt", "appended", (e) => { // this method appends a new conten
     }
 })
 
+// OPENING A FILE
+
+// fs.open("fs.txt", "r+", (err, data) => {
+//     console.log("file has been opened");
+//     fs.read(data, (err, d) => {
+//         console.log("The content: ", d.toString());
+//     })
+// })
+
+// DELETING A FILE
+
+// fs.unlink("fs.txt", (err) => {
+//     console.log("The file has been successfully deleted");
+// })
+
+// CREATING A FILE
+
+// fs.writeFile("fs.txt", "New File", (err) => {
+//     console.log("A new file has been created");
+// })
