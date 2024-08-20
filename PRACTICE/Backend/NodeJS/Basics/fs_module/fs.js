@@ -19,6 +19,19 @@ console.log(read.toString()); // the data has been converted to string
 
 // Opening a File
 
-fs.open("fs.txt")
+// fs.open("fs.txt")
 
+// Writing a File
+
+fs.writeFile("fs.txt", "updated", (err) => { // this method replaces the content entirely
+    if (!err) {
+        console.log("The content has been updated"); // if there is no error, print this on console
+    }
+})
+
+fs.appendFile("fs.txt", "appended", (e) => { // this method appends a new content
+    if (!e){
+        console.log("The content has been appended");
+    }
+})
 
