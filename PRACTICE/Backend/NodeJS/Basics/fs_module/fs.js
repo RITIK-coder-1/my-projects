@@ -25,20 +25,29 @@ fs.writeFile("fs.txt", "updated", (err) => { // this method replaces the content
     }
 })
 
+// fs.writeFileSync("fs.txt", "written"); // synchronous
+
+
 fs.appendFile("fs.txt", "appended", (e) => { // this method appends a new content
     if (!e){
         console.log("The content has been appended");
     }
 })
 
+// fs.appendFileSync("fs.txt", "appended") // synchronous
+
 // OPENING A FILE
 
-// fs.open("fs.txt", "r+", (err, data) => {
-//     console.log("file has been opened");
-//     fs.read(data, (err, d) => {
-//         console.log("The content: ", d.toString());
-//     })
-// })
+const buffer = Buffer.alloc(1024) // the buffer object with 1024 bytes // temporary storage 
+
+fs.open("fs.txt", "r+", (err, data) => { // read and write mode
+    console.log("file has been opened");
+    fs.read(data, buffer, 0, buffer.length, 3, (err, bytesRead, buffer) => { // it will start reading from the 3rd index
+        console.log("The file has been read succesfully");
+        console.log("The content: ", buffer.toString()); // the buffer has been converted to string
+        console.log("The number of bytes read: ", bytesRead);
+    })
+})
 
 // DELETING A FILE
 
