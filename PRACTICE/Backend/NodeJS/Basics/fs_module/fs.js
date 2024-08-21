@@ -47,6 +47,9 @@ fs.open("fs.txt", "r+", (err, data) => { // read and write mode
         console.log("The content: ", buffer.toString()); // the buffer has been converted to string
         console.log("The number of bytes read: ", bytesRead);
     })
+
+    // closing the file
+    fs.close(data, (err) => console.log("The file has been closed"))
 })
 
 // DELETING A FILE
