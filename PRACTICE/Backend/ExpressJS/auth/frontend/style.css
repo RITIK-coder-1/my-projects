@@ -29,6 +29,7 @@ form{
     width: 450px;
     height: 50px;
     justify-content: space-between;
+    gap: 10px;
 }
 
 form > div{
@@ -50,4 +51,14 @@ input{
 #buttons{
     justify-content: start;
     gap: 30px;
+    margin-top: 30px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10%;
+    border: 0;
+    font-weight: 900;
+    background-color: #37e637;
+    cursor: pointer;
 }
