@@ -1,0 +1,6 @@
+# Node modules folder (huge files, not needed in repo)
+node_modules/
+
+# Environment variables (contains sensitive data)
+.env
+

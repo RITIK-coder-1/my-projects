@@ -3,6 +3,7 @@ const authRouter = express.Router() // instance of the router module
 const authController = require("../controllers/authController.js")
 
 authRouter.get("/", (req, res) => {
+    // Route Handler
     req.statusCode = 200
     authController(res)
 })
