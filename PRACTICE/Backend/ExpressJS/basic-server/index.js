@@ -1,8 +1,8 @@
-const express = require('express'); // Imported the Express module
+import express from "express"; // Imported the Express module
 
 const app = express(); // This creates an instance of an Express application
 
-const port = 3000; // specific port
+const port = 5000; // specific port
 
 app.get('/', (req, res) => { // this method works with the get requests
   res.send('Hello, World!'); // Send a response of "Hello, World!" to the client
