@@ -1,6 +1,6 @@
-require("dotenv").config() // importing the environment variables
-
-const app = require("./app") // importing the app module
+import dotenv from 'dotenv' //importing the environment variables
+dotenv.config() // loading the environment variables
+import app from "./app.js" // importing the app module
 
 const port = process.env.PORT || 3000; // port number should fall back to 3000 if it has not been specified in the environment variables
 

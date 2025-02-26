@@ -1,5 +1,5 @@
-const express = require("express") // importing express
+import express from "express" // importing express
 
 const app = express() // express app
 
-module.exports = app // exporting the module
+export default app // exporting the module

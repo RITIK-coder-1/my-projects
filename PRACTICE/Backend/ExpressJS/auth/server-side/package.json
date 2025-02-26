@@ -6,6 +6,7 @@
   },
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "basic authentication practice",
   "main": "index.js",
   "scripts": {
