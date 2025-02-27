@@ -1,32 +1,38 @@
-import mongoose from "mongoose" // importing mongoose
+import mongoose from "mongoose" // Importing mongoose
 
 // Defining the user schema
 
-const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        lowercase: [true, "The username should be in lowercase"]
+const userSchema = new mongoose.Schema(
+  {
+    username: {
+      type: String,
+      required: true,
+      lowercase: true, 
+      unique: true, 
     },
     age: {
-        type: Number,
-        required: true
+      type: Number,
+      min: [18, "The user should be at least 18 years old to continue using this app."],
     },
     email: {
-        type: String,
-        required: true,
-        unique: [true, "Email should be unique. If you're an existing user, please log in."],
-        lowercase: true
+      type: String,
+      required: true,
+      unique: true, 
+      lowercase: true,
     },
     password: {
-        type: Number,
-        required: true,
-        min: [8, "Password must be of 8 characters minimum"]
-    }
-}, {
-    timestamps: true
-})
+      type: String, 
+      required: true,
+      minlength: [6, "Password must be at least 6 characters long"], 
+    },
+  },
+  {
+    timestamps: true, // Automatically adds createdAt and updatedAt fields
+  }
+)
 
-const User = mongoose.model("User", userSchema) // curating a model out of the schema
+// Creating a model from the schema
 
-export default User // exporting the schema 
+const User = mongoose.model("User", userSchema)
+
+export default User // Exporting the model
