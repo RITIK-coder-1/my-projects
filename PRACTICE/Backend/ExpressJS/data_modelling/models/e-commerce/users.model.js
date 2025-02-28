@@ -25,9 +25,39 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: [6, "Password must be at least 6 characters long"], 
     },
+    role: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Role",
+      required: true
+    },
+    phoneNumber: {
+      type: Number,
+      required: true,
+      max: 10
+    },
+    address: [
+      {
+        country: {
+          type: String,
+          required: true
+        },
+        state: {
+          type: String,
+          required: true
+        },
+        city: {
+          type: String,
+          required: true
+        },
+        homeNumber: {
+          type: String,
+          required: true
+        }
+      }
+    ]
   },
   {
-    timestamps: true, // Automatically adds createdAt and updatedAt fields
+    timestamps: true,
   }
 )
 
