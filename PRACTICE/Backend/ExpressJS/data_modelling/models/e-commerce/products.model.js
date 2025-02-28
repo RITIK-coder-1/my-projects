@@ -13,9 +13,9 @@ const productSchema = new mongoose.Schema({
         required: [true, "Price is required. Please enter a price."]
     },
     category: {
-        type: String,
-        required: true,
-        enum: ["electronics", "clothing", "home", "books"]
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+        required: true
     },
     stock: {
         type: Number,
