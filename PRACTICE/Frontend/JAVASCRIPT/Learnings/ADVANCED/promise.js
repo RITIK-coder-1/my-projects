@@ -34,7 +34,3 @@ async function consumePromise(){
 }
 
 consumePromise() // promise resolved
-
-
-
-
