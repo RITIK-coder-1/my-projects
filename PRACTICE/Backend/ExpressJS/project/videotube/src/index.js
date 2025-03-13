@@ -4,6 +4,10 @@ import app from "./app.js" // importing the express app
 
 const port = process.env.PORT || 3000
 
+app.on("error", (error) => {
+    console.log("There was an unexpected error :", error)    
+})
+
 // connecting the database
 
 connectDB()
