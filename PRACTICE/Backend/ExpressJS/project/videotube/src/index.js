@@ -8,6 +8,15 @@ app.on("error", (error) => {
     console.log("There was an unexpected error :", error)    
 })
 
+// Global Error Handling Middleware
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500).json({
+        success: false,
+        message: error.message || "Internal Server Error"
+    })
+})
+
 // connecting the database
 
 connectDB()
