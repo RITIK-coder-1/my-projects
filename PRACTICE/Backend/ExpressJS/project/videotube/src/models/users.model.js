@@ -1,49 +1,40 @@
 import mongoose from "mongoose"
 
-const userSchema = mongoose.Schema({
-    watchHistory: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Video",
-            required: true
-        }
-    ],
-    username: {
+const userSchema = new mongoose.Schema({
+    title: {
         type: String,
         required: true,
-        lowercase: true,
-        unique: true,
-        trim: true,
-        index: true
     },
-    fullname: {
+    description: {
         type: String,
         required: true,
-        trim: true,
-        index: true
+        maxLength: 1000
     },
-    email: {
-        type: String,
+    duration: {
+        type: Number,
         required: true,
-        lowercase: true,
-        unique: true,
-        trim: true,
-        index: true
     }, 
-    avatar: {
+    videoFile: {
         type: String, // URL from a different service (Cloudinary)
         required: true,
     }, 
-    coverImage: {
+    thumbnail: {
         type: String, // URL from a different service (Cloudinary)
         required: true,
     }, 
-    password: {
-        type: String,
+    views: {
+        type: Number,
         required: true,
+        default: 0
     }, 
-    refreshToken: {
-        type: String,
+    isPublished: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
     }
 }, {
     timestamps: true
