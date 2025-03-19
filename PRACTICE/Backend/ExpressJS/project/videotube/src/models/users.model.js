@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import bcrypt from "bcrypt"
+import bcrypt, { hash } from "bcrypt"
 import jwt from "jsonwebtoken"
 import "dotenv/config"
 
@@ -49,7 +49,13 @@ userSchema.pre("save", passwordChecker)
 // password hashing function
 async function passwordChecker(next) {
     if (this.isModified("password")) {
-        this.password = await bcrypt.hash(this.password, 10)
+        try {
+            this.password = await bcrypt.hash(this.password, 10)
+            console.log("The password has been successfully hashed.")
+        } catch (error) {
+            console.error("The password couldn't be hashed:", error.message)
+            return next(error)
+        }
     }
     next()
 }
@@ -60,6 +66,7 @@ userSchema.methods.isPasswordCorrect = async function(password){
 }
 
 // token generator
+
 userSchema.methods.generateAccessToken = async function(){
     jwt.sign(
         {
