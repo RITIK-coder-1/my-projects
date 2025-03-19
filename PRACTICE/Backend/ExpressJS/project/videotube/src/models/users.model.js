@@ -1,43 +1,52 @@
 import mongoose from "mongoose"
-import bcrypt, { hash } from "bcrypt"
+import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 import "dotenv/config"
 
 const userSchema = new mongoose.Schema({
-    title: {
+    watchHistory: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Video",
+            required: true
+        }
+    ],
+    username: {
         type: String,
         required: true,
+        lowercase: true,
+        unique: true,
+        trim: true,
+        index: true
     },
-    description: {
+    fullname: {
         type: String,
         required: true,
-        maxLength: 1000
+        trim: true,
+        index: true
     },
-    duration: {
-        type: Number,
+    email: {
+        type: String,
         required: true,
+        lowercase: true,
+        unique: true,
+        trim: true,
+        index: true
     }, 
-    videoFile: {
+    avatar: {
         type: String, // URL from a different service (Cloudinary)
         required: true,
     }, 
-    thumbnail: {
+    coverImage: {
         type: String, // URL from a different service (Cloudinary)
         required: true,
     }, 
-    views: {
-        type: Number,
+    password: {
+        type: String,
         required: true,
-        default: 0
     }, 
-    isPublished: {
-        type: Boolean,
-        required: true,
-        default: true
-    },
-    owner: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+    refreshToken: {
+        type: String,
     }
 }, {
     timestamps: true
@@ -67,8 +76,8 @@ userSchema.methods.isPasswordCorrect = async function(password){
 
 // token generator
 
-userSchema.methods.generateAccessToken = async function(){
-    jwt.sign(
+userSchema.methods.generateAccessToken = function (){
+    return jwt.sign(
         {
         _id: this._id,
         email: this.email,
@@ -82,8 +91,8 @@ process.env.ACCESS_TOKEN_SECRET,
 )
 }
 
-userSchema.methods.generateRefreshToken = async function(){
-    jwt.sign(
+userSchema.methods.generateRefreshToken = function(){
+    return jwt.sign(
         {
         _id: this._id
     },
