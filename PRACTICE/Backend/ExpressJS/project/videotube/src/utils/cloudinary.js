@@ -16,8 +16,21 @@ const uploadOnCloudinary = async (filePath) => {
     try {
         const response = await cloudinary.uploader.upload(filePath, { resource_type: "auto" })
         console.log("Upload Successful:", response.url)
+
+        // Delete the file after uploading
+
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.error("File deletion failed:", err.message)
+            } else {
+                console.log("The file has been deleted successfully!")
+            }
+        })
         return response
     } catch (error) {
+
+        // Delete the file in case it has been corrupted
+        
         fs.unlink(filePath, (err) => {
             if (err) {
                 console.error("File deletion failed:", err.message)
