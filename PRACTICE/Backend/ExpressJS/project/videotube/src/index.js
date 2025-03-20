@@ -21,6 +21,9 @@ app.use((error, req, res, next) => {
 
 connectDB()
 .then(() => {
+    app.get("/", (req, res) => {
+        res.send("Just A Demo!")
+    })
     app.listen(port, () => {
         console.log("Our app started listening at", port)        
     })
