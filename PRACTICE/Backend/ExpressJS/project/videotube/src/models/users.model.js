@@ -39,11 +39,11 @@ const userSchema = new mongoose.Schema({
     }, 
     coverImage: {
         type: String, // URL from a different service (Cloudinary)
-        required: true,
     }, 
     password: {
         type: String,
         required: true,
+        trim: true
     }, 
     refreshToken: {
         type: String,
