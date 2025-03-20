@@ -3,6 +3,6 @@ import registerUser from "../controllers/user.controller.js" // importing the re
 
 const router = Router() // the router instance
 
-router.route("/register").post(registerUser)
+router.route("/register").post(registerUser) // register the user on the register path
 
 export default router // exporting the router 
