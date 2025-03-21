@@ -3,7 +3,7 @@ import ApiError from "../utils/apiError.js" // importing api error handler
 import ApiResponse from "../utils/apiResponse.js" // importing api response handler
 import User from "../models/users.model.js" // importing the user model
 import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary uplload function
-
+let files
 // the register user function
 const controllerFunction = async (req, res) => {
 
@@ -19,7 +19,8 @@ const controllerFunction = async (req, res) => {
 
     // checking files (images) upload
     const avatarLocalPath = req.files?.avatar[0]?.path // (required)
-    const coverLocalPath = req.files?.cover[0]?.path    
+    const coverLocalPath = req.files?.coverImage[0]?.path    
+    
     
     if (!avatarLocalPath){
         throw new ApiError(400, "Please upload a profile picture!")

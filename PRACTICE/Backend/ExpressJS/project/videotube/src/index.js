@@ -13,7 +13,8 @@ app.on("error", (error) => {
 app.use((error, req, res, next) => {
     res.status(error.status || 500).json({
         success: false,
-        message: error.message || "Internal Server Error"
+        message: error.message || "Internal Server Error",
+        error: process.env.NODE_ENV === "development" ? err : undefined, // Full error object for debugging (only in development) 
     })
 })
 
