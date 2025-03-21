@@ -11,28 +11,28 @@ const controllerFunction = async (req, res) => {
     const { username, fullname, email, password } = req.body
     
     // validating if all the required fields have been input or not by removing extra spaces
-    if (
-        [username, fullname, email, password].some((field) => field?.trim() === "")
-    ){
+    const isInputWrong = [username, fullname, email, password].some((field) => field?.trim() === "") // (it stores a boolean value if atleast each field is empty or not)
+
+    if (isInputWrong){
         throw new ApiError(400, "All fields are required!")
-    }
+    } // (if a field is empty, throw an error message) 
+
+    // checking files (images) upload
+    const avatarLocalPath = req.files?.avatar[0]?.path // (required)
+    const coverLocalPath = req.files?.cover[0]?.path    
+    
+    if (!avatarLocalPath){
+        throw new ApiError(400, "Please upload a profile picture!")
+    } // (if the avatar is empty, throw an error message)
 
     // checking if the user already exists or not
-    const existingUser = User.findOne({
+    const existingUser = await User.findOne({
         $or: [{ username }, { email }]
     })
 
     if (existingUser){
         throw new ApiError(400, "The user is already registered!")
-    }
-
-    // checking files (images) upload
-    const avatarLocalPath = req.files?.avatar[0]?.path
-    const coverLocalPath = req.files?.cover[0]?.path    
-    
-    if (!avatarLocalPath){
-        throw new ApiError(400, "Please upload a profile picture!")
-    }
+    } // (if the user exists already, throw an error message) 
 
     // uploading files on cloudinary
     const avatar = await uploadOnCloudinary(avatarLocalPath)
@@ -52,9 +52,9 @@ const controllerFunction = async (req, res) => {
         coverImage: coverImage.url
     })
 
+    // validating if the user has been registered
     const createdUser = await User.findById(user._id).select("-password -refreshToken")
 
-    // validating if the user has been registered
     if (!createdUser){
         throw new ApiError(500, "There was a problem while registering the user")
     }
@@ -69,4 +69,4 @@ const controllerFunction = async (req, res) => {
 // the register user controller with error handling
 const registerUser = asyncHandler(controllerFunction)
 
-export default registerUser // exporting the controller
+export { registerUser } // exporting the controller
