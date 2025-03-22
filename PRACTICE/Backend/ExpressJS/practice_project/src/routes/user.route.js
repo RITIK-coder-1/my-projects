@@ -4,7 +4,9 @@ import upload from "../middlewares/multer.middleware.js" // importing the multer
 
 const router = Router() // the router instance
 
-router.route("/register").post(
+router
+.route("/register")
+.post(
     upload.fields([
         {
             name: "avatar",
@@ -15,6 +17,7 @@ router.route("/register").post(
             maxCount: 1
         }
     ]),
-    registerUser) // register the user on the register path
+    registerUser
+) // register the user on the register path
 
 export default router // exporting the router 

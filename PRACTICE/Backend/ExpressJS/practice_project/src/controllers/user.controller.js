@@ -4,8 +4,25 @@ import ApiResponse from "../utils/apiResponse.js" // importing api response hand
 import User from "../models/users.model.js" // importing the user model
 import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary uplload function
 
+// Function to generate Access and Refresh Tokens
+const generateTokens = async (userId) => {
+    try {
+        const user = await User.findById(userId)
+        const accessToken = user.generateAccessToken()
+        const refreshToken = user.generateRefreshToken()
+        
+        user.refreshToken = refreshToken
+        await user.save({validateBeforeSave: false})
+
+        return { accessToken, refreshToken }
+
+    } catch (error) {
+        throw new ApiError(500, "Could not generate tokens")
+    }
+}
+
 // the register user function
-const controllerFunction = async (req, res) => {
+const registerFunction = async (req, res) => {
     
     // destructuring the request body object
     const { username, fullname, email, password } = req.body
@@ -69,7 +86,64 @@ const controllerFunction = async (req, res) => {
     )
 }
 
-// the register user controller with error handling
-const registerUser = asyncHandler(controllerFunction)
+// the login user function
+const loginFunction = async (req, res) => {
 
-export { registerUser } // exporting the controller
+    // Getting data from the user
+    const { username, email, password } = req.body
+
+    // validating data
+    if (!username || !email){
+        throw new ApiError(400, "username or email is required!")
+    }
+
+    // checking if the input data exists in the database
+    const existingUser = await User.findOne({
+        $or: [{ username }, { email }]
+    })
+
+    if (!existingUser){
+        throw new ApiError(404, "the user isn't registered! Enter correct credentials or sign up.")
+    }
+
+    // checking if the password for the given user is correct or not
+    const passwordValidator = await existingUser.isPasswordCorrect(password)
+
+    if (!passwordValidator){
+        throw new ApiError(400, "The password isn't correct!")
+    }
+
+    // generating tokens if the user exists 
+    const { accessToken, refreshToken } = await generateTokens(existingUser._id)
+
+    const loggedInUser = await User.findById(existingUser._id).select("-password -refreshToken")
+
+    // sending cookies
+    const options = {
+        httpOnly: true,
+        secure: true
+    }
+
+    return res.status(200)
+    .cookie("accessToken", accessToken, options)
+    .cookie("refreshToken", refreshToken, options)
+    .json(
+        new ApiResponse(
+            200, {
+                user: loggedInUser,
+                accessToken,
+                refreshToken
+            },
+            "User Logged In Successfully!"
+        )
+    )
+}
+
+const registerUser = asyncHandler(registerFunction) // the register user controller with error handling
+const loginUser = asyncHandler(loginFunction) // the login user controller with error handling
+
+
+export { 
+    registerUser,
+    loginUser
+} // exporting the controllers
