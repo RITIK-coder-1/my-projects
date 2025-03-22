@@ -3,10 +3,10 @@ import ApiError from "../utils/apiError.js" // importing api error handler
 import ApiResponse from "../utils/apiResponse.js" // importing api response handler
 import User from "../models/users.model.js" // importing the user model
 import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary uplload function
-let files
+
 // the register user function
 const controllerFunction = async (req, res) => {
-
+    
     // destructuring the request body object
     const { username, fullname, email, password } = req.body
     
@@ -19,9 +19,12 @@ const controllerFunction = async (req, res) => {
 
     // checking files (images) upload
     const avatarLocalPath = req.files?.avatar[0]?.path // (required)
-    const coverLocalPath = req.files?.coverImage[0]?.path    
     
-    
+    let coverLocalPath;
+    if (req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.length > 0){
+        coverLocalPath = req.files.coverImage[0].path // only if the cover image is uploaded
+    }
+
     if (!avatarLocalPath){
         throw new ApiError(400, "Please upload a profile picture!")
     } // (if the avatar is empty, throw an error message)
@@ -39,7 +42,7 @@ const controllerFunction = async (req, res) => {
     const avatar = await uploadOnCloudinary(avatarLocalPath)
     const coverImage = await uploadOnCloudinary(coverLocalPath)
 
-    if (!avatar || !coverImage){
+    if (!avatar){
         throw new ApiError(400, "Image wasn't uploaded")
     }
 
@@ -50,7 +53,7 @@ const controllerFunction = async (req, res) => {
         email,
         password,
         avatar: avatar.url,
-        coverImage: coverImage.url
+        coverImage: coverImage?.url || "" // only if the cover image is present, else it should be empty
     })
 
     // validating if the user has been registered
@@ -65,7 +68,6 @@ const controllerFunction = async (req, res) => {
         new ApiResponse(200, createdUser, "User has been registered succesfully!")
     )
 }
-
 
 // the register user controller with error handling
 const registerUser = asyncHandler(controllerFunction)
