@@ -2,7 +2,7 @@ import asyncHandler from "../utils/asyncHandler.js" // importing asynchandler
 import ApiError from "../utils/apiError.js" // importing api error handler
 import ApiResponse from "../utils/apiResponse.js" // importing api response handler
 import User from "../models/users.model.js" // importing the user model
-import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary uplload function
+import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary upload function
 
 // Function to generate Access and Refresh Tokens
 const generateTokens = async (userId) => {
@@ -92,7 +92,7 @@ const loginFunction = async (req, res) => {
     // Getting data from the user
     const { username, email, password } = req.body
 
-    // validating data
+    // validating the data
     if (!username || !email){
         throw new ApiError(400, "username or email is required!")
     }
@@ -116,12 +116,13 @@ const loginFunction = async (req, res) => {
     // generating tokens if the user exists 
     const { accessToken, refreshToken } = await generateTokens(existingUser._id)
 
+    // fetching the user details
     const loggedInUser = await User.findById(existingUser._id).select("-password -refreshToken")
 
     // sending cookies
     const options = {
-        httpOnly: true,
-        secure: true
+        httpOnly: true, // cookie can't be accessed via JavaScript
+        secure: true // cookie is only sent over HTTPS
     }
 
     return res.status(200)
@@ -142,7 +143,7 @@ const loginFunction = async (req, res) => {
 // the logout user function
 const logoutFunction = async (req, res) => {
 
-    // finding the user from database
+    // finding the user from database and updating its value at the same time
     await User.findByIdAndUpdate(
         req.user._id,
         {
@@ -154,11 +155,13 @@ const logoutFunction = async (req, res) => {
         }
     )
 
+    // cookie security options
     const options = {
         httpOnly: true,
         secure: true
     }
 
+    // clearing the cookies and the tokens once the user is logged out successfully
     return res
     .status(200)
     .clearCookie("accessToken", options)
