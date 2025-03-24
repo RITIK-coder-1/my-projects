@@ -3,6 +3,8 @@ import ApiError from "../utils/apiError.js" // importing api error handler
 import ApiResponse from "../utils/apiResponse.js" // importing api response handler
 import User from "../models/users.model.js" // importing the user model
 import uploadOnCloudinary from "../utils/cloudinary.js" // importing the cloudinary upload function
+import jwt from "jsonwebtoken" // importing the json web tokens
+import "dotenv/config" // importing the environment variables
 
 // Function to generate Access and Refresh Tokens
 const generateTokens = async (userId) => {
@@ -171,13 +173,69 @@ const logoutFunction = async (req, res) => {
     )
 }
 
+// new access token function
+const newAccessTokenFunction = async (req, res) => {
+    try {
+        // Getting our refresh token from the cookies or request body alternatively
+        const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken
+    
+        if (!incomingRefreshToken){
+            throw new ApiError(400, "Unauthorized Request") // throw an error if the refresh token is unauthorized
+        }
+    
+        // once we have the refresh token, we decode it to get the user id
+        const decodedToken = jwt.verify(
+            incomingRefreshToken,
+            process.env.REFRESH_TOKEN_SECRET
+        )
+   
+        // we get the user with a query
+        const user = await User.findById(decodedToken?._id)
+    
+        if (!user){
+            throw new ApiError(400, "Invalid Refresh Token") // throw an error if the user is not present
+        }
+    
+        // double checking if the incoming refresh token matches the one stored in the database
+        if (incomingRefreshToken !== user?.refreshToken){
+            throw new ApiError(400, "Refresh Token is expired or used")
+        }
+    
+        // the cookie options
+        const options = {
+            httpOnly: true,
+            secure: true
+        }
+    
+        // getting the new access and the refresh tokens 
+        const { accessToken, newRefreshToken } =  await generateTokens(user._id)
+    
+        // updating the cookies and sending a JSON API response
+        res
+        .status(200)
+        .cookie("accessToken", accessToken, options)
+        .cookie("refreshToken", newRefreshToken, options)
+        .json(
+            new ApiResponse(
+                200, 
+                {accessToken, refreshToken: newRefreshToken},
+                "Access Token Refreshed!"
+            )
+        )
+    } catch (error) {
+        throw new ApiError(400, error.message || "Invalid Refresh Token") // if everything fails, the refresh token is invalid
+    }
+}
+
 const registerUser = asyncHandler(registerFunction) // the register user controller with error handling
 const loginUser = asyncHandler(loginFunction) // the login user controller with error handling
 const logoutUser = asyncHandler(logoutFunction) // the login user controller with error handling
+const newAccessToken = asyncHandler(newAccessTokenFunction) // the new accesstoken generator controller with error handling
 
 
 export { 
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser,
+    newAccessToken
 } // exporting the controllers
