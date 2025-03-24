@@ -227,15 +227,132 @@ const newAccessTokenFunction = async (req, res) => {
     }
 }
 
+// the update account function
+const updateAccountFunction = async (req, res) => {
+
+    // getting the data that can be updated
+    const {fullname, username, email} = req.body
+
+    // validating the data to be updated
+    const isEmpty = [fullname, username, email].some((field) => field?.trim() === "")
+
+    if (isEmpty){
+        throw new ApiError(400, "All Fields Are Required!")
+    }
+
+    // finding the user and updating its values
+    const user = await User.findByIdAndUpdate(
+        req.user?._id,
+        {
+            $set: {
+                fullname: fullname,
+                username: username,
+                email: email
+            }
+        },
+        {
+            new: true
+        }
+    )
+    .select("-password -refreshToken") // excluding sensitive information
+
+    // checking if the user is valid
+    if (!user){
+        throw new ApiError(400, "User could not be updated")
+    }
+
+    // sending an API response for the successful update
+    return res.status(200).json(
+        new ApiResponse(200, user, "Account has been updated successfully")
+    )
+}
+
+// the update password function
+const updatePasswordFunction = async (req, res) => {
+
+    // getting the new and old passwords
+    const { oldPassword, newPassword } = req.body
+
+    // getting the user and checking if the entered password is correct or not
+    const user = await User.findById(req.user?._id)
+    const isPasswordCorrect = await user.isPasswordCorrect(oldPassword)
+
+    if (!isPasswordCorrect){
+        throw new ApiError(400, "Invalid Old Password")
+    }
+
+    // updating the password
+    user.password = newPassword
+    await user.save({validateBeforeSave: false})
+
+    return res
+    .status(200)
+    .json(
+        new ApiResponse(200, {}, "Password Changed Successfully!")
+    )
+}
+
+// the update file function
+const updateFileFunction = async (req, res) => {
+    // getting the path of the file
+    const avatarLocalPath = req.file?.path // we're uploading a single file 
+
+    // validating the path
+    if (!avatarLocalPath) {
+        throw new ApiError(400, "Avatar File is missing")
+    }
+
+    // uploading the file on cloudinary 
+    const avatar = await uploadOnCloudinary(avatarLocalPath)
+
+    // validating the cloudinary url
+    if (!avatar.url){
+        throw new ApiError(400, "Could not upload the new avatar file")
+    }
+
+    // updating the user file on database
+    const user = await User.findByIdAndUpdate(
+        req.user?._id,
+        {
+            $set: {
+                avatar: avatar.url
+            }
+        },
+        {
+            new: true
+        }
+    )
+    .select("-password -refreshToken")
+
+    // validating if the file was updated
+    if (!user){
+        throw new ApiError(400, "Could not be updated!")
+    }
+
+    // sending a JSON API response
+    res
+    .send(200)
+    .json(
+        new ApiResponse(200, {}, "The file has been updated!")
+    )
+}
+
+
 const registerUser = asyncHandler(registerFunction) // the register user controller with error handling
 const loginUser = asyncHandler(loginFunction) // the login user controller with error handling
 const logoutUser = asyncHandler(logoutFunction) // the login user controller with error handling
 const newAccessToken = asyncHandler(newAccessTokenFunction) // the new accesstoken generator controller with error handling
+const updateAccount = asyncHandler(updateAccountFunction) // the update account controller with error handling
+const updatePassword = asyncHandler(updatePasswordFunction) // the update password controller with error handling
+const updateFile = asyncHandler(updateFileFunction) // the update files controller with error handling
 
 
 export { 
     registerUser,
     loginUser,
     logoutUser,
-    newAccessToken
+    newAccessToken,
+    updateAccount,
+    updatePassword,
+    updateFile
 } // exporting the controllers

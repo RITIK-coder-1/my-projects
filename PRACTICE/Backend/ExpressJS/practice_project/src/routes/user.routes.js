@@ -34,6 +34,6 @@ router
 
 router.
 route("/refresh-token")
-.post(newAccessToken) // to issue new access token end point
+.post(newAccessToken) // to issue a new access token end point
 
 export default router // exporting the router 
