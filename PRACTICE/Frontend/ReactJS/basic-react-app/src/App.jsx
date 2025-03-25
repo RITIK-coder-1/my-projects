@@ -1,7 +1,9 @@
+import Hello from "./components/Hello";
+
 function App() {
   return (
     <>
-      <h1>Hey!</h1>
+      <Hello />
     </>
   );
 }
