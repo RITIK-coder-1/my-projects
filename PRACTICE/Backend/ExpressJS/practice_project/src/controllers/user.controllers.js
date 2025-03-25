@@ -227,6 +227,17 @@ const newAccessTokenFunction = async (req, res) => {
     }
 }
 
+// fetching user details function
+const getUserFunction = async (req, res) => {
+    return res
+    .status(200)
+    .json(
+        200, 
+        req.user,
+        "Current User Fetched Successfully!"
+    )
+}
+
 // the update account function
 const updateAccountFunction = async (req, res) => {
 
@@ -342,6 +353,7 @@ const registerUser = asyncHandler(registerFunction) // the register user control
 const loginUser = asyncHandler(loginFunction) // the login user controller with error handling
 const logoutUser = asyncHandler(logoutFunction) // the login user controller with error handling
 const newAccessToken = asyncHandler(newAccessTokenFunction) // the new accesstoken generator controller with error handling
+const getUser = asyncHandler(getUserFunction) // the current user controller with error handling
 const updateAccount = asyncHandler(updateAccountFunction) // the update account controller with error handling
 const updatePassword = asyncHandler(updatePasswordFunction) // the update password controller with error handling
 const updateFile = asyncHandler(updateFileFunction) // the update files controller with error handling
@@ -352,6 +364,7 @@ export {
     loginUser,
     logoutUser,
     newAccessToken,
+    getUser,
     updateAccount,
     updatePassword,
     updateFile
