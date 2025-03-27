@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  let [password, setPassword] = useState("");
+  let [passwordLength, setPasswordLength] = useState(8);
+  let [numberAllowed, setNumberAllowed] = useState(true);
+  let [charAllowed, setCharAllowed] = useState(true);
 
+  let str = "abcdefghijklmnopqrstwvuxyzABCDEFGHIJKLMNOPQURSTUVWXYZ";
+  let num = "0123456789";
+  let char = "_+-*/$%^&*@!~";
+
+  for (let i = 0; i <= passwordLength; i++) {
+    const newChar = Math.floor(Math.random() * str.length + 1);
+    password = password.concat(str.charAt(newChar));
+  }
+
+  const check = (param, func) => {
+    return () => {
+      func(() => !param);
+    };
+  };
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1 className="text-white text-5xl font-bold">Password Generator</h1>
+      <div className="h-56 w-84 bg-red-700 p-5 flex flex-col gap-5">
+        <input
+          type="text"
+          className="border border-red border-solid bg-white rounded outline-none p-2"
+          value={password}
+          placeholder="Password"
+          readOnly
+        />
+        <div className="flex justify-between items-center">
+          <label>Length: ({passwordLength})</label>
+          <input type="range" className="cursor-pointer" />
+        </div>
+        <div className="flex justify-between items-center">
+          <label>Allow Numbers: </label>
+          <input
+            type="checkbox"
+            className="cursor-pointer"
+            checked={numberAllowed}
+            onClick={check(numberAllowed, setNumberAllowed)}
+          />
+        </div>
+        <div className="flex justify-between items-center">
+          <label>Allow Special Characters: </label>
+          <input
+            type="checkbox"
+            className="cursor-pointer"
+            checked={charAllowed}
+            onClick={check(charAllowed, setCharAllowed)}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
