@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 function Button({ color, onClick }) {
   return (
     <button

@@ -24,6 +24,7 @@ function Cart({ changeColor }) {
     >
       {colors.map((ele, index) => {
         return <Button color={ele} key={index} onClick={changeColor(ele)} />;
+        /* changeColor is a higher-order function that returns a function. I called it here because "ele" gets passed as the argument, allowing it to change the background color of the entire page in the App Component. */
       })}
     </div>
   );
