@@ -5,10 +5,22 @@ function Counter() {
   let [counter, setCounter] = useState(0);
 
   const increment = () => {
-    counter = counter + 1;
-    setCounter(counter);
+    setCounter((counter) => counter + 1);
+
     if (counter >= 20) {
+      alert("The value will not exceed 20!");
       counter = 20;
+      setCounter(counter);
+    }
+
+    console.log(counter);
+  };
+
+  const decrement = () => {
+    setCounter((counter) => counter - 1);
+    if (counter <= 0) {
+      alert("The value will not be negative!");
+      counter = 0;
       setCounter(counter);
     }
   };
@@ -16,8 +28,8 @@ function Counter() {
   return (
     <>
       <h1>Basic Counter: {counter}</h1>
-      <Button onClick={increment} />
-      <Button />
+      <Button content="Increase" onClick={increment} />
+      <Button content="Decrease" onClick={decrement} />
       <p>Another Counter: {counter}</p>
     </>
   );
