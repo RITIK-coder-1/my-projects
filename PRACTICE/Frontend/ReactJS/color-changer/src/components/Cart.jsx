@@ -2,17 +2,17 @@ import Button from "./Button.jsx";
 
 function Cart({ changeColor }) {
   const colors = [
-    "red",
-    "green",
-    "blue",
-    "orange",
-    "brown",
-    "yellow",
-    "violet",
-    "purple",
-    "indigo",
-    "skyblue",
-    "black",
+    { id: 1, name: "red" },
+    { id: 2, name: "green" },
+    { id: 3, name: "blue" },
+    { id: 4, name: "orange" },
+    { id: 5, name: "brown" },
+    { id: 6, name: "yellow" },
+    { id: 7, name: "violet" },
+    { id: 8, name: "purple" },
+    { id: 9, name: "indigo" },
+    { id: 10, name: "skyblue" },
+    { id: 11, name: "black" },
   ];
 
   return (
@@ -22,9 +22,9 @@ function Cart({ changeColor }) {
         backgroundColor: "yellowgreen",
       }}
     >
-      {colors.map((ele, index) => {
-        return <Button color={ele} key={index} onClick={changeColor(ele)} />;
-        /* changeColor is a higher-order function that returns a function. I called it here because "ele" gets passed as the argument, allowing it to change the background color of the entire page in the App Component. */
+      {colors.map(({ id, name }) => {
+        return <Button color={name} key={id} onClick={changeColor(name)} />;
+        /* changeColor is a higher-order function that returns a function. I called it here because "name" gets passed as the argument, allowing it to change the background color of the entire page in the App Component (Its Parent). */
       })}
     </div>
   );
