@@ -18,8 +18,8 @@ function App() {
     setCharAllowed((charAllowed) => !charAllowed);
   };
 
-  const setLength = () => {
-    setPasswordLength((passwordLength) => event.target.value);
+  const setLength = (event) => {
+    setPasswordLength(event.target.value);
   };
 
   if (numberAllowed) {
@@ -32,17 +32,12 @@ function App() {
 
   const generate = () => {
     let newPassword = "";
-    setPassword((password) => {
-      return password.replace(password, "");
-    });
     for (let i = 0; i < passwordLength; i++) {
       const newChar = Math.floor(Math.random() * str.length);
       newPassword += str.charAt(newChar);
     }
 
-    setPassword((password) => {
-      return password.concat(newPassword);
-    });
+    setPassword(newPassword);
   };
 
   const copyText = () => {
@@ -69,7 +64,7 @@ function App() {
           </span>
         </div>
         <div className="flex justify-between items-center">
-          <label className="text-amber-200 font-bold">
+          <label className="text-amber-200 font-bold" htmlFor="password-length">
             Length: {passwordLength}
           </label>
           <input
