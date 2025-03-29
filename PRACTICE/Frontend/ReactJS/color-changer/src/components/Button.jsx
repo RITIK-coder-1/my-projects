@@ -7,7 +7,7 @@ function Button({ color, onClick }) {
       style={{
         backgroundColor: color,
       }}
-      onClick={onClick}
+      onClick={onClick} // the method to change color
     >
       {color}
     </button>
