@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
   let [password, setPassword] = useState("");
@@ -6,43 +6,50 @@ function App() {
   let [numberAllowed, setNumberAllowed] = useState(true);
   let [charAllowed, setCharAllowed] = useState(true);
 
-  let str = "abcdefghijklmnopqrstwvuxyzABCDEFGHIJKLMNOPQURSTUVWXYZ";
-  let num = "0123456789";
-  let char = "_+-*/$%^&*@!~";
+  const passwordRef = useRef(null);
 
-  const checkNumber = () => {
+  const checkNumber = useCallback(() => {
     setNumberAllowed((numberAllowed) => !numberAllowed);
-  };
+  }, [numberAllowed]);
 
-  const checkChar = () => {
+  const checkChar = useCallback(() => {
     setCharAllowed((charAllowed) => !charAllowed);
-  };
+  }, [charAllowed]);
 
-  const setLength = (event) => {
+  const setLength = useCallback((event) => {
     setPasswordLength(event.target.value);
-  };
+  }, []);
 
-  if (numberAllowed) {
-    str = str.concat(num);
-  }
-
-  if (charAllowed) {
-    str = str.concat(char);
-  }
-
-  const generate = () => {
+  const generate = useCallback(() => {
+    let str = "abcdefghijklmnopqrstwvuxyzABCDEFGHIJKLMNOPQURSTUVWXYZ";
+    let num = "0123456789";
+    let char = "_+-*/$%^&*@!~";
     let newPassword = "";
+
+    if (numberAllowed) {
+      str = str.concat(num);
+    }
+
+    if (charAllowed) {
+      str = str.concat(char);
+    }
+
     for (let i = 0; i < passwordLength; i++) {
       const newChar = Math.floor(Math.random() * str.length);
       newPassword += str.charAt(newChar);
     }
 
     setPassword(newPassword);
-  };
+  }, [numberAllowed, charAllowed, passwordLength]);
 
-  const copyText = () => {
+  useEffect(() => {
+    generate();
+  }, [numberAllowed, charAllowed, passwordLength]);
+
+  const copyText = useCallback(() => {
+    passwordRef.current?.select();
     navigator.clipboard.writeText(password);
-  };
+  }, [password]);
 
   return (
     <>
@@ -55,13 +62,14 @@ function App() {
             value={password}
             placeholder="Password"
             readOnly
+            ref={passwordRef}
           />
-          <span
-            className="bg-purple-800 p-2 rounded font-bold cursor-pointer"
+          <button
+            className="bg-purple-800 p-2 rounded font-bold cursor-pointer hover:bg-purple-950"
             onClick={copyText}
           >
             Copy
-          </span>
+          </button>
         </div>
         <div className="flex justify-between items-center">
           <label className="text-amber-200 font-bold" htmlFor="password-length">
@@ -94,7 +102,10 @@ function App() {
             onChange={checkChar}
           />
         </div>
-        <button onClick={generate} className="bg-purple-600 ">
+        <button
+          onClick={generate}
+          className="bg-purple-600 rounded-md p-1 font-bold text-white cursor-pointer hover:bg-purple-800"
+        >
           Generate Password
         </button>
       </div>
