@@ -28,7 +28,7 @@ function Counter() {
   return (
     <>
       <h1>Basic Counter: {counter}</h1>
-      <Button content="Increase" n="ritik" onClick={increment} />
+      <Button content="Increase" onClick={increment} />
       <Button content="Decrease" onClick={decrement} />
       <p>Another Counter: {counter}</p>
     </>
