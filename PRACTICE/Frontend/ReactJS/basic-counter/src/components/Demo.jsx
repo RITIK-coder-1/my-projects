@@ -1,8 +1,8 @@
-import { useState } from "react";
 import Button from "./Button";
+import { useState } from "react";
 
-function Counter() {
-  let [counter, setCounter] = useState(0);
+function Demo() {
+  const [counter, setCounter] = useState(0);
 
   function increment() {
     if (counter < 20) {
@@ -22,12 +22,11 @@ function Counter() {
 
   return (
     <>
-      <h1>Basic Counter: {counter}</h1>
+      <h1 className="text-2xl">Counter: {counter}</h1>
       <Button content="Increase" onClick={increment} />
       <Button content="Decrease" onClick={decrement} />
-      <p>Another Counter: {counter}</p>
     </>
   );
 }
 
-export default Counter;
+export default Demo;
