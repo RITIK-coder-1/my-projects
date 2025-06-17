@@ -8,8 +8,11 @@ function useCurrency() {
     fetch(
       "https://api.currencyapi.com/v3/latest?apikey=cur_live_n95l3qfyxmz0n8TE6vYIbUgSlEuiWairf3BCydyg"
     )
-      .then((data) => data.json())
-      .then((data) => setData(data["data"])) // because this data has two nested objects: data and meta. We're retrieving data["data"])
+      .then((API) => API.json())
+      .then((API) => {
+        setData(API["data"]); // because this data has two nested objects: data and meta. We're retrieving API["data"])
+        console.log(API); // for debugging purposes
+      })
       .catch((err) => {
         console.log("API could not be fetched: ", err);
       });
