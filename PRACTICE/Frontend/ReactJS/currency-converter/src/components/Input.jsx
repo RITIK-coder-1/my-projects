@@ -22,7 +22,11 @@ function Input() {
         <label className="text-gray-500 font-bold text-xl">Currency Type</label>
         <select className="w-30 outline-none font-thin text-md font-bold p-3 rounded-md bg-gray-100">
           {dataArray.map((ele) => {
-            return <option key={ele}>{ele}</option>; // we looped through the array and displayed each currency as an option
+            return (
+              <option key={ele} value={ele}>
+                {ele}
+              </option>
+            ); // we looped through the array and displayed each currency as an option
           })}
         </select>
       </div>
