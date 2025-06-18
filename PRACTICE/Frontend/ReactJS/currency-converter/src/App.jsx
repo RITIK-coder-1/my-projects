@@ -10,6 +10,9 @@ function App() {
         <div className="w-full flex flex-col justify-center items-center gap-5">
           <Input />
           <Input />
+          <button className="bg-blue-700 p-2 rounded-xl w-72 font-bold cursor-pointer">
+            Convert
+          </button>
         </div>
       </div>
     </>

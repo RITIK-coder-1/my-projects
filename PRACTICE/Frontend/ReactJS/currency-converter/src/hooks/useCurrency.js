@@ -10,7 +10,9 @@ function useCurrency() {
     )
       .then((API) => API.json())
       .then((API) => {
-        setData(API["data"]); // because this data has two nested objects: data and meta. We're retrieving API["data"])
+        setData(API["data"]);
+        // This sets the value of the state "data" with the API
+        // I've used API["data"] because this data has two nested objects: data and meta. We're retrieving the data object inside it which is in string.
         console.log(API); // for debugging purposes
       })
       .catch((err) => {
