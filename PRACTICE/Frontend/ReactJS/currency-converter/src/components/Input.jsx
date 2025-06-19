@@ -1,6 +1,14 @@
 import useCurrency from "../hooks/useCurrency";
 
-function Input() {
+function Input({
+  label,
+  amount,
+  onAmountChange,
+  onCurrencyChange,
+  selectCurrency = "USD",
+  amountDisable = false,
+  currencyDisable = false,
+}) {
   const data = useCurrency(); // getting the retrieved data
   let dataArray = []; // this array will store the currency value and I'll loop through it to display them
 
