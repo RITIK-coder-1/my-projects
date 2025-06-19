@@ -1,7 +1,6 @@
 import useCurrency from "../hooks/useCurrency";
 
 function Input({
-  label,
   amount,
   onAmountChange,
   onCurrencyChange,
