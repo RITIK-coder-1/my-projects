@@ -1,6 +1,7 @@
 import useCurrency from "../hooks/useCurrency";
 
 function Input({
+  dataArray = [],
   amount,
   onAmountChange,
   onCurrencyChange,
@@ -8,13 +9,6 @@ function Input({
   amountDisable = false,
   currencyDisable = false,
 }) {
-  const data = useCurrency(); // getting the retrieved data
-  let dataArray = []; // this array will store the currency value and I'll loop through it to display them
-
-  for (const property in data) {
-    dataArray.push(property); // looping through the data object and pushing each property to the array
-  }
-
   return (
     <div className="w-3xl h-36 bg-white p-3 rounded-xl flex justify-between">
       <div className="flex flex-col justify-center h-full gap-6">
