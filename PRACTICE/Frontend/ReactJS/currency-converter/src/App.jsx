@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Input } from "./components";
 import useCurrency from "./hooks/useCurrency";
 
@@ -8,6 +9,19 @@ function App() {
   for (const property in data) {
     dataArray.push(property); // looping through the data object and pushing each property to the array
   }
+
+  const [amount, setAmount] = useState(0);
+  const [from, setFrom] = useState("USD");
+  const [to, setTo] = useState("INR");
+  const [convertedAmount, setConvertedAmount] = useState(0);
+
+  const swap = () => {
+    setFrom(to);
+    setTo(from);
+    setConvertedAmount(amount);
+    setAmount(convertedAmount);
+  };
+
   return (
     <>
       <div className="w-full h-full p-5 backdrop-blur-xs">
@@ -15,8 +29,8 @@ function App() {
           Currency Converter
         </h1>
         <div className="w-full flex flex-col justify-center items-center gap-5">
-          <Input dataArray={dataArray} />
-          <Input dataArray={dataArray} />
+          <Input dataArray={dataArray} amount={amount} label="From" />
+          <Input dataArray={dataArray} amount={amount} label="To" />
           <button className="bg-blue-700 p-2 rounded-xl w-72 font-bold cursor-pointer">
             Convert
           </button>
