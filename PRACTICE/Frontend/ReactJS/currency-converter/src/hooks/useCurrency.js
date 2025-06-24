@@ -13,7 +13,7 @@ function useCurrency() {
         setData(API["data"]);
         // This sets the value of the state "data" with the API
         // I've used API["data"] because this data has two nested objects: data and meta. We're retrieving the data object inside it which is in string.
-        console.log(API); // for debugging purposes
+        console.log("API: ", API); // for debugging purposes
       })
       .catch((err) => {
         console.log("API could not be fetched: ", err);

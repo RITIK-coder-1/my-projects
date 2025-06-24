@@ -7,6 +7,7 @@ function Input({
   selectCurrency = "USD",
   amountDisable = false,
   currencyDisable = false,
+  isReadOnly = false,
 }) {
   return (
     <div className="w-3xl h-36 bg-white p-3 rounded-xl flex justify-between">
@@ -21,6 +22,7 @@ function Input({
           onChange={(e) =>
             onAmountChange && onAmountChange(Number(e.target.value))
           }
+          readOnly={isReadOnly}
         />
       </div>
       <div className="flex flex-col justify-center h-full gap-6 items-end">
