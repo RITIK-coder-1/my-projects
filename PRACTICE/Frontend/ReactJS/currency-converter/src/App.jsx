@@ -1,36 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "./components";
 import useCurrency from "./hooks/useCurrency";
 
 function App() {
   const data = useCurrency(); // getting the retrieved data
   let dataArray = []; // this array will store the currency value and I'll loop through it to display them
-  let valueArray = [];
 
   for (const property in data) {
     dataArray.push(property); // looping through the data object and pushing each property to the array
   }
 
-  for (const property in data) {
-    console.log("values: ", data[property]["value"]);
-    valueArray.push(data[property]["value"]);
-  }
-
   console.log("data array: ", dataArray); // for debbuging purposes
   console.log("data: ", data);
-  console.log("value array: ", valueArray);
 
   const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("USD");
   const [to, setTo] = useState("INR");
-  let convertedAmount;
+  const [convertedAmount, setConvertedAmount] = useState(0);
 
+  let newAmount = 0;
   for (const property in data) {
     if (to === property) {
       let value = data[property]["value"];
-      convertedAmount = (amount * value).toFixed(2);
+      newAmount = (amount * value).toFixed(2);
     }
   }
+
+  useEffect(() => {
+    setConvertedAmount(newAmount);
+  }, [newAmount]);
 
   return (
     <>
