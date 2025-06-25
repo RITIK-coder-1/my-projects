@@ -15,7 +15,7 @@ function Input({
         <label className="text-gray-500 font-bold text-xl">{label}</label>
         <input
           type="text"
-          className="w-10 outline-none font-bold text-xl"
+          className="w-auto outline-none font-bold text-xl"
           defaultValue="0"
           disabled={amountDisable}
           value={amount}
