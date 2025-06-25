@@ -18,17 +18,14 @@ function App() {
   const [to, setTo] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(0);
 
-  let newAmount = 0;
-  for (const property in data) {
-    if (to === property) {
-      let value = data[property]["value"];
-      newAmount = (amount * value).toFixed(2);
-    }
-  }
-
   useEffect(() => {
-    setConvertedAmount(newAmount);
-  }, [newAmount]);
+    for (const property in data) {
+      let value = data[property]["value"];
+      if (to === property) {
+        setConvertedAmount((amount * value).toFixed(2));
+      }
+    }
+  }, [amount]);
 
   return (
     <>
@@ -36,7 +33,7 @@ function App() {
         <h1 className="text-white text-center text-5xl font-bold mb-5">
           Currency Converter
         </h1>
-        <div className="w-full flex flex-col justify-center items-center gap-5">
+        <div className="w-full flex flex-col justify-start items-center gap-20 mt-10">
           <Input
             dataArray={dataArray}
             amount={amount}
@@ -53,9 +50,6 @@ function App() {
             selectCurrency={to}
             onCurrencyChange={setTo}
           />
-          <button className="bg-blue-700 p-2 rounded-xl w-72 font-bold cursor-pointer">
-            Convert
-          </button>
         </div>
       </div>
     </>
