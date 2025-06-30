@@ -40,18 +40,13 @@ function Footer() {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/hiteshchoudhary"
+                    href="https://github.com/RITIK-coder-1"
                     className="hover:underline"
                     target="_blank"
                     rel="noreferrer"
                   >
                     Github
                   </a>
-                </li>
-                <li>
-                  <Link to="/" className="hover:underline">
-                    Discord
-                  </Link>
                 </li>
               </ul>
             </div>
