@@ -39,6 +39,7 @@ function Header() {
                       isActive ? "text-red-600" : "text-black"
                     }`
                   }
+                  to="/"
                 >
                   Home
                 </NavLink>
@@ -50,6 +51,7 @@ function Header() {
                       isActive ? "text-red-600" : "text-black"
                     }`
                   }
+                  to="/about"
                 >
                   About
                 </NavLink>
@@ -61,19 +63,9 @@ function Header() {
                       isActive ? "text-red-600" : "text-black"
                     }`
                   }
+                  to="contact"
                 >
                   Contact
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 ${
-                      isActive ? "text-red-600" : "text-black"
-                    }`
-                  }
-                >
-                  GitHub
                 </NavLink>
               </li>
             </ul>
