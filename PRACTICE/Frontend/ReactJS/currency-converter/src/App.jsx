@@ -21,11 +21,30 @@ function App() {
   useEffect(() => {
     for (const property in data) {
       let value = data[property]["value"];
+
+      // let toValue;
+      // if (property === to) {
+      //   toValue = data[property]["value"];
+      // }
+
+      // let fromValue;
+      // if (property === from) {
+      //   fromValue = data[property]["value"];
+      // }
+
+      // if (from === "USD" && to === property) {
+      //   setConvertedAmount((amount * value).toFixed(2));
+      // } else if (from !== "USD" && to === property) {
+      //   setConvertedAmount((amount * (fromValue / toValue)).toFixed(2));
+      // }
+
       if (to === property) {
         setConvertedAmount((amount * value).toFixed(2));
       }
     }
-  }, [amount]);
+  }, [amount, from, to]);
+
+  console.log(from);
 
   return (
     <>
