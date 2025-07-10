@@ -18,30 +18,21 @@ function App() {
   const [to, setTo] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(0);
 
-  useEffect(() => {
-    for (const property in data) {
-      let value = data[property]["value"];
-
-      // let toValue;
-      // if (property === to) {
-      //   toValue = data[property]["value"];
-      // }
-
-      // let fromValue;
-      // if (property === from) {
-      //   fromValue = data[property]["value"];
-      // }
-
-      // if (from === "USD" && to === property) {
-      //   setConvertedAmount((amount * value).toFixed(2));
-      // } else if (from !== "USD" && to === property) {
-      //   setConvertedAmount((amount * (fromValue / toValue)).toFixed(2));
-      // }
-
-      if (to === property) {
-        setConvertedAmount((amount * value).toFixed(2));
-      }
+  let toValue, fromValue;
+  for (const property in data) {
+    if (property === to) {
+      toValue = data[property]["value"];
     }
+    if (property === from) {
+      fromValue = data[property]["value"];
+    }
+
+    console.log("to: ", toValue);
+    console.log("from: ", fromValue);
+  }
+
+  useEffect(() => {
+    setConvertedAmount(((amount / fromValue) * toValue).toFixed(2));
   }, [amount, from, to]);
 
   console.log(from);
