@@ -45,7 +45,7 @@ function App() {
         <h1 className="text-white text-center text-5xl font-bold mb-5">
           Currency Converter
         </h1>
-        <div className="w-full flex flex-col justify-start items-center gap-20 mt-10">
+        <div className="w-full flex flex-col justify-start items-center gap-2 mt-10">
           <Input
             dataArray={dataArray}
             amount={amount}
