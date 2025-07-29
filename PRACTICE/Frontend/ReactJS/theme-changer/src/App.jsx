@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider value={{ themeMode, darkMode, lightMode }}>
-      <h1 className="text-2xl text-blue-900 text-center bg-ritikpurple">
+      <h1 className="text-2xl text-blue-900 text-center bg-[ritik-blue]">
         Theme
       </h1>
       <Theme />
