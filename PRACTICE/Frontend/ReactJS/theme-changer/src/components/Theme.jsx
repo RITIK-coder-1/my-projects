@@ -5,7 +5,7 @@ function Theme() {
   const { theme, lightMode, darkMode } = useTheme();
   return (
     <>
-      <label>Change Theme: </label>
+      <label className="dark:text-white">Change Theme: </label>
       <input
         type="checkbox"
         className="w-5"

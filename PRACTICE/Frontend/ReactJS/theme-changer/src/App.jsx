@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { ThemeProvider } from "./context/themeContext";
 import Theme from "./components/Theme";
+import Demo from "./components/Demo";
 
 function App() {
-  const [themeMode, setThemeMode] = useState("light");
+  const [theme, setThemeMode] = useState("light");
 
   const darkMode = () => {
     setThemeMode("dark");
@@ -16,14 +17,20 @@ function App() {
 
   useEffect(() => {
     document.querySelector("html").classList.remove("light", "dark");
-    document.querySelector("html").classList.add(themeMode);
-  }, [themeMode]);
+    document.querySelector("html").classList.add(theme);
+    console.log(theme);
+  }, [theme]);
 
   return (
-    <ThemeProvider value={{ themeMode, darkMode, lightMode }}>
-      <h1 className="text-2xl text-blue-900 text-center">Theme</h1>
-      <Theme />
-    </ThemeProvider>
+    <>
+      <ThemeProvider value={{ theme, darkMode, lightMode }}>
+        <h1 className="text-2xl text-blue-900 text-center dark:text-shadow-blue-950">
+          Theme
+        </h1>
+        <Theme />
+        <Demo />
+      </ThemeProvider>
+    </>
   );
 }
 
