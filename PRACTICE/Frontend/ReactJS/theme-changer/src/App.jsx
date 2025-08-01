@@ -5,7 +5,7 @@ import Theme from "./components/Theme";
 import Demo from "./components/Demo";
 
 function App() {
-  const [theme, setThemeMode] = useState("light");
+  const [currentTheme, setThemeMode] = useState("light");
 
   const darkMode = () => {
     setThemeMode("dark");
@@ -17,13 +17,13 @@ function App() {
 
   useEffect(() => {
     document.querySelector("html").classList.remove("light", "dark");
-    document.querySelector("html").classList.add(theme);
-    console.log(theme);
-  }, [theme]);
+    document.querySelector("html").classList.add(currentTheme);
+    console.log(currentTheme);
+  }, [currentTheme]);
 
   return (
     <>
-      <ThemeProvider value={{ theme, darkMode, lightMode }}>
+      <ThemeProvider value={{ theme: currentTheme, darkMode, lightMode }}>
         <h1 className="text-2xl text-blue-900 text-center dark:text-shadow-blue-950">
           Theme
         </h1>

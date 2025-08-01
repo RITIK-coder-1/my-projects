@@ -17,7 +17,6 @@ function Theme() {
             lightMode();
           }
         }}
-        checked={theme === "dark"}
       />
     </>
   );
