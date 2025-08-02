@@ -5,14 +5,14 @@ import Theme from "./components/Theme";
 import Demo from "./components/Demo";
 
 function App() {
-  const [currentTheme, setThemeMode] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState("light");
 
-  const darkMode = () => {
-    setThemeMode("dark");
+  const dark = () => {
+    setCurrentTheme("dark");
   };
 
-  const lightMode = () => {
-    setThemeMode("light");
+  const light = () => {
+    setCurrentTheme("light");
   };
 
   useEffect(() => {
@@ -23,13 +23,15 @@ function App() {
 
   return (
     <>
-      <ThemeProvider value={{ theme: currentTheme, darkMode, lightMode }}>
+      <ThemeProvider
+        value={{ theme: currentTheme, darkMode: dark, lightMode: light }}
+      >
         <h1 className="text-2xl text-blue-900 text-center dark:text-shadow-blue-950">
           Theme
         </h1>
         <Theme />
-        <Demo />
       </ThemeProvider>
+      <Demo />
     </>
   );
 }
