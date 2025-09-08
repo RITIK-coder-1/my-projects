@@ -11,7 +11,6 @@ function TodoItem({ todo }) {
     setIsTodoEditable(false);
   };
   const toggleCompleted = () => {
-    //console.log(todo.id);
     toggleComplete(todo.id);
   };
 
