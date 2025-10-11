@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* * 1. Configure darkMode: "class"
+ * Use @custom-variant to tell Tailwind to apply 'dark:' utilities
+ * when the 'dark' class is present on an ancestor element (e.g., <html>).
+ */
+@custom-variant dark (&:where(.dark, .dark *));
