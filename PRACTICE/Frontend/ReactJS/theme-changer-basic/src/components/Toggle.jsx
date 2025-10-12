@@ -15,7 +15,7 @@ const Toggle = () => {
     <>
       <label className="flex cursor-pointer select-none items-center gap-2">
         <span className="dark:text-white">
-          {themeObject.theme === "light" ? "Dark Mode:" : "Light Mode"}
+          {themeObject.theme === "light" ? "Dark Mode:" : "Light Mode:"}
         </span>
         <div className="relative">
           <input
