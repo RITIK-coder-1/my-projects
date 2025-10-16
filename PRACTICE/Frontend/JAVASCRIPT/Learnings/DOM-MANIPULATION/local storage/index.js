@@ -3,11 +3,14 @@ let counter = Number(counterElement.textContent);
 const add = document.getElementById("add");
 const sub = document.getElementById("sub");
 
+let counterState = Number(localStorage.getItem("counter")) || 0;
+counterElement.textContent = counterState;
+
 add.addEventListener(
   "click",
   () => {
-    counter++;
-    counterElement.textContent = counter;
+    counterState++;
+    updateLocalStorage();
   },
   false
 );
@@ -15,8 +18,13 @@ add.addEventListener(
 sub.addEventListener(
   "click",
   () => {
-    counter--;
-    counterElement.textContent = counter;
+    counterState--;
+    updateLocalStorage();
   },
   false
 );
+
+function updateLocalStorage() {
+  localStorage.setItem("counter", String(counterState));
+  counterElement.textContent = counterState;
+}
