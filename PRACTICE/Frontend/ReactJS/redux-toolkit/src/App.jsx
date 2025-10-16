@@ -7,18 +7,23 @@ import {
   incrementByAmount,
   decrementByAmount,
   reset,
-} from "./redux/features/counterSlice";
+} from "./redux/features/counterSlice.js";
+import useLocalStorage from "./useLocalStorage.js";
 
 function App() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   const [amount1, setAmount1] = useState("");
   const [amount2, setAmount2] = useState("");
+
+  useLocalStorage();
   return (
     <div className="text-center mt-5">
       <h1 className="text-white">Counter: {count}</h1>
       <button
-        onClick={() => dispatch(increment())}
+        onClick={() => {
+          dispatch(increment());
+        }}
         className="border border-white border-solid mr-5 p-1 text-white"
       >
         Increment
