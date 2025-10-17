@@ -1,20 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
-import { add } from "./features/todoSlice";
-import { useEffect, useState } from "react";
+import { add, del } from "./features/todoSlice";
+import { useState } from "react";
 
 function App() {
   const todos = useSelector((state) => state.todos.value);
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
-
-  // if (todos.length !== 0) {
-  //   todos.map((ele, key) => {
-  //     localStorage.setItem(`Todo ${key + 1}`, ele);
-  //   });
-  // }
-
-  // localStorage.clear();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center py-10 px-4 text-white">
@@ -55,18 +47,33 @@ function App() {
           {todos.length === 0 ? (
             <p>No tasks yet. Add your first one above!</p>
           ) : (
-            <p></p>
+            <ul className="flex flex-col justify-center items-start gap-3 w-full p-4 rounded-xl shadow-2xl">
+              {todos.map((ele, key) => (
+                <li
+                  key={key}
+                  className="w-full px-4 py-2 bg-white/80 text-gray-800 font-semibold rounded-lg shadow-sm hover:shadow-md hover:bg-white transition-all duration-200 flex items-center gap-2 border border-amber-200"
+                >
+                  <div className="w-full flex items-center justify-start gap-3">
+                    <label>{`${key + 1}.`}</label>
+                    <input
+                      type="text"
+                      value={ele}
+                      className="p-1 w-full outline-0 caret-transparent cursor-default"
+                    />
+                  </div>
+                  <button
+                    className="flex-shrink-0 w-4 h-4 bg-yellow-500 rounded-full cursor-pointer"
+                    title="Update Todo"
+                  ></button>
+                  <button
+                    className="flex-shrink-0 w-4 h-4 bg-red-950 rounded-full cursor-pointer"
+                    title="Delete Todo"
+                    onClick={() => dispatch(del(key))}
+                  ></button>
+                </li>
+              ))}
+            </ul>
           )}
-          <ul className="flex flex-col justify-center items-start gap-3 w-full">
-            {todos.map((ele, key) => (
-              <li
-                key={key}
-                className="text-black font-black p-1 rounded-md bg-amber-200"
-              >
-                {ele}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>
