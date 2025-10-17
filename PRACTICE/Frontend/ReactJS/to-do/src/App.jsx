@@ -1,14 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
-import { add, del } from "./features/todoSlice";
+import { add, del, update } from "./features/todoSlice";
 import { useState } from "react";
 
 function App() {
   const todos = useSelector((state) => state.todos.value);
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
-  const [toBeUpdated, setUpdated] = useState(false);
-  console.log(toBeUpdated);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center py-10 px-4 text-white">
@@ -59,10 +57,10 @@ function App() {
                     <label>{`${key + 1}.`}</label>
                     <input
                       type="text"
-                      defaultValue={ele}
-                      readOnly={toBeUpdated === true ? false : true}
+                      defaultValue={ele.value}
+                      readOnly={ele.toBeUpdated === true ? false : true}
                       className={`p-1 w-full ${
-                        toBeUpdated === true
+                        ele.toBeUpdated === true
                           ? "outline-1 caret-black cursor-auto"
                           : "outline-0 caret-transparent cursor-default"
                       }`}
@@ -71,14 +69,17 @@ function App() {
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-yellow-500 rounded-full cursor-pointer"
                     title="Update Todo"
-                    onClick={() => {
-                      setUpdated(!toBeUpdated);
-                    }}
+                    onClick={() => dispatch(update(key))}
                   ></button>
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-red-950 rounded-full cursor-pointer"
                     title="Delete Todo"
-                    onClick={() => dispatch(del(key))}
+                    onClick={() => {
+                      dispatch(del(key));
+                      if (ele.toBeUpdated === true) {
+                        !ele.toBeUpdated;
+                      }
+                    }}
                   ></button>
                 </li>
               ))}
