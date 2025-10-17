@@ -7,6 +7,8 @@ function App() {
   const todos = useSelector((state) => state.todos.value);
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
+  const [toBeUpdated, setUpdated] = useState(false);
+  console.log(toBeUpdated);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center py-10 px-4 text-white">
@@ -57,13 +59,21 @@ function App() {
                     <label>{`${key + 1}.`}</label>
                     <input
                       type="text"
-                      value={ele}
-                      className="p-1 w-full outline-0 caret-transparent cursor-default"
+                      defaultValue={ele}
+                      readOnly={toBeUpdated === true ? false : true}
+                      className={`p-1 w-full ${
+                        toBeUpdated === true
+                          ? "outline-1 caret-black cursor-auto"
+                          : "outline-0 caret-transparent cursor-default"
+                      }`}
                     />
                   </div>
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-yellow-500 rounded-full cursor-pointer"
                     title="Update Todo"
+                    onClick={() => {
+                      setUpdated(!toBeUpdated);
+                    }}
                   ></button>
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-red-950 rounded-full cursor-pointer"
