@@ -7,6 +7,7 @@ function App() {
   const todos = useSelector((state) => state.todos.value);
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
+  console.log(todos);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center py-10 px-4 text-white">
@@ -50,7 +51,7 @@ function App() {
             <ul className="flex flex-col justify-center items-start gap-3 w-full p-4 rounded-xl shadow-2xl">
               {todos.map((ele, key) => (
                 <li
-                  key={key}
+                  key={ele.id}
                   className="w-full px-4 py-2 bg-white/80 text-gray-800 font-semibold rounded-lg shadow-sm hover:shadow-md hover:bg-white transition-all duration-200 flex items-center gap-2 border border-amber-200"
                 >
                   <div className="w-full flex items-center justify-start gap-3">
@@ -69,13 +70,13 @@ function App() {
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-yellow-500 rounded-full cursor-pointer"
                     title="Update Todo"
-                    onClick={() => dispatch(update(key))}
+                    onClick={() => dispatch(update(ele.id))}
                   ></button>
                   <button
                     className="flex-shrink-0 w-4 h-4 bg-red-950 rounded-full cursor-pointer"
                     title="Delete Todo"
                     onClick={() => {
-                      dispatch(del(key));
+                      dispatch(del(ele.id));
                       if (ele.toBeUpdated === true) {
                         !ele.toBeUpdated;
                       }
