@@ -1,13 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
-import { add, del, update } from "./features/todoSlice";
-import { useState } from "react";
+import { add, del, update, demo } from "./features/todoSlice";
+import { useEffect, useState } from "react";
 
 function App() {
   const todos = useSelector((state) => state.todos.value);
+  console.log(todos);
+
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
-  console.log(todos);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center py-10 px-4 text-white">
@@ -30,10 +35,19 @@ function App() {
         <button
           className="bg-blue-600 hover:bg-blue-700 transition-all duration-200 border border-transparent rounded-lg px-4 py-2 font-semibold shadow-md cursor-pointer"
           onClick={() => {
-            dispatch(add(todoInput));
+            if (todoInput.trim() !== "") {
+              dispatch(add(todoInput));
+            }
           }}
         >
           Add
+        </button>
+        <button
+          onClick={() => {
+            localStorage.clear();
+          }}
+        >
+          clear
         </button>
       </form>
 

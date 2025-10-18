@@ -1,20 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from "@reduxjs/toolkit";
 
+const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+
 const todoSlice = createSlice({
   name: "todos",
   initialState: {
-    value: [],
+    value: savedTodos,
   },
   reducers: {
     add: (state, action) => {
-      if (action.payload.trim() !== "") {
-        state.value.push({
-          id: nanoid(),
-          value: action.payload,
-          toBeUpdated: false,
-        });
-      }
+      let todoID = nanoid();
+      state.value.push({
+        id: todoID,
+        value: action.payload,
+        toBeUpdated: false,
+      });
     },
     del: (state, action) => {
       state.value.map((ele) => {
@@ -34,6 +35,6 @@ const todoSlice = createSlice({
   },
 });
 
-export const { add, del, update } = todoSlice.actions;
+export const { add, del, update, demo } = todoSlice.actions;
 
 export default todoSlice.reducer;
