@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./App.css";
-import { add, del, update, demo } from "./features/todoSlice";
+import { add, del, update, saveUpdate } from "./features/todoSlice";
 import { useEffect, useState } from "react";
 
 function App() {
   const todos = useSelector((state) => state.todos.value);
-  console.log(todos);
 
   const dispatch = useDispatch();
   const [todoInput, setInput] = useState("");
+  let [newTodoInput, setnewInput] = useState("");
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -79,6 +79,12 @@ function App() {
                           ? "outline-1 caret-black cursor-auto"
                           : "outline-0 caret-transparent cursor-default"
                       }`}
+                      onChange={(e) => {
+                        setnewInput((newTodoInput = e.target.value));
+                        dispatch(
+                          saveUpdate({ id: ele.id, newText: newTodoInput })
+                        );
+                      }}
                     />
                   </div>
                   <button

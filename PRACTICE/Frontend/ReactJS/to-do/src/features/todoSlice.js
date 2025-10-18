@@ -32,9 +32,16 @@ const todoSlice = createSlice({
         }
       });
     },
+    saveUpdate: (state, action) => {
+      state.value.map((ele) => {
+        if (ele.id === action.payload.id) {
+          ele.value = action.payload.newText;
+        }
+      });
+    },
   },
 });
 
-export const { add, del, update, demo } = todoSlice.actions;
+export const { add, del, update, saveUpdate } = todoSlice.actions;
 
 export default todoSlice.reducer;
